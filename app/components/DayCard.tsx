@@ -4,12 +4,11 @@ import { useState } from "react";
 import dynamic from "next/dynamic";
 import type { Day } from "../data/trip";
 
-// Leaflet must load client-side only
 const DayMap = dynamic(() => import("./DayMap"), {
   ssr: false,
   loading: () => (
-    <div className="map-wrapper" style={{ display: "flex", alignItems: "center", justifyContent: "center", color: "var(--ink-faded)" }}>
-      Cargando mapa…
+    <div className="map-wrapper">
+      <div className="map-loading">Cargando mapa…</div>
     </div>
   ),
 });
@@ -44,9 +43,7 @@ export default function DayCard({ day }: { day: Day }) {
       </div>
 
       <div className="day-body">
-        {day.sleep && (
-          <div className="day-sleep">☾ Noche en {day.sleep}</div>
-        )}
+        {day.sleep && <div className="day-sleep">☾ Noche en {day.sleep}</div>}
 
         <div className="locations-list">
           {day.locations.map((loc, idx) => (

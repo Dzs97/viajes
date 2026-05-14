@@ -1,6 +1,7 @@
 import { trip } from "./data/trip";
 import DayCard from "./components/DayCard";
 import ThemeToggle from "./components/ThemeToggle";
+import ScrollToTop from "./components/ScrollToTop";
 
 export default function Home() {
   const totalDays = trip.reduce((sum, c) => sum + c.days.length, 0);
@@ -11,7 +12,7 @@ export default function Home() {
 
   return (
     <>
-      <header className="header">
+      <header className="header" id="top">
         <div className="header-inner">
           <div className="logo">
             <span className="logo-mark">3W</span>
@@ -83,10 +84,10 @@ export default function Home() {
       ))}
 
       <footer className="footer">
-        <p className="footer-text">
-          Buen viaje. ✦
-        </p>
+        <p className="footer-text">Buen viaje. ✦</p>
       </footer>
+
+      <ScrollToTop />
     </>
   );
 }
