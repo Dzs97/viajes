@@ -27,7 +27,7 @@ export default function BudgetSection({ countryId }: { countryId: string }) {
           <div className="budget-eyebrow">Presupuesto estimado</div>
           <h3 className="budget-title">Costo del país</h3>
           <p className="budget-subtitle">
-            2 personas · nivel cómodo · hoteles 4★ · restaurantes mejores
+            2 personas · nivel cómodo · hoteles 3-3.5★ · mayo 2027
           </p>
         </div>
         <div className="currency-toggle" role="group" aria-label="Cambiar moneda">
@@ -45,15 +45,23 @@ export default function BudgetSection({ countryId }: { countryId: string }) {
       </div>
 
       <ul className="budget-items">
-        {budget.items.map((item, idx) => (
-          <li className="budget-item" key={idx}>
-            <div className="budget-item-main">
-              <span className="budget-item-label">{item.label}</span>
-              <span className="budget-item-amount">{formatAmount(item.amount, currency)}</span>
-            </div>
-            {item.detail && <p className="budget-item-detail">{item.detail}</p>}
-          </li>
-        ))}
+        {budget.items.map((item, idx) => {
+          const status = item.status ?? "pendiente";
+          return (
+            <li className="budget-item" key={idx}>
+              <div className="budget-item-main">
+                <span className="budget-item-label">
+                  {item.label}
+                  <span className={`status-pill status-${status}`} aria-label={`Estado: ${status}`}>
+                    {status}
+                  </span>
+                </span>
+                <span className="budget-item-amount">{formatAmount(item.amount, currency)}</span>
+              </div>
+              {item.detail && <p className="budget-item-detail">{item.detail}</p>}
+            </li>
+          );
+        })}
       </ul>
 
       <div className="budget-total">
@@ -62,7 +70,7 @@ export default function BudgetSection({ countryId }: { countryId: string }) {
       </div>
 
       <p className="budget-disclaimer">
-        Estimados aproximados basados en precios de mayo 2026. Tipos de cambio: 1 USD ≈ {exchangeRates.MXN} MXN ·{" "}
+        Estimados aproximados basados en precios de mayo 2027. Tipos de cambio: 1 USD ≈ {exchangeRates.MXN} MXN ·{" "}
         {(1 / exchangeRates.EUR).toFixed(2)} USD/EUR · {(1 / exchangeRates.GBP).toFixed(2)} USD/GBP.
         Precios pueden variar significativamente según temporada, anticipación de reserva y disponibilidad.
       </p>

@@ -3,10 +3,11 @@
 import { useEffect, useRef, useState } from "react";
 import { trip } from "../data/trip";
 import { budgets, formatAmount, getCountryTotal, getGrandTotal } from "../data/budget";
+import { dateForDay, formatTripDate } from "../lib/dates";
 
 function generateMarkdown(): string {
-  let md = `# Itinerario · Irlanda, Escocia & Inglaterra\n\n`;
-  md += `_Viaje de 3 semanas por las Islas Británicas_\n\n`;
+  let md = `# Itinerario · Inglaterra, Irlanda & Escocia\n\n`;
+  md += `_Viaje de 3 semanas por las Islas Británicas · Mayo 2027_\n\n`;
   md += `---\n\n`;
 
   for (const country of trip) {
@@ -18,7 +19,8 @@ function generateMarkdown(): string {
       md += `_Itinerario por definir._\n\n`;
     } else {
       for (const day of country.days) {
-        md += `### Día ${day.number} — ${day.title}\n\n`;
+        const date = formatTripDate(dateForDay(day.number));
+        md += `### Día ${day.number} (${date}) — ${day.title}\n\n`;
         md += `${day.narrative}\n\n`;
         if (day.sleep) {
           md += `**Noche en:** ${day.sleep}\n\n`;
@@ -39,11 +41,12 @@ function generateMarkdown(): string {
     const countryBudget = budgets.find((b) => b.countryId === country.id);
     if (countryBudget) {
       md += `### Presupuesto estimado · ${country.name}\n\n`;
-      md += `_2 personas · nivel cómodo_\n\n`;
-      md += `| Concepto | MXN | USD |\n`;
-      md += `|---|---|---|\n`;
+      md += `_2 personas · nivel cómodo · hoteles 3-3.5★_\n\n`;
+      md += `| Concepto | Estado | MXN | USD |\n`;
+      md += `|---|---|---|---|\n`;
       for (const item of countryBudget.items) {
-        md += `| ${item.label} | ${formatAmount(item.amount, "MXN")} | ${formatAmount(item.amount, "USD")} |\n`;
+        const status = item.status ?? "pendiente";
+        md += `| ${item.label} | ${status} | ${formatAmount(item.amount, "MXN")} | ${formatAmount(item.amount, "USD")} |\n`;
       }
       const total = getCountryTotal(country.id);
       md += `| **TOTAL** | **${formatAmount(total, "MXN")}** | **${formatAmount(total, "USD")}** |\n\n`;
@@ -59,7 +62,7 @@ function generateMarkdown(): string {
   md += `- **${formatAmount(grand, "USD")}**\n`;
   md += `- **${formatAmount(grand, "EUR")}**\n`;
   md += `- **${formatAmount(grand, "GBP")}**\n\n`;
-  md += `_Estimados basados en precios de mayo 2026. Pueden variar según temporada y anticipación de reserva._\n`;
+  md += `_Estimados basados en precios de mayo 2027. Pueden variar según temporada y anticipación de reserva._\n`;
 
   return md;
 }
@@ -94,7 +97,7 @@ export default function ExportMenu() {
 
   const exportMarkdown = () => {
     const md = generateMarkdown();
-    downloadFile(md, "itinerario-irlanda-escocia-inglaterra.md", "text/markdown");
+    downloadFile(md, "itinerario-inglaterra-irlanda-escocia.md", "text/markdown");
     setOpen(false);
   };
 

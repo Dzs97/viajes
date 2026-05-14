@@ -3,10 +3,13 @@
 // Tipos de cambio base (mayo 2026): 1 USD ≈ 17.20 MXN, 1 EUR ≈ 18.70 MXN, 1 GBP ≈ 21.80 MXN
 // Todos los montos están en USD para fácil conversión.
 
+export type BookingStatus = "pendiente" | "reservado" | "pagado";
+
 export type BudgetItem = {
   label: string;
   amount: number; // USD
   detail?: string;
+  status?: BookingStatus; // default: pendiente
 };
 
 export type CountryBudget = {

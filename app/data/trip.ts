@@ -1,3 +1,9 @@
+// Fecha de inicio del viaje (día 1 global). Cambia esto si la fecha del viaje cambia.
+export const tripStartDate = new Date("2027-05-17T00:00:00");
+
+// Total de días planeados del viaje completo (3 semanas).
+export const totalTripDays = 21;
+
 export type Location = {
   name: string;
   lat: number;
