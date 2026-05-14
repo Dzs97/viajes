@@ -1,4 +1,5 @@
-// Presupuesto para 2 personas, nivel cómodo, salida desde México, mayo-septiembre 2026
+// Presupuesto para 2 personas, nivel cómodo, salida desde México, mitades de mayo 2026
+// Hoteles nivel 3-3.5 estrellas. Temporada baja-media (mayo), antes del pico de verano.
 // Tipos de cambio base (mayo 2026): 1 USD ≈ 17.20 MXN, 1 EUR ≈ 18.70 MXN, 1 GBP ≈ 21.80 MXN
 // Todos los montos están en USD para fácil conversión.
 
@@ -36,20 +37,55 @@ export const currencyLabels: Record<Currency, string> = {
   GBP: "GBP",
 };
 
-// All numbers in USD, for 2 people total, cómodo (4-star hotels, good restaurants)
+// All numbers in USD, for 2 people total, nivel cómodo con hoteles 3-3.5★
 export const budgets: CountryBudget[] = [
+  {
+    countryId: "inglaterra",
+    items: [
+      {
+        label: "Vuelo redondo CDMX → Londres (regreso desde Edimburgo)",
+        amount: 2600,
+        detail: "2 personas, multi-city: CDMX→LHR, EDI→CDMX. British Airways, KLM/Air France o Aeroméxico. Reservar 2-3 meses antes.",
+      },
+      {
+        label: "Hospedaje (5 noches en Londres, hotel 3.5★)",
+        amount: 950,
+        detail: "Hoteles 3.5★ en zonas centrales o bien conectadas (Bayswater, Paddington, South Kensington, Kings Cross) ~$190/noche en mayo. Ejemplos: Premier Inn, Hub by Premier Inn, Travelodge Plus.",
+      },
+      {
+        label: "Transporte público (Oyster + day trips)",
+        amount: 280,
+        detail: "Oyster card Londres ~$50/persona/5 días + trenes ida/vuelta para Windsor, Stonehenge, Castle Combe (~$50 c/u por trip).",
+      },
+      {
+        label: "Day trips guiados",
+        amount: 320,
+        detail: "Stonehenge + Bath tour ~$120/persona, opcional Oxford/Cotswolds ~$90/persona. Más barato self-drive pero requiere coche.",
+      },
+      {
+        label: "Comida y bebidas",
+        amount: 1100,
+        detail: "5 días × ~$220/día para 2. Londres es la ciudad más cara del viaje. Mix de pubs, gastropubs y un restaurante especial.",
+      },
+      {
+        label: "Actividades y entradas",
+        amount: 520,
+        detail: "London Eye (£35×2), Westminster Abbey (£30×2), Tower of London (£35×2), Warner Bros Studio (£55×2), Windsor Castle (£30×2), Stonehenge (£25×2), British Museum (gratis), Royal Botanic Gardens (£15×2).",
+      },
+      {
+        label: "Transporte Londres → Dublín",
+        amount: 140,
+        detail: "Vuelo Ryanair/EasyJet/Aer Lingus LHR/STN → DUB, ~1h, ~$70/persona reservando con anticipación. Alternativa: tren a Holyhead + ferry Stena Line a Dublin Port (~8-10h door-to-door, ~$220-300 los 2).",
+      },
+    ],
+  },
   {
     countryId: "irlanda",
     items: [
       {
-        label: "Vuelo redondo CDMX → Dublín (regreso desde Londres)",
-        amount: 2600,
-        detail: "2 personas, multi-city: CDMX→DUB, LHR→CDMX. Aer Lingus o KLM/Air France. Reservar 2-3 meses antes.",
-      },
-      {
-        label: "Hospedaje (10 noches, hoteles 4★)",
-        amount: 2400,
-        detail: "Dublín (4 noches) $260/noche, Galway (2) $200/noche, Sligo (1) $180, Bushmills (1) $220, Belfast (1) $230. Promedio $240/noche.",
+        label: "Hospedaje (9 noches, hoteles 3-3.5★)",
+        amount: 1100,
+        detail: "Dublín (4 noches) $130/noche, Galway (2) $110, Sligo (1) $95, Bushmills (1) $130, Belfast (1) $110. Promedio $122/noche en mayo (shoulder season).",
       },
       {
         label: "Renta de coche (8 días)",
@@ -82,9 +118,9 @@ export const budgets: CountryBudget[] = [
     countryId: "escocia",
     items: [
       {
-        label: "Hospedaje (6 noches, hoteles 4★)",
-        amount: 1500,
-        detail: "Edimburgo (3 noches) $280/noche, Inverness o Highlands (2) $220, Glasgow (1) $200. Promedio $250/noche.",
+        label: "Hospedaje (6 noches, hoteles 3-3.5★)",
+        amount: 900,
+        detail: "Edimburgo (3 noches) $170/noche, Inverness o Highlands (2) $125, Glasgow (1) $115. Promedio $150/noche en mayo, sin el sobreprecio del Festival de agosto.",
       },
       {
         label: "Transporte público (trenes + buses)",
@@ -105,41 +141,6 @@ export const budgets: CountryBudget[] = [
         label: "Actividades y entradas",
         amount: 280,
         detail: "Edinburgh Castle (£20×2), Royal Yacht Britannia (£20×2), Holyrood (£20×2), destilería whisky tour (£20×2), Arthur's Seat (gratis), Royal Mile.",
-      },
-      {
-        label: "Tren Edimburgo → Londres",
-        amount: 220,
-        detail: "LNER Azuma, ~4h30, 2 personas en clase estándar. Más barato si se reserva 3 meses antes (~$70 c/u).",
-      },
-    ],
-  },
-  {
-    countryId: "inglaterra",
-    items: [
-      {
-        label: "Hospedaje (5 noches en Londres, hotel 4★)",
-        amount: 1750,
-        detail: "Londres es caro. Hoteles 4★ en zonas centrales (Westminster, Covent Garden, South Kensington) $300-380/noche. Promedio $350/noche.",
-      },
-      {
-        label: "Transporte público (Oyster + day trips)",
-        amount: 280,
-        detail: "Oyster card Londres ~$50/persona/5 días + trenes ida/vuelta para Windsor, Stonehenge, Castle Combe (~$50 c/u por trip).",
-      },
-      {
-        label: "Day trips guiados",
-        amount: 320,
-        detail: "Stonehenge + Bath tour ~$120/persona, opcional Oxford/Cotswolds ~$90/persona. Más barato self-drive pero requiere coche.",
-      },
-      {
-        label: "Comida y bebidas",
-        amount: 1100,
-        detail: "5 días × ~$220/día para 2. Londres es la ciudad más cara del viaje. Mix de pubs, gastropubs y un restaurante especial.",
-      },
-      {
-        label: "Actividades y entradas",
-        amount: 520,
-        detail: "London Eye (£35×2), Westminster Abbey (£30×2), Tower of London (£35×2), Warner Bros Studio (£55×2), Windsor Castle (£30×2), Stonehenge (£25×2), British Museum (gratis), Royal Botanic Gardens (£15×2).",
       },
     ],
   },

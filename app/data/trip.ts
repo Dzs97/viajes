@@ -26,18 +26,27 @@ export type Country = {
 
 export const trip: Country[] = [
   {
+    id: "inglaterra",
+    name: "Inglaterra",
+    flag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
+    subtitle: "Primera etapa · 5 días en Londres",
+    description:
+      "Punto de entrada al viaje. Base en Londres con day trips a Stonehenge, Windsor, Castle Combe y Oxford. Itinerario detallado por definir.",
+    days: [],
+  },
+  {
     id: "irlanda",
     name: "Irlanda",
     flag: "☘",
-    subtitle: "10 días · Ruta circular con coche",
+    subtitle: "Segunda etapa · 10 días con coche",
     description:
-      "Comenzando y terminando en Dublín, este loop recorre el oeste salvaje, el norte celta y la costa este. Coche rentado del día 3 al día 10.",
+      "Llegada desde Londres (vuelo Ryanair o ferry vía Holyhead). Loop circular desde Dublín por el oeste salvaje, el norte celta y la costa este. Coche rentado del día 8 al día 15.",
     days: [
       {
-        number: 1,
+        number: 6,
         title: "Llegada a Dublín",
         narrative:
-          "Aterrizaje y aclimatación. Caminata por Temple Bar y el río Liffey. Noche tranquila para arrancar fuerte mañana.",
+          "Llegada desde Londres y aclimatación. Caminata por Temple Bar y el río Liffey. Noche tranquila para arrancar fuerte mañana.",
         sleep: "Dublín centro",
         locations: [
           {
@@ -45,7 +54,7 @@ export const trip: Country[] = [
             lat: 53.4264,
             lng: -6.2499,
             time: "3:00 PM",
-            notes: "Aircoach o taxi al centro (~30 min).",
+            notes: "Vuelo de Londres llega a DUB. Aircoach o taxi al centro (~30 min).",
           },
           {
             name: "Temple Bar District",
@@ -58,7 +67,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 2,
+        number: 7,
         title: "Dublín a fondo",
         narrative:
           "Día completo en la capital a pie. Cultura, historia y la mejor experiencia de fish & chips.",
@@ -99,7 +108,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 3,
+        number: 8,
         title: "Wicklow: cascada, lago y monasterio",
         narrative:
           "Day trip al sur de Dublín con el coche recién rentado. Powerscourt, Avoca, Lough Tay y Glendalough.",
@@ -147,7 +156,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 4,
+        number: 9,
         title: "Dublín → Galway vía Connemara",
         narrative:
           "Cruzas Irlanda de este a oeste. Connemara es el highlight visual del día.",
@@ -186,7 +195,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 5,
+        number: 10,
         title: "Cliffs of Moher + The Burren + Ennis",
         narrative:
           "Loop sur desde Galway. Cliffs of Moher temprano para evitar tour buses.",
@@ -234,7 +243,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 6,
+        number: 11,
         title: "Galway → Sligo (Gleniff Horseshoe)",
         narrative:
           "Subida hacia el noroeste. Gleniff Horseshoe es una joya poco turística.",
@@ -267,7 +276,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 7,
+        number: 12,
         title: "Sligo → Costa de Antrim (UK)",
         narrative:
           "Cruzas a Irlanda del Norte (UK). Cambias de euros a libras. Día largo pero la Causeway Coast es el highlight del norte.",
@@ -300,7 +309,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 8,
+        number: 13,
         title: "Dark Hedges + Belfast",
         narrative:
           "Mañana fotogénica, tarde de historia en Belfast con Titanic y Black Cab Tour.",
@@ -341,7 +350,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 9,
+        number: 14,
         title: "Belfast → Dublín (costa este)",
         narrative:
           "Regreso a Dublín por la costa este con parada cultural en Newgrange.",
@@ -373,7 +382,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 10,
+        number: 15,
         title: "Dublín → Edimburgo (vuelo)",
         narrative:
           "Día final. Devuelves el coche en el aeropuerto y vuelas a Escocia (~1h con Aer Lingus o Ryanair).",
@@ -401,18 +410,9 @@ export const trip: Country[] = [
     id: "escocia",
     name: "Escocia",
     flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-    subtitle: "Por planear · Transporte público",
+    subtitle: "Última etapa · 6 días · Vuelo de regreso desde Edimburgo",
     description:
-      "Llegada vía Edimburgo. Itinerario por definir. Tren entre ciudades principales, tours organizados para Highlands remotas.",
-    days: [],
-  },
-  {
-    id: "inglaterra",
-    name: "Inglaterra",
-    flag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-    subtitle: "5-6 días · Base en Londres",
-    description:
-      "Base en Londres con day trips a Stonehenge, Windsor, Castle Combe y Oxford. Itinerario detallado por definir.",
+      "Llegada vía Edimburgo desde Dublín. Itinerario por definir. Tren entre ciudades principales, tours organizados para Highlands remotas. Vuelo de regreso a CDMX desde Edimburgo.",
     days: [],
   },
 ];
