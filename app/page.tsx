@@ -2,6 +2,8 @@ import { trip } from "./data/trip";
 import DayCard from "./components/DayCard";
 import ThemeToggle from "./components/ThemeToggle";
 import ScrollToTop from "./components/ScrollToTop";
+import ExportMenu from "./components/ExportMenu";
+import BudgetSection, { GrandTotalBanner } from "./components/BudgetSection";
 
 export default function Home() {
   const totalDays = trip.reduce((sum, c) => sum + c.days.length, 0);
@@ -51,6 +53,8 @@ export default function Home() {
         </div>
       </section>
 
+      <GrandTotalBanner />
+
       <nav className="country-nav">
         {trip.map((c) => (
           <a key={c.id} href={`#${c.id}`} className="country-pill">
@@ -80,6 +84,8 @@ export default function Home() {
               ))}
             </div>
           )}
+
+          <BudgetSection countryId={country.id} />
         </section>
       ))}
 
@@ -87,6 +93,7 @@ export default function Home() {
         <p className="footer-text">Buen viaje. ✦</p>
       </footer>
 
+      <ExportMenu />
       <ScrollToTop />
     </>
   );
