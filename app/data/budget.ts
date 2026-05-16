@@ -1,6 +1,6 @@
-// Presupuesto para 2 personas, nivel cómodo, salida desde México, mitades de mayo 2026
+// Presupuesto para 2 personas, nivel cómodo, salida desde México, mitades de mayo 2027
 // Hoteles nivel 3-3.5 estrellas. Temporada baja-media (mayo), antes del pico de verano.
-// Tipos de cambio base (mayo 2026): 1 USD ≈ 17.20 MXN, 1 EUR ≈ 18.70 MXN, 1 GBP ≈ 21.80 MXN
+// Tipos de cambio base (mayo 2027 aproximados): 1 USD ≈ 17.20 MXN, 1 EUR ≈ 18.70 MXN, 1 GBP ≈ 21.80 MXN
 // Todos los montos están en USD para fácil conversión.
 
 export type BookingStatus = "pendiente" | "reservado" | "pagado";

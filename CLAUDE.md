@@ -4,7 +4,7 @@
 
 ## Qué es esto
 
-Página web personal de itinerario de viaje de 3 semanas por Irlanda, Escocia e Inglaterra (mayo–septiembre 2026). El owner (Diego) es el único usuario real; el sitio es semi-público en Vercel para compartir con familia y compañeros de viaje.
+Página web personal de itinerario de viaje de ~3 semanas (22 días) por Inglaterra, Irlanda y Escocia (mitades de mayo 2027, salida 17 may). El owner (Diego) es el único usuario real; el sitio es semi-público en Vercel para compartir con familia y compañeros de viaje.
 
 URL en producción: `https://viajes-eight.vercel.app/`
 
@@ -66,27 +66,32 @@ Estas variables tienen overrides en `[data-theme="dark"]`. Si añades colores nu
 
 ## Datos del viaje (estado actual)
 
-### Irlanda (completo - 10 días)
-- Días 1-10: Dublín → Galway → Cliffs of Moher → Sligo → Belfast → vuelo a Edimburgo
-- Coche rentado del día 3 al día 10
+**Orden del viaje:** Inglaterra (días 1-5) → Irlanda (días 6-15) → Escocia (días 16-22). Día 1 = 17 may 2027, día 22 = 7 jun 2027.
+
+### Inglaterra (pendiente - 5 días)
+- Días 1-5: Base en Londres
+- Sección creada pero `days: []`
+- Lista de lugares confirmada por owner: London Eye, Westminster Abbey, Buckingham Palace, Big Ben, Tower of London, British Museum, Royal Botanic Gardens, Covent Garden, Warner Bros. Studio, Oxford Street, Piccadilly, Stonehenge, Castle Combe, Wiltshire, Windsor Castle, Tower Bridge, St James's Park, St Paul's Cathedral, Natural History Museum, Sherlock Holmes Pub, Painted Hall, Queen's House, Waterlily House (Kew), The National Gallery, Brick Lane Vintage Market, Barbican Conservatory, Tate Modern, 30 St Mary Axe, Bath, Cotswolds, Seven Sisters
+- Transporte: Oyster card en Londres + trenes para day trips
+- Transición a Irlanda: vuelo Londres → Dublín (Ryanair/EasyJet, ~$140 los 2) o ferry vía Holyhead
+
+### Irlanda (completo - 10 días, días 6-15)
+- Días 6-15: Dublín → Galway → Cliffs of Moher → Sligo → Belfast → vuelo a Edimburgo
+- Coche rentado del día 8 al día 15 (8 días)
 - Todos los datos en `app/data/trip.ts` con coordenadas reales y notas
 
-### Escocia (pendiente)
-- Sección creada pero `days: []`
-- Owner llegará vía vuelo desde Dublín, planea usar transporte público
-- 6-7 días estimados, base en Edimburgo
-- Lugares de interés mencionados: Edimburgo, Highlands, Isla de Skye, Loch Ness
-
-### Inglaterra (pendiente)
-- Sección creada pero `days: []`
-- 5-6 días estimados, base en Londres
-- Lista de lugares del owner: London Eye, Westminster Abbey, Buckingham Palace, Big Ben, Tower of London, British Museum, Royal Botanic Gardens, Covent Garden, Warner Bros. Studio, Oxford Street, Piccadilly, Stonehenge, Castle Combe, Wiltshire, Windsor Castle
+### Escocia (completo - 7 días, días 16-22)
+- Días 16-22: Edimburgo → Glencoe → Fort William → Skye → Loch Ness → Edimburgo → vuelo CDMX
+- Coche rentado del día 18 al día 21 (4 días)
+- Lugares principales: Royal Mile, Holyroodhouse, Duddingston cluster, Craigmillar Castle, Glencoe, Glenfinnan Viaduct, Eilean Donan, Isle of Skye (Old Man of Storr, Fairy Glen), Plodda Falls, Loch Ness, Inverness
+- Día 22 = solo vuelo de regreso desde EDI
+- Coordenadas aproximadas para Islander Workshop y Lounge 33 — verificar dirección exacta antes del viaje
 
 ## Presupuesto (estado actual)
 
 Configurado para **2 personas, nivel cómodo, salida desde México**. Todos los montos están en USD en `budget.ts` y se convierten dinámicamente con `exchangeRates`. Soporta MXN, USD, EUR, GBP.
 
-Tipos de cambio al 13 de mayo 2026 (aproximados, actualizar si pasa mucho tiempo):
+Tipos de cambio estimados para mayo 2027 (actualizar antes de reservar si pasa mucho tiempo):
 - 1 USD ≈ 17.20 MXN
 - 1 USD ≈ 0.91 EUR
 - 1 USD ≈ 0.78 GBP
