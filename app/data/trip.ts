@@ -1,8 +1,8 @@
 // Fecha de inicio del viaje (día 1 global). Cambia esto si la fecha del viaje cambia.
-export const tripStartDate = new Date("2027-05-17T00:00:00");
+export const tripStartDate = new Date("2027-05-15T00:00:00");
 
-// Total de días planeados del viaje completo (~3 semanas).
-export const totalTripDays = 22;
+// Total de días planeados del viaje completo (~3.5 semanas).
+export const totalTripDays = 23;
 
 export type Location = {
   name: string;
@@ -35,10 +35,364 @@ export const trip: Country[] = [
     id: "inglaterra",
     name: "Inglaterra",
     flag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-    subtitle: "Primera etapa · 5 días en Londres",
+    subtitle: "Primera etapa · 6 días en Londres",
     description:
-      "Punto de entrada al viaje. Base en Londres con day trips a Stonehenge, Windsor, Castle Combe y Oxford. Itinerario detallado por definir.",
-    days: [],
+      "Base en Londres centro con transporte público (Oyster/Travelcard). Day trip a Wiltshire (Stonehenge + Bath + Castle Combe). Día 7 = transición Windsor + Kew + vuelo a Dublín.",
+    days: [
+      {
+        number: 1,
+        title: "Llegada a Londres + Soho evening",
+        narrative:
+          "Llegada desde CDMX (vuelo ~13h). Tarde-noche light: drop maletas, caminata por Piccadilly Circus y Covent Garden, cena casual cerca del hotel.",
+        sleep: "Londres central (Bloomsbury / Bayswater / King's Cross)",
+        locations: [
+          {
+            name: "Heathrow Airport (LHR)",
+            lat: 51.47,
+            lng: -0.4543,
+            time: "5:00 PM",
+            notes: "Llegada desde CDMX. Heathrow Express a Paddington (15 min, £25/persona) o tube Piccadilly line al centro (1h, £6 con Oyster). Recoger Oyster Card / 7-Day Travelcard zonas 1-6 en máquinas del aeropuerto.",
+          },
+          {
+            name: "Hotel central (Bayswater/Bloomsbury/King's Cross)",
+            lat: 51.5305,
+            lng: -0.124,
+            time: "6:30 PM",
+            notes: "Drop maletas. Hoteles 3-3.5★ recomendados en zonas con tube zona 1-2 (Premier Inn Hub, Travelodge Plus, Hilton Garden Inn, ibis Styles).",
+          },
+          {
+            name: "Piccadilly Circus",
+            lat: 51.5099,
+            lng: -0.1342,
+            time: "7:30 PM",
+            duration: "30 min",
+            notes: "Plaza icónica con pantallas LED y estatua de Eros. Foto rápida + caminata. Oxford Street comienza a 5 min al norte.",
+          },
+          {
+            name: "Covent Garden",
+            lat: 51.5117,
+            lng: -0.124,
+            time: "8:00 PM",
+            duration: "2h",
+            notes: "Mercado victoriano cubierto, artistas callejeros, pubs y restaurantes. Cena casual (The Ivy Market Grill, Dishoom, Flat Iron).",
+          },
+        ],
+      },
+      {
+        number: 2,
+        title: "Domingo: Brick Lane + Barbican + British Museum + Sky Garden",
+        narrative:
+          "Día dominical aprovechando lugares solo abiertos en domingo (Brick Lane Vintage Market + Barbican Conservatory gratis), museo icónico y sunset desde el rascacielos Walkie Talkie.",
+        sleep: "Londres central",
+        locations: [
+          {
+            name: "Barbican Conservatory",
+            lat: 51.5202,
+            lng: -0.0937,
+            time: "10:00 AM",
+            duration: "1h",
+            notes: "Segundo jardín tropical más grande de Londres. SOLO ABRE DOMINGOS + festivos. GRATIS. Verificar horario en barbican.org.uk.",
+          },
+          {
+            name: "Brick Lane Vintage Market + curry lunch",
+            lat: 51.523,
+            lng: -0.0712,
+            time: "12:00 PM",
+            duration: "3h",
+            notes: "Mejor día del mercado vintage (domingo 10-6). Caminata por Shoreditch, street art (incl. Banksy). Lunch en curry house (Aladin, Brick Lane Brasserie).",
+          },
+          {
+            name: "British Museum",
+            lat: 51.5194,
+            lng: -0.127,
+            time: "3:30 PM",
+            duration: "1.5h",
+            notes: "Rosetta Stone, Parthenon Marbles, Egyptian mummies. GRATIS. Cierra 5 PM dom. Entrada por Great Russell Street.",
+          },
+          {
+            name: "Sky Garden",
+            lat: 51.5111,
+            lng: -0.0838,
+            time: "8:00 PM",
+            duration: "1.5h",
+            notes: "Sunset desde el piso 35 del Walkie Talkie. GRATIS pero RESERVAR online 3 semanas antes en skygarden.london. Sunset mayo ~8:50 PM. Alternativa al London Eye (£35).",
+          },
+        ],
+      },
+      {
+        number: 3,
+        title: "Westminster + West End",
+        narrative:
+          "Día de iconos políticos y reales: Abadía, Big Ben, Buckingham con Cambio de Guardia, parques reales, National Gallery y cena en Sherlock Holmes Pub.",
+        sleep: "Londres central",
+        locations: [
+          {
+            name: "Westminster Abbey",
+            lat: 51.4994,
+            lng: -0.1274,
+            time: "9:30 AM",
+            duration: "1.5h",
+            notes: "Iglesia gótica donde se coronan los monarcas. Reservar entrada online (£29/persona). Foto rápida de Big Ben de paso al salir.",
+          },
+          {
+            name: "Buckingham Palace + Changing of the Guard",
+            lat: 51.5014,
+            lng: -0.1419,
+            time: "11:00 AM",
+            duration: "1h",
+            notes: "Cambio de Guardia lun/mié/vie/dom 11:00 AM (verificar en royal.uk). Llegar 10:30 para buen lugar. Solo exterior (State Rooms abren julio-octubre).",
+          },
+          {
+            name: "St James's Park + The Mall",
+            lat: 51.5024,
+            lng: -0.1336,
+            time: "12:00 PM",
+            duration: "1h",
+            notes: "Parque real con pelícanos. Caminata al noreste por The Mall hacia Trafalgar.",
+          },
+          {
+            name: "Lunch en pub local",
+            lat: 51.5074,
+            lng: -0.1336,
+            time: "1:00 PM",
+            duration: "1h",
+            notes: "The Albert (Victoria) o The Lord Moon of the Mall. Fish & chips, pie, ales.",
+          },
+          {
+            name: "The National Gallery",
+            lat: 51.5089,
+            lng: -0.1283,
+            time: "2:30 PM",
+            duration: "2h",
+            notes: "Trafalgar Square. Van Gogh Sunflowers, Da Vinci, Monet, Turner. GRATIS.",
+          },
+          {
+            name: "Trafalgar Square",
+            lat: 51.5081,
+            lng: -0.1281,
+            time: "4:30 PM",
+            duration: "30 min",
+            notes: "Nelson's Column, leones de Landseer. Caminata hacia Piccadilly y Oxford Street de paso.",
+          },
+          {
+            name: "Sherlock Holmes Pub",
+            lat: 51.5077,
+            lng: -0.1242,
+            time: "6:30 PM",
+            duration: "2h",
+            notes: "10 Northumberland Street. Pub temático con réplica de 221B Baker Street arriba. Cena fish & chips, ales.",
+          },
+          {
+            name: "Teatro West End (opcional)",
+            lat: 51.512,
+            lng: -0.1335,
+            time: "8:30 PM",
+            duration: "2.5h",
+            notes: "Mamma Mia, Les Misérables, Phantom, Wicked. TKTS Leicester Square día del show (£30-50/persona).",
+          },
+        ],
+      },
+      {
+        number: 4,
+        title: "Day Trip · Stonehenge + Bath + Castle Combe",
+        narrative:
+          "Day trip clásico inglés: círculo prehistórico de Stonehenge, Bath georgiana con sus Roman Baths, y el pueblo perfecto de Castle Combe. Tour organizado de 10-12h.",
+        sleep: "Londres central",
+        locations: [
+          {
+            name: "Punto de salida del tour",
+            lat: 51.5305,
+            lng: -0.124,
+            time: "8:00 AM",
+            notes: "Tour recoge en hotel central o Victoria Coach Station. Operadores: Golden Tours, Premium Tours, Evan Evans (~$110/persona).",
+          },
+          {
+            name: "Stonehenge",
+            lat: 51.1789,
+            lng: -1.8262,
+            time: "10:30 AM",
+            duration: "1.5h",
+            notes: "Círculo prehistórico (2500 AC). Audio-guide incluido. No se tocan las piedras.",
+          },
+          {
+            name: "Bath · Roman Baths + Royal Crescent",
+            lat: 51.3811,
+            lng: -2.359,
+            time: "12:30 PM",
+            duration: "3h",
+            notes: "Baños romanos del s.I + arquitectura georgiana. Lunch en Sally Lunn's o Pulteney Bridge area. Caminata Royal Crescent.",
+          },
+          {
+            name: "Castle Combe",
+            lat: 51.492,
+            lng: -2.2275,
+            time: "4:30 PM",
+            duration: "45 min",
+            notes: "Pueblo medieval considerado de los más bonitos de Inglaterra. Casas de piedra honey-colored. Solo caminar la calle principal.",
+          },
+          {
+            name: "Regreso a Londres",
+            lat: 51.5305,
+            lng: -0.124,
+            time: "8:00 PM",
+            notes: "Drop-off en punto céntrico. Cena casual cerca del hotel.",
+          },
+        ],
+      },
+      {
+        number: 5,
+        title: "City + South Bank (Tower, St Paul's, Tate Modern)",
+        narrative:
+          "Día denso por la City histórica y la ribera sur del Támesis. Tower of London, catedral, museos gratuitos y caminata por el Thames con dinner en Borough.",
+        sleep: "Londres central",
+        locations: [
+          {
+            name: "Tower of London",
+            lat: 51.5081,
+            lng: -0.0759,
+            time: "9:00 AM",
+            duration: "2.5h",
+            notes: "Fortaleza del s.XI. Joyas de la Corona, White Tower, Beefeater tour. £35/persona. Reservar online. Tube: Tower Hill.",
+          },
+          {
+            name: "Tower Bridge",
+            lat: 51.5055,
+            lng: -0.0754,
+            time: "11:30 AM",
+            duration: "30 min",
+            notes: "Cruzar caminando. Vista al HMS Belfast y The Shard. Opcional pagar entrada al puente (£12).",
+          },
+          {
+            name: "Leadenhall Market + Gherkin foto",
+            lat: 51.5125,
+            lng: -0.0832,
+            time: "12:30 PM",
+            duration: "1h",
+            notes: "Mercado victoriano cubierto (Diagon Alley exterior en Harry Potter). Lunch en pub interior. 30 St Mary Axe (Gherkin) a 2 min caminando para foto.",
+          },
+          {
+            name: "St Paul's Cathedral",
+            lat: 51.5138,
+            lng: -0.0984,
+            time: "1:45 PM",
+            duration: "1.5h",
+            notes: "Catedral de Christopher Wren. Subir a Whispering Gallery + Stone Gallery + Golden Gallery (528 escalones, vista panorámica). £21/persona.",
+          },
+          {
+            name: "Reflection Garden (25 Cannon St)",
+            lat: 51.5118,
+            lng: -0.0916,
+            time: "3:15 PM",
+            duration: "15 min",
+            notes: "25 Cannon Street EC4M 9AF. Jardín de bolsillo cerca de St Paul's. Verificar ubicación exacta al llegar.",
+          },
+          {
+            name: "Sir John Soane's Museum",
+            lat: 51.517,
+            lng: -0.1175,
+            time: "3:45 PM",
+            duration: "1h",
+            notes: "55-56 Lincoln's Inn Fields. Casa-museo del arquitecto del s.XIX, colección excéntrica. GRATIS. Cierra 5 PM. Llegar antes de 4:15 PM.",
+          },
+          {
+            name: "Tate Modern",
+            lat: 51.5076,
+            lng: -0.0994,
+            time: "5:00 PM",
+            duration: "1h",
+            notes: "Cruzar Millennium Bridge desde St Paul's. Arte moderno. GRATIS. Cierra 6 PM Sun-Thu, 10 PM Fri-Sat. Solo highlights por tiempo.",
+          },
+          {
+            name: "Shakespeare's Globe",
+            lat: 51.5081,
+            lng: -0.0972,
+            time: "6:15 PM",
+            duration: "15 min",
+            notes: "Réplica del teatro original isabelino, al lado de Tate Modern. Exterior gratis. Tours guiados £22 (verificar si quedan).",
+          },
+          {
+            name: "Borough Market area (cena)",
+            lat: 51.5055,
+            lng: -0.0911,
+            time: "6:45 PM",
+            duration: "2h",
+            notes: "Mercado típicamente cierra 5 PM lun-jue. Restaurantes cerca abren toda la noche: Padella (pasta), El Pastor (tacos), Roast.",
+          },
+        ],
+      },
+      {
+        number: 6,
+        title: "Greenwich + Hampstead",
+        narrative:
+          "Día de neighborhoods alejados del centro. Greenwich con su Painted Hall y Royal Observatory, luego Hampstead con su pergola escondida y village pintoresco.",
+        sleep: "Londres central",
+        locations: [
+          {
+            name: "Painted Hall (Greenwich)",
+            lat: 51.4838,
+            lng: -0.0067,
+            time: "10:00 AM",
+            duration: "1h",
+            notes: "College Way SE10 9NN. Antiguo refectorio del Old Royal Naval College con techos pintados por Sir James Thornhill (la 'Sistine Chapel de Inglaterra'). £15/persona. DLR Cutty Sark.",
+          },
+          {
+            name: "Queen's House (Greenwich)",
+            lat: 51.4811,
+            lng: 0.0005,
+            time: "11:15 AM",
+            duration: "1h",
+            notes: "Romney Road SE10 9NF. Casa palladiana real, primera de su estilo en Inglaterra. GRATIS. Colección de arte marítimo.",
+          },
+          {
+            name: "Royal Observatory + Prime Meridian",
+            lat: 51.4779,
+            lng: -0.0015,
+            time: "12:30 PM",
+            duration: "1h",
+            notes: "Pararte en el meridiano de Greenwich (línea 0 de longitud). £18/persona. Vista panorámica de Londres desde Greenwich Park.",
+          },
+          {
+            name: "Lunch en Greenwich Market",
+            lat: 51.4814,
+            lng: -0.0086,
+            time: "1:30 PM",
+            duration: "1h",
+            notes: "Mercado con stalls de comida internacional + artesanías.",
+          },
+          {
+            name: "Tube a Hampstead",
+            lat: 51.5557,
+            lng: -0.1781,
+            time: "3:00 PM",
+            notes: "DLR Cutty Sark → Bank → Northern line a Hampstead (~1h transit total).",
+          },
+          {
+            name: "The Hill Garden and Pergola",
+            lat: 51.5635,
+            lng: -0.1827,
+            time: "3:30 PM",
+            duration: "1h",
+            notes: "Pergola eduardiana cubierta de glicinias (mayo es perfecto). GRATIS. North End Way, Hampstead Heath. Foto icónica.",
+          },
+          {
+            name: "Holly Village",
+            lat: 51.5705,
+            lng: -0.1453,
+            time: "4:45 PM",
+            duration: "30 min",
+            notes: "Swains Lane, Highgate. Casas neogóticas victorianas, foto rápida. Privadas, solo caminar afuera respetando residentes.",
+          },
+          {
+            name: "Pub en Hampstead",
+            lat: 51.5557,
+            lng: -0.1781,
+            time: "6:00 PM",
+            duration: "1.5h",
+            notes: "The Holly Bush o The Spaniards Inn (histórico, mencionado por Dickens). Cena pub.",
+          },
+        ],
+      },
+    ],
   },
   {
     id: "irlanda",
@@ -46,34 +400,56 @@ export const trip: Country[] = [
     flag: "☘",
     subtitle: "Segunda etapa · 10 días con coche",
     description:
-      "Llegada desde Londres (vuelo Ryanair o ferry vía Holyhead). Loop circular desde Dublín por el oeste salvaje, el norte celta y la costa este. Coche rentado del día 8 al día 15.",
+      "Día 7 transición (Windsor + Kew + vuelo Londres → Dublín). Loop circular desde Dublín por el oeste salvaje, el norte celta y la costa este. Coche rentado del día 9 al día 16.",
     days: [
       {
-        number: 6,
-        title: "Llegada a Dublín",
+        number: 7,
+        title: "Windsor + Kew + vuelo a Dublín",
         narrative:
-          "Llegada desde Londres y aclimatación. Caminata por Temple Bar y el río Liffey. Noche tranquila para arrancar fuerte mañana.",
+          "Día de transición: mañana Windsor Castle, tarde Kew Gardens, vuelo nocturno a Dublín. Llegada tarde, dormir.",
         sleep: "Dublín centro",
         locations: [
           {
-            name: "Dublin Airport",
-            lat: 53.4264,
-            lng: -6.2499,
-            time: "3:00 PM",
-            notes: "Vuelo de Londres llega a DUB. Aircoach o taxi al centro (~30 min).",
+            name: "Checkout hotel Londres",
+            lat: 51.5305,
+            lng: -0.124,
+            time: "7:30 AM",
+            notes: "Checkout temprano, dejar maletas en consigna del hotel para recoger después de Kew.",
           },
           {
-            name: "Temple Bar District",
-            lat: 53.3454742,
-            lng: -6.2641937,
-            time: "7:00 PM",
+            name: "Windsor Castle",
+            lat: 51.4839,
+            lng: -0.6044,
+            time: "9:00 AM",
             duration: "3h",
-            notes: "Cena en pubs como The Brazen Head o The Old Storehouse.",
+            notes: "Tren Paddington → Windsor & Eton Central, 38 min. Residencia oficial de la realeza. State Apartments + St George's Chapel. £30/persona. Reservar online.",
+          },
+          {
+            name: "Kew Gardens + Waterlily House",
+            lat: 51.4787,
+            lng: -0.2956,
+            time: "2:00 PM",
+            duration: "3h",
+            notes: "Tren Windsor → Slough → Paddington → Tube District line a Kew Gardens. Palm House, Temperate House, Waterlily House. £22/persona.",
+          },
+          {
+            name: "Heathrow Airport (LHR)",
+            lat: 51.47,
+            lng: -0.4543,
+            time: "6:30 PM",
+            notes: "Heathrow Express desde Paddington (15 min). Check-in 7 PM para vuelo Ryanair/Aer Lingus 9 PM. Recoger maletas del hotel antes.",
+          },
+          {
+            name: "Dublin Airport (DUB)",
+            lat: 53.4264,
+            lng: -6.2499,
+            time: "10:00 PM",
+            notes: "Llegada nocturna. Aircoach o taxi al centro de Dublín (~30 min). Cena rápida y dormir.",
           },
         ],
       },
       {
-        number: 7,
+        number: 8,
         title: "Dublín a fondo",
         narrative:
           "Día completo en la capital a pie. Cultura, historia y la mejor experiencia de fish & chips.",
@@ -111,10 +487,18 @@ export const trip: Country[] = [
             duration: "2h",
             notes: "Opcional. Tour + Gravity Bar al atardecer.",
           },
+          {
+            name: "Temple Bar District",
+            lat: 53.3454742,
+            lng: -6.2641937,
+            time: "8:30 PM",
+            duration: "2h",
+            notes: "Cena y pubs con música tradicional irlandesa: The Brazen Head (más antiguo, 1198), The Old Storehouse, The Temple Bar Pub.",
+          },
         ],
       },
       {
-        number: 8,
+        number: 9,
         title: "Wicklow: cascada, lago y monasterio",
         narrative:
           "Day trip al sur de Dublín con el coche recién rentado. Powerscourt, Avoca, Lough Tay y Glendalough.",
@@ -162,7 +546,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 9,
+        number: 10,
         title: "Dublín → Galway vía Connemara",
         narrative:
           "Cruzas Irlanda de este a oeste. Connemara es el highlight visual del día.",
@@ -201,7 +585,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 10,
+        number: 11,
         title: "Cliffs of Moher + The Burren + Ennis",
         narrative:
           "Loop sur desde Galway. Cliffs of Moher temprano para evitar tour buses.",
@@ -249,7 +633,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 11,
+        number: 12,
         title: "Galway → Sligo (Gleniff Horseshoe)",
         narrative:
           "Subida hacia el noroeste. Gleniff Horseshoe es una joya poco turística.",
@@ -282,7 +666,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 12,
+        number: 13,
         title: "Sligo → Costa de Antrim (UK)",
         narrative:
           "Cruzas a Irlanda del Norte (UK). Cambias de euros a libras. Día largo pero la Causeway Coast es el highlight del norte.",
@@ -315,7 +699,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 13,
+        number: 14,
         title: "Dark Hedges + Belfast",
         narrative:
           "Mañana fotogénica, tarde de historia en Belfast con Titanic y Black Cab Tour.",
@@ -356,7 +740,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 14,
+        number: 15,
         title: "Belfast → Dublín (costa este)",
         narrative:
           "Regreso a Dublín por la costa este con parada cultural en Newgrange.",
@@ -388,7 +772,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 15,
+        number: 16,
         title: "Dublín → Edimburgo (vuelo)",
         narrative:
           "Día final. Devuelves el coche en el aeropuerto y vuelas a Escocia (~1h con Aer Lingus o Ryanair).",
@@ -421,7 +805,7 @@ export const trip: Country[] = [
       "Base en Edimburgo (4 noches Old Town + 1 cerca aeropuerto), loop por West Highlands (Glencoe, Fort William), Isle of Skye (Portree) y regreso por Loch Ness. Vuelo de regreso a CDMX desde Edimburgo el día 22.",
     days: [
       {
-        number: 16,
+        number: 17,
         title: "Llegada a Edimburgo + Royal Mile",
         narrative:
           "Llegada desde Dublín por la mañana. Caminata por el Royal Mile con vistas al castillo, cena legendaria en The Witchery y nightcap en cocktail bar.",
@@ -485,7 +869,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 17,
+        number: 18,
         title: "Edimburgo a fondo + pub crawl",
         narrative:
           "Día completo de museos, palacios y pubs históricos. Por la noche, crawl temático por los dos pubs más icónicos de la ciudad.",
@@ -542,7 +926,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 18,
+        number: 19,
         title: "Duddingston + Craigmillar Castle",
         narrative:
           "Día relajado en las afueras. Recoger coche rentado, visitar el cluster de Duddingston (jardín secreto + pub más antiguo de Escocia) y Craigmillar Castle.",
@@ -589,7 +973,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 19,
+        number: 20,
         title: "Edimburgo → Glencoe → Fort William",
         narrative:
           "Primera ruta al oeste por las Highlands. Glencoe valley es el primer wow de paisaje escocés, con sus Three Sisters dramáticas.",
@@ -628,7 +1012,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 20,
+        number: 21,
         title: "Glenfinnan + Eilean Donan + Skye",
         narrative:
           "Día épico: viaducto del Hogwarts Express, castillo más fotografiado de Escocia, llegada a Skye con atardecer en Old Man of Storr.",
@@ -684,7 +1068,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 21,
+        number: 22,
         title: "Skye → Plodda Falls → Loch Ness → Edimburgo",
         narrative:
           "Día largo de regreso al sur. Plodda Falls escondida en Glen Affric, caza de Nessie en Loch Ness, pasada por Inverness y vuelta a la capital.",
@@ -731,7 +1115,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 22,
+        number: 23,
         title: "Vuelo de regreso a CDMX",
         narrative:
           "Día de transición. Vuelo desde Edimburgo (EDI) a Ciudad de México, con probable layover en Amsterdam (KLM), Londres (BA) o Paris (Air France).",

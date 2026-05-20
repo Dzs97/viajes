@@ -4,7 +4,7 @@
 
 ## Qué es esto
 
-Página web personal de itinerario de viaje de ~3 semanas (22 días) por Inglaterra, Irlanda y Escocia (mitades de mayo 2027, salida 17 may). El owner (Diego) es el único usuario real; el sitio es semi-público en Vercel para compartir con familia y compañeros de viaje.
+Página web personal de itinerario de viaje de ~3.5 semanas (23 días) por Inglaterra, Irlanda y Escocia (mitades de mayo 2027, salida sáb 15 may). El owner (Diego) es el único usuario real; el sitio es semi-público en Vercel para compartir con familia y compañeros de viaje.
 
 URL en producción: `https://viajes-eight.vercel.app/`
 
@@ -66,26 +66,29 @@ Estas variables tienen overrides en `[data-theme="dark"]`. Si añades colores nu
 
 ## Datos del viaje (estado actual)
 
-**Orden del viaje:** Inglaterra (días 1-5) → Irlanda (días 6-15) → Escocia (días 16-22). Día 1 = 17 may 2027, día 22 = 7 jun 2027.
+**Orden del viaje:** Inglaterra (días 1-6) → Irlanda (días 7-16) → Escocia (días 17-23). Día 1 = sáb 15 may 2027, día 23 = dom 6 jun 2027.
 
-### Inglaterra (pendiente - 5 días)
-- Días 1-5: Base en Londres
-- Sección creada pero `days: []`
-- Lista de lugares confirmada por owner: London Eye, Westminster Abbey, Buckingham Palace, Big Ben, Tower of London, British Museum, Royal Botanic Gardens, Covent Garden, Warner Bros. Studio, Oxford Street, Piccadilly, Stonehenge, Castle Combe, Wiltshire, Windsor Castle, Tower Bridge, St James's Park, St Paul's Cathedral, Natural History Museum, Sherlock Holmes Pub, Painted Hall, Queen's House, Waterlily House (Kew), The National Gallery, Brick Lane Vintage Market, Barbican Conservatory, Tate Modern, 30 St Mary Axe, Bath, Cotswolds, Seven Sisters
-- Transporte: Oyster card en Londres + trenes para day trips
-- Transición a Irlanda: vuelo Londres → Dublín (Ryanair/EasyJet, ~$140 los 2) o ferry vía Holyhead
+### Inglaterra (completo - 6 días, días 1-6)
+- Día 1 sáb 15 may: Llegada + Piccadilly + Covent Garden evening
+- Día 2 dom 16 may: SUNDAY CLUSTER (Barbican Conservatory + Brick Lane Vintage Market + British Museum + Sky Garden sunset)
+- Día 3 lun 17 may: Westminster + West End (Abbey, Buckingham, National Gallery, Sherlock Holmes Pub, opcional teatro)
+- Día 4 mar 18 may: DAY TRIP Wiltshire (Stonehenge + Bath + Castle Combe, tour organizado)
+- Día 5 mié 19 may: City + South Bank (Tower, St Paul's, Soane's Museum, Reflection Garden, Leadenhall, Tate Modern, Shakespeare's Globe, Borough Market)
+- Día 6 jue 20 may: Greenwich (Painted Hall + Queen's House + Royal Observatory) + Hampstead (Hill Garden Pergola + Holly Village)
+- Transporte: 7-Day Travelcard zonas 1-6 todo Londres. No coche.
 
-### Irlanda (completo - 10 días, días 6-15)
-- Días 6-15: Dublín → Galway → Cliffs of Moher → Sligo → Belfast → vuelo a Edimburgo
-- Coche rentado del día 8 al día 15 (8 días)
+### Irlanda (completo - 10 días, días 7-16)
+- Día 7 vie 21 may: TRANSICIÓN — Mañana Windsor Castle + Tarde Kew Gardens + vuelo nocturno LHR→DUB
+- Días 8-16: Dublín → Galway → Cliffs of Moher → Sligo → Belfast → vuelo a Edimburgo
+- Coche rentado del día 9 al día 16 (8 días)
 - Todos los datos en `app/data/trip.ts` con coordenadas reales y notas
 
-### Escocia (completo - 7 días, días 16-22)
-- Días 16-22: Edimburgo → Glencoe → Fort William → Skye → Loch Ness → Edimburgo → vuelo CDMX
-- Coche rentado del día 18 al día 21 (4 días)
+### Escocia (completo - 7 días, días 17-23)
+- Días 17-23: Edimburgo → Glencoe → Fort William → Skye → Loch Ness → Edimburgo → vuelo CDMX
+- Coche rentado del día 19 al día 22 (4 días)
 - Lugares principales: Royal Mile, Holyroodhouse, Duddingston cluster, Craigmillar Castle, Glencoe, Glenfinnan Viaduct, Eilean Donan, Isle of Skye (Old Man of Storr, Fairy Glen), Plodda Falls, Loch Ness, Inverness
-- Día 22 = solo vuelo de regreso desde EDI
-- Coordenadas aproximadas para Islander Workshop y Lounge 33 — verificar dirección exacta antes del viaje
+- Día 23 = solo vuelo de regreso desde EDI
+- Coordenadas aproximadas para Lounge 33 — verificar dirección exacta antes del viaje
 
 ## Presupuesto (estado actual)
 

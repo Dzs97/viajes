@@ -88,7 +88,7 @@ export function GrandTotalBanner() {
         <div>
           <div className="budget-eyebrow">Total del viaje</div>
           <h2 className="grand-total-amount">{formatAmount(total, currency)}</h2>
-          <p className="grand-total-detail">3 países · 22 días · 2 personas</p>
+          <p className="grand-total-detail">3 países · 23 días · 2 personas</p>
         </div>
         <div className="currency-toggle" role="group" aria-label="Cambiar moneda total">
           {CURRENCIES.map((c) => (
