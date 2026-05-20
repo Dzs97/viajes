@@ -47,8 +47,8 @@ export const budgets: CountryBudget[] = [
     items: [
       {
         label: "Vuelo redondo CDMX → Londres (regreso desde Edimburgo)",
-        amount: 2600,
-        detail: "2 personas, multi-city: CDMX→LHR, EDI→CDMX. British Airways directo, AeroMéxico, KLM o Air France con conexión. Reservar 2-3 meses antes. Verificar maletas documentadas incluidas (algunas aerolíneas las cobran aparte en internacional).",
+        amount: 3000,
+        detail: "2 personas, multi-city: CDMX→LHR, EDI→CDMX. British Airways directo, AeroMéxico, KLM o Air France con conexión. Best case $2,400-2,800 si reservan en sweet spot (sep-nov 2026) o aprovechan Hot Sale. Realista $2,800-3,200 reservando 3-4 meses antes. Buffer hasta $3,000 por fluctuación de precio + selección asientos + maletas. AeroMéxico directo MEX-LHR es más cómodo (~$1,400/pp), KLM/AF con escala más barato (~$1,200/pp).",
       },
       {
         label: "Hospedaje Londres (6 noches, hoteles 3-3.5★ centro)",
