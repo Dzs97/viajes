@@ -501,11 +501,11 @@ export const trip: Country[] = [
           },
           {
             name: "Islander Workshop",
-            lat: 55.948,
-            lng: -3.191,
+            lat: 55.9522,
+            lng: -3.1801,
             time: "11:30 AM",
             duration: "45 min",
-            notes: "Taller artesanal en Edimburgo. Verificar dirección exacta y horario antes de ir.",
+            notes: "156 Canongate (parte baja del Royal Mile, cerca de Holyroodhouse). Taller/tienda artesanal escocesa de knitwear y tweed. Verificar horario de apertura.",
           },
           {
             name: "Palace of Holyroodhouse",
