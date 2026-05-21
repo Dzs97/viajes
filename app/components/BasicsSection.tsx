@@ -29,29 +29,22 @@ export default function BasicsSection() {
 
   return (
     <section className="basics-section" id="basics">
-      <div className="basics-header">
-        <div className="hero-eyebrow">Antes del viaje</div>
-        <h2 className="basics-title">Basics</h2>
-        <p className="basics-subtitle">
-          Lista editable. Click en el status para cambiar (pendiente → comprado → empacado → opcional). Los cambios se guardan en tu navegador.
-        </p>
-        <div className="basics-toolbar">
-          <div className="currency-toggle" role="group" aria-label="Cambiar moneda basics">
-            {CURRENCIES.map((c) => (
-              <button
-                key={c}
-                className="currency-btn"
-                data-active={currency === c}
-                onClick={() => setCurrency(c)}
-              >
-                {c}
-              </button>
-            ))}
-          </div>
-          <button className="basics-reset-btn" onClick={handleResetClick} title="Resetear a defaults del archivo">
-            🔄 Reset
-          </button>
+      <div className="basics-toolbar basics-toolbar-standalone">
+        <div className="currency-toggle" role="group" aria-label="Cambiar moneda basics">
+          {CURRENCIES.map((c) => (
+            <button
+              key={c}
+              className="currency-btn"
+              data-active={currency === c}
+              onClick={() => setCurrency(c)}
+            >
+              {c}
+            </button>
+          ))}
         </div>
+        <button className="basics-reset-btn" onClick={handleResetClick} title="Resetear a defaults del archivo">
+          🔄 Reset
+        </button>
       </div>
 
       <div className="basics-grid">

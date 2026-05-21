@@ -1,12 +1,11 @@
 import dynamic from "next/dynamic";
 import { trip, totalTripDays } from "./data/trip";
 import DayCard from "./components/DayCard";
-import ThemeToggle from "./components/ThemeToggle";
+import SiteHeader from "./components/SiteHeader";
 import ScrollToTop from "./components/ScrollToTop";
 import ExportMenu from "./components/ExportMenu";
 import BudgetSection, { GrandTotalBanner } from "./components/BudgetSection";
 import Countdown from "./components/Countdown";
-import BasicsSection from "./components/BasicsSection";
 
 const OverviewMap = dynamic(() => import("./components/OverviewMap"), {
   ssr: false,
@@ -28,15 +27,7 @@ export default function Home() {
 
   return (
     <>
-      <header className="header" id="top">
-        <div className="header-inner">
-          <div className="logo">
-            <span className="logo-mark">3W</span>
-            <span>Three Weeks</span>
-          </div>
-          <ThemeToggle />
-        </div>
-      </header>
+      <SiteHeader />
 
       <section className="hero">
         <div className="hero-eyebrow">Itinerario · 3 semanas</div>
@@ -82,10 +73,6 @@ export default function Home() {
             <span>{c.name}</span>
           </a>
         ))}
-        <a href="#basics" className="country-pill">
-          <span>🎒</span>
-          <span>Basics</span>
-        </a>
       </nav>
 
       {trip.map((country) => (
@@ -112,8 +99,6 @@ export default function Home() {
           <BudgetSection countryId={country.id} />
         </section>
       ))}
-
-      <BasicsSection />
 
       <footer className="footer">
         <p className="footer-text">Buen viaje. ✦</p>
