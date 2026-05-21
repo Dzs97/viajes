@@ -1370,6 +1370,214 @@ a { color: inherit; text-decoration: none; }
   text-decoration: underline;
 }
 
+/* Toolbar with reset button */
+.basics-toolbar {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.75rem;
+  justify-content: center;
+  align-items: center;
+  margin-top: 1rem;
+}
+
+.basics-reset-btn {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.45rem 0.9rem;
+  border: 1px solid var(--border);
+  border-radius: 999px;
+  background: var(--bg);
+  color: var(--ink-muted);
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.basics-reset-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+}
+
+/* Make status pill clickable in basics */
+.status-clickable {
+  cursor: pointer;
+  border: 1px solid;
+  transition: transform 0.1s ease, filter 0.15s ease;
+  font-family: 'JetBrains Mono', monospace;
+}
+
+.status-clickable:hover {
+  filter: brightness(1.1);
+  transform: translateY(-1px);
+}
+
+.status-clickable:active {
+  transform: translateY(0);
+}
+
+/* Action buttons on items */
+.basic-item-actions {
+  display: inline-flex;
+  gap: 0.4rem;
+  margin-left: auto;
+}
+
+.basic-item-action-btn {
+  background: var(--bg);
+  border: 1px solid var(--border-subtle);
+  border-radius: 6px;
+  padding: 0.25rem 0.5rem;
+  font-size: 0.8rem;
+  cursor: pointer;
+  transition: all 0.15s ease;
+  opacity: 0.6;
+}
+
+.basic-item-action-btn:hover {
+  opacity: 1;
+  border-color: var(--accent);
+}
+
+.basic-item-action-delete:hover {
+  border-color: #c84c2a;
+  background: color-mix(in srgb, #c84c2a 10%, transparent);
+}
+
+/* Add item button */
+.basics-add-btn {
+  width: 100%;
+  padding: 0.7rem;
+  border: 2px dashed var(--border);
+  border-radius: 10px;
+  background: transparent;
+  color: var(--ink-faded);
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.8rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.basics-add-btn:hover {
+  border-color: var(--accent);
+  color: var(--accent);
+  background: color-mix(in srgb, var(--accent) 5%, transparent);
+}
+
+/* Edit form */
+.basic-item-editing {
+  border-color: var(--accent) !important;
+  background: color-mix(in srgb, var(--accent) 4%, var(--bg-card)) !important;
+}
+
+.basic-edit-form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.basic-edit-fields {
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.basic-edit-row {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  gap: 0.6rem;
+}
+
+@media (max-width: 640px) {
+  .basic-edit-row {
+    grid-template-columns: 1fr;
+  }
+}
+
+.basic-edit-label {
+  display: flex;
+  flex-direction: column;
+  gap: 0.25rem;
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.7rem;
+  text-transform: uppercase;
+  letter-spacing: 0.06em;
+  color: var(--ink-muted);
+}
+
+.basic-edit-label input,
+.basic-edit-label textarea,
+.basic-edit-label select {
+  padding: 0.5rem 0.7rem;
+  border: 1px solid var(--border);
+  border-radius: 8px;
+  background: var(--bg-card);
+  color: var(--ink);
+  font-family: 'Outfit', sans-serif;
+  font-size: 0.9rem;
+  text-transform: none;
+  letter-spacing: normal;
+  width: 100%;
+}
+
+.basic-edit-label input:focus,
+.basic-edit-label textarea:focus,
+.basic-edit-label select:focus {
+  outline: none;
+  border-color: var(--accent);
+  box-shadow: 0 0 0 3px color-mix(in srgb, var(--accent) 20%, transparent);
+}
+
+.basic-edit-label textarea {
+  resize: vertical;
+  min-height: 60px;
+  line-height: 1.4;
+}
+
+.basic-edit-actions {
+  display: flex;
+  gap: 0.5rem;
+  justify-content: flex-end;
+  margin-top: 0.5rem;
+  padding-top: 0.75rem;
+  border-top: 1px dashed var(--border-subtle);
+}
+
+.basic-edit-cancel,
+.basic-edit-save {
+  font-family: 'JetBrains Mono', monospace;
+  font-size: 0.75rem;
+  text-transform: uppercase;
+  letter-spacing: 0.08em;
+  padding: 0.5rem 1rem;
+  border-radius: 999px;
+  cursor: pointer;
+  transition: all 0.15s ease;
+}
+
+.basic-edit-cancel {
+  background: transparent;
+  border: 1px solid var(--border);
+  color: var(--ink-muted);
+}
+
+.basic-edit-cancel:hover {
+  border-color: var(--ink);
+  color: var(--ink);
+}
+
+.basic-edit-save {
+  background: var(--accent);
+  color: white;
+  border: 1px solid var(--accent);
+}
+
+.basic-edit-save:hover {
+  filter: brightness(1.1);
+}
+
 /* Additional status pill for basics */
 .status-comprado {
   background: color-mix(in srgb, var(--accent-2) 18%, transparent);
@@ -1443,6 +1651,10 @@ a { color: inherit; text-decoration: none; }
   .countdown,
   .route-button,
   .route-warning,
+  .basics-toolbar,
+  .basics-add-btn,
+  .basic-item-actions,
+  .basic-edit-form,
   .footer {
     display: none !important;
   }
