@@ -6,6 +6,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import ExportMenu from "./components/ExportMenu";
 import BudgetSection, { GrandTotalBanner } from "./components/BudgetSection";
 import Countdown from "./components/Countdown";
+import ExpenseBreakdown from "./components/ExpenseBreakdown";
 
 const OverviewMap = dynamic(() => import("./components/OverviewMap"), {
   ssr: false,
@@ -65,6 +66,8 @@ export default function Home() {
       <OverviewMap />
 
       <GrandTotalBanner />
+
+      <ExpenseBreakdown />
 
       <nav className="country-nav">
         {trip.map((c) => (
