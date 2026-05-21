@@ -1399,58 +1399,6 @@ a { color: inherit; text-decoration: none; }
   color: var(--accent);
 }
 
-/* Sync indicator */
-.sync-indicator {
-  display: inline-flex;
-  align-items: center;
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.7rem;
-  text-transform: uppercase;
-  letter-spacing: 0.06em;
-  padding: 0.35rem 0.8rem;
-  border-radius: 999px;
-  border: 1px solid;
-  white-space: nowrap;
-}
-
-.sync-idle {
-  border-color: var(--border-subtle);
-  color: var(--ink-faded);
-  background: var(--bg);
-}
-
-.sync-loading {
-  border-color: color-mix(in srgb, var(--accent-3) 40%, transparent);
-  color: var(--accent-3);
-  background: color-mix(in srgb, var(--accent-3) 8%, transparent);
-}
-
-.sync-ok {
-  border-color: color-mix(in srgb, var(--accent-2) 40%, transparent);
-  color: var(--accent-2);
-  background: color-mix(in srgb, var(--accent-2) 8%, transparent);
-}
-
-.sync-error {
-  border-color: color-mix(in srgb, var(--accent) 40%, transparent);
-  color: var(--accent);
-  background: color-mix(in srgb, var(--accent) 8%, transparent);
-}
-
-.basics-sync-error {
-  margin-top: 0.6rem;
-  font-size: 0.8rem;
-  color: var(--accent);
-  text-align: center;
-  padding: 0.5rem 1rem;
-  background: color-mix(in srgb, var(--accent) 6%, transparent);
-  border: 1px solid color-mix(in srgb, var(--accent) 25%, transparent);
-  border-radius: 8px;
-  max-width: 500px;
-  margin-left: auto;
-  margin-right: auto;
-}
-
 /* Make status pill clickable in basics */
 .status-clickable {
   cursor: pointer;

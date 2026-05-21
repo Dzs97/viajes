@@ -12,8 +12,7 @@
     "next": "14.2.5",
     "react": "^18.3.1",
     "react-dom": "^18.3.1",
-    "@googlemaps/js-api-loader": "^1.16.8",
-    "@vercel/kv": "^2.0.0"
+    "@googlemaps/js-api-loader": "^1.16.8"
   },
   "devDependencies": {
     "@types/google.maps": "^3.58.1",

@@ -11,18 +11,7 @@ export default function BasicsSection() {
   const [currency, setCurrency] = useState<Currency>("MXN");
   const [editingIndex, setEditingIndex] = useState<number | null>(null);
   const [addingToCategory, setAddingToCategory] = useState<string | null>(null);
-  const {
-    items,
-    updateItem,
-    deleteItem,
-    addItem,
-    reset,
-    hydrated,
-    syncStatus,
-    lastError,
-    setPin,
-    getPin,
-  } = useBasicsState();
+  const { items, updateItem, deleteItem, addItem, reset, hydrated } = useBasicsState();
 
   const grouped = groupByCategory(items);
   const total = totalCostUSD(items);
@@ -33,45 +22,9 @@ export default function BasicsSection() {
   const getItemIndex = (item: BasicItem) => items.indexOf(item);
 
   const handleResetClick = () => {
-    if (confirm("¿Resetear todos los items a los defaults del archivo? Esto borra todos tus cambios sincronizados.")) {
+    if (confirm("¿Resetear todos los items a los defaults del archivo? Se perderán tus cambios locales.")) {
       reset();
     }
-  };
-
-  const handlePinClick = () => {
-    const current = getPin() ?? "";
-    const newPin = prompt(
-      current
-        ? "PIN actual configurado. Ingresa nuevo PIN (vacío para borrar):"
-        : "Ingresa el PIN de edición (configurado en Vercel como EDIT_PIN):",
-      current
-    );
-    if (newPin !== null) {
-      setPin(newPin);
-      if (newPin) {
-        alert("PIN guardado. Los próximos cambios se sincronizarán.");
-      } else {
-        alert("PIN borrado. Los cambios solo serán locales.");
-      }
-    }
-  };
-
-  const syncLabel: Record<typeof syncStatus, string> = {
-    idle: "—",
-    loading: "Cargando…",
-    syncing: "Sincronizando…",
-    synced: "✓ Sincronizado",
-    error: "⚠ Error",
-    offline: "⚠ Sin sync",
-  };
-
-  const syncClass: Record<typeof syncStatus, string> = {
-    idle: "sync-idle",
-    loading: "sync-loading",
-    syncing: "sync-loading",
-    synced: "sync-ok",
-    error: "sync-error",
-    offline: "sync-error",
   };
 
   return (
@@ -95,19 +48,10 @@ export default function BasicsSection() {
               </button>
             ))}
           </div>
-          <span className={`sync-indicator ${syncClass[syncStatus]}`} title={lastError || ""}>
-            {syncLabel[syncStatus]}
-          </span>
-          <button className="basics-reset-btn" onClick={handlePinClick} title="Configurar PIN de edición">
-            🔒 PIN
-          </button>
           <button className="basics-reset-btn" onClick={handleResetClick} title="Resetear a defaults del archivo">
             🔄 Reset
           </button>
         </div>
-        {lastError && (
-          <p className="basics-sync-error">{lastError}</p>
-        )}
       </div>
 
       <div className="basics-grid">
