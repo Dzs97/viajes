@@ -6,6 +6,7 @@ import ScrollToTop from "./components/ScrollToTop";
 import ExportMenu from "./components/ExportMenu";
 import BudgetSection, { GrandTotalBanner } from "./components/BudgetSection";
 import Countdown from "./components/Countdown";
+import BasicsSection from "./components/BasicsSection";
 
 const OverviewMap = dynamic(() => import("./components/OverviewMap"), {
   ssr: false,
@@ -81,6 +82,10 @@ export default function Home() {
             <span>{c.name}</span>
           </a>
         ))}
+        <a href="#basics" className="country-pill">
+          <span>🎒</span>
+          <span>Basics</span>
+        </a>
       </nav>
 
       {trip.map((country) => (
@@ -107,6 +112,8 @@ export default function Home() {
           <BudgetSection countryId={country.id} />
         </section>
       ))}
+
+      <BasicsSection />
 
       <footer className="footer">
         <p className="footer-text">Buen viaje. ✦</p>
