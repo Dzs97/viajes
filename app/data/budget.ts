@@ -51,8 +51,8 @@ export const budgets: CountryBudget[] = [
         detail: "2 personas, multi-city: CDMX→LHR, EDI→CDMX. British Airways directo, AeroMéxico, KLM o Air France con conexión. Best case $2,400-2,800 si reservan en sweet spot (sep-nov 2026) o aprovechan Hot Sale. Realista $2,800-3,200 reservando 3-4 meses antes. Buffer hasta $3,000 por fluctuación de precio + selección asientos + maletas. AeroMéxico directo MEX-LHR es más cómodo (~$1,400/pp), KLM/AF con escala más barato (~$1,200/pp).",
       },
       {
-        label: "Hospedaje Londres (6 noches, hoteles 3-3.5★ centro)",
-        amount: 1200,
+        label: "Hospedaje Londres (7 noches, hoteles 3-3.5★ centro)",
+        amount: 1400,
         detail: "Promedio $200/noche en mayo (temporada media). Zonas recomendadas con tube zona 1-2: Bayswater, Bloomsbury, King's Cross, South Kensington. Cadenas: Premier Inn Hub Kings Cross (~£140), Travelodge Plus Bayswater (~£150), Hilton Garden Inn London City (~£180), ibis Styles. Reservar 2-3 meses antes.",
       },
       {
@@ -71,6 +71,11 @@ export const budgets: CountryBudget[] = [
         detail: "Tour organizado de día completo desde Londres con bus + guía + entradas a Stonehenge. ~$110/persona × 2. Operadores: Golden Tours, Premium Tours, Evan Evans. Recoge en hotel central o Victoria Coach. 10-12h. Alternativa self-drive con renta de auto 1 día ~$130 total.",
       },
       {
+        label: "Coche rentado medio día (Seven Sisters)",
+        amount: 115,
+        detail: "Pick up en estación perimetral sur (East Croydon o similar — evitar central London por tarifas y tráfico). $60 renta + $20 gasolina + $7 parking Birling Gap + $20 seguro + $15 tube a/desde estación. Roundtrip ~80 millas. Manejar del lado izquierdo en UK — primera vez = estrés, ir despacio.",
+      },
+      {
         label: "Vuelo Londres (LHR/STN) → Dublín (DUB)",
         amount: 140,
         detail: "Ryanair, EasyJet o Aer Lingus, ~1h vuelo, ~$70/persona reservando con 2-3 meses anticipación. Alternativa: ferry Holyhead-Dublin (~$220-300 los 2, 8-10h door-to-door, más experiencia).",
@@ -81,9 +86,9 @@ export const budgets: CountryBudget[] = [
         detail: "Westminster Abbey £29×2=$80, Tower of London £35×2=$90, St Paul's Cathedral £21×2=$50, Shakespeare's Globe tour £22×2=$55, Painted Hall Greenwich £15×2=$40, Royal Observatory Greenwich £18×2=$45, Windsor Castle £30×2=$80, Kew Gardens £22×2=$55. Reservar online para evitar colas. GRATIS: British Museum, National Gallery, Tate Modern, Sir John Soane's Museum, Sky Garden (reservar), Barbican Conservatory (sun), Queen's House Greenwich, St James's Park, Hill Garden Pergola, Holly Village, Cambio de Guardia Buckingham.",
       },
       {
-        label: "Comida y bebidas (6 días)",
-        amount: 1280,
-        detail: "6 días × ~$213/día para 2. Mix: desayuno casual/hotel ($30), lunch pub o mercado ($35), cena mid-range ($90-100), 2-3 pints/día ($25). Highlights: cena Sherlock Holmes Pub día 3, curry Brick Lane día 2 dom, dinner Borough Market area día 5, pub Hampstead día 6. Una cena especial opcional: The Ivy Market Grill ($120 los 2).",
+        label: "Comida y bebidas (7 días)",
+        amount: 1500,
+        detail: "7 días × ~$214/día para 2. Mix: desayuno casual/hotel ($30), lunch pub o mercado ($35), cena mid-range ($90-100), 2-3 pints/día ($25). Highlights: cena Sherlock Holmes Pub día 3, curry Brick Lane día 2 dom, dinner Borough Market area día 5, pub Hampstead día 6, lunch Alfriston día 7 Seven Sisters. Una cena especial opcional: The Ivy Market Grill ($120 los 2).",
       },
       {
         label: "Teatro West End (opcional)",

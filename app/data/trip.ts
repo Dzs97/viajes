@@ -2,7 +2,7 @@
 export const tripStartDate = new Date("2027-05-15T00:00:00");
 
 // Total de días planeados del viaje completo (~3.5 semanas).
-export const totalTripDays = 23;
+export const totalTripDays = 24;
 
 export type Location = {
   name: string;
@@ -35,9 +35,9 @@ export const trip: Country[] = [
     id: "inglaterra",
     name: "Inglaterra",
     flag: "🏴󠁧󠁢󠁥󠁮󠁧󠁿",
-    subtitle: "Primera etapa · 6 días en Londres",
+    subtitle: "Primera etapa · 7 días en Londres",
     description:
-      "Base en Londres centro con transporte público (Oyster/Travelcard). Day trip a Wiltshire (Stonehenge + Bath + Castle Combe). Día 7 = transición Windsor + Kew + vuelo a Dublín.",
+      "Base en Londres centro con transporte público (Oyster/Travelcard). Day trips a Wiltshire (Stonehenge + Bath + Castle Combe) y Seven Sisters (acantilados de East Sussex con coche rentado medio día). Día 8 = transición Windsor + Kew + vuelo a Dublín.",
     days: [
       {
         number: 1,
@@ -392,6 +392,53 @@ export const trip: Country[] = [
           },
         ],
       },
+      {
+        number: 7,
+        title: "Day Trip · Seven Sisters Cliffs",
+        narrative:
+          "Day trip costero a los acantilados blancos de Seven Sisters en East Sussex. Coche rentado medio día desde estación perimetral para flexibilidad. Caminata por los acantilados + lunch en pueblo medieval Alfriston.",
+        sleep: "Londres central",
+        locations: [
+          {
+            name: "Recoger coche rentado (East Croydon)",
+            lat: 51.3744,
+            lng: -0.0928,
+            time: "8:30 AM",
+            notes: "East Croydon o estación perimetral sur (Enterprise/Avis/Hertz). Evitar central London para evadir tarifas + tráfico. Tube/National Rail a Croydon ~25-30 min desde centro.",
+          },
+          {
+            name: "Birling Gap",
+            lat: 50.743,
+            lng: 0.2031,
+            time: "10:30 AM",
+            duration: "1.5h",
+            notes: "Estacionamiento principal de los acantilados (£5/día, National Trust). Bajada a la playa por escaleras + mejor vista de los acantilados blancos al oeste. Bring jacket — siempre ventoso.",
+          },
+          {
+            name: "Caminata cliff edge → Cuckmere Haven",
+            lat: 50.77,
+            lng: 0.15,
+            time: "12:00 PM",
+            duration: "1.5h",
+            notes: "Sendero por el borde del acantilado (South Downs Way). Los 'seven sisters' son las 7 colinas de tiza que dan nombre. ~2-3km, terreno irregular pero hacedero. Hiking shoes recomendados.",
+          },
+          {
+            name: "Lunch en Alfriston",
+            lat: 50.7958,
+            lng: 0.1592,
+            time: "2:00 PM",
+            duration: "1.5h",
+            notes: "Pueblo medieval con casas de timber framing del s.XIV. The Star Inn (1345) o Ye Olde Smugglers Inne (1358). Pub food tradicional + cerveza local.",
+          },
+          {
+            name: "Regreso a Londres + devolver coche",
+            lat: 51.3744,
+            lng: -0.0928,
+            time: "5:30 PM",
+            notes: "Devolver coche en estación perimetral. Tube a hotel. Tarde-noche libre en Londres.",
+          },
+        ],
+      },
     ],
   },
   {
@@ -400,10 +447,10 @@ export const trip: Country[] = [
     flag: "☘",
     subtitle: "Segunda etapa · 10 días con coche",
     description:
-      "Día 7 transición (Windsor + Kew + vuelo Londres → Dublín). Loop circular desde Dublín por el oeste salvaje, el norte celta y la costa este. Coche rentado del día 9 al día 16.",
+      "Día 8 transición (Windsor + Kew + vuelo Londres → Dublín). Loop circular desde Dublín por el oeste salvaje, el norte celta y la costa este. Coche rentado del día 10 al día 17.",
     days: [
       {
-        number: 7,
+        number: 8,
         title: "Windsor + Kew + vuelo a Dublín",
         narrative:
           "Día de transición: mañana Windsor Castle, tarde Kew Gardens, vuelo nocturno a Dublín. Llegada tarde, dormir.",
@@ -449,7 +496,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 8,
+        number: 9,
         title: "Dublín a fondo",
         narrative:
           "Día completo en la capital a pie. Cultura, historia y la mejor experiencia de fish & chips.",
@@ -498,7 +545,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 9,
+        number: 10,
         title: "Wicklow: cascada, lago y monasterio",
         narrative:
           "Day trip al sur de Dublín con el coche recién rentado. Powerscourt, Avoca, Lough Tay y Glendalough.",
@@ -546,7 +593,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 10,
+        number: 11,
         title: "Dublín → Galway vía Connemara",
         narrative:
           "Cruzas Irlanda de este a oeste. Connemara es el highlight visual del día.",
@@ -585,7 +632,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 11,
+        number: 12,
         title: "Cliffs of Moher + The Burren + Ennis",
         narrative:
           "Loop sur desde Galway. Cliffs of Moher temprano para evitar tour buses.",
@@ -633,7 +680,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 12,
+        number: 13,
         title: "Galway → Sligo (Gleniff Horseshoe)",
         narrative:
           "Subida hacia el noroeste. Gleniff Horseshoe es una joya poco turística.",
@@ -666,7 +713,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 13,
+        number: 14,
         title: "Sligo → Costa de Antrim (UK)",
         narrative:
           "Cruzas a Irlanda del Norte (UK). Cambias de euros a libras. Día largo pero la Causeway Coast es el highlight del norte.",
@@ -699,7 +746,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 14,
+        number: 15,
         title: "Dark Hedges + Belfast",
         narrative:
           "Mañana fotogénica, tarde de historia en Belfast con Titanic y Black Cab Tour.",
@@ -740,7 +787,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 15,
+        number: 16,
         title: "Belfast → Dublín (costa este)",
         narrative:
           "Regreso a Dublín por la costa este con parada cultural en Newgrange.",
@@ -772,7 +819,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 16,
+        number: 17,
         title: "Dublín → Edimburgo (vuelo)",
         narrative:
           "Día final. Devuelves el coche en el aeropuerto y vuelas a Escocia (~1h con Aer Lingus o Ryanair).",
@@ -802,10 +849,10 @@ export const trip: Country[] = [
     flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
     subtitle: "Última etapa · 7 días · Coche rentado para Highlands y Skye",
     description:
-      "Base en Edimburgo (4 noches Old Town + 1 cerca aeropuerto), loop por West Highlands (Glencoe, Fort William), Isle of Skye (Portree) y regreso por Loch Ness. Vuelo de regreso a CDMX desde Edimburgo el día 22.",
+      "Base en Edimburgo (4 noches Old Town + 1 cerca aeropuerto), loop por West Highlands (Glencoe, Fort William), Isle of Skye (Portree) y regreso por Loch Ness. Coche rentado del día 20 al día 23. Vuelo de regreso a CDMX desde Edimburgo el día 24.",
     days: [
       {
-        number: 17,
+        number: 18,
         title: "Llegada a Edimburgo + Royal Mile",
         narrative:
           "Llegada desde Dublín por la mañana. Caminata por el Royal Mile con vistas al castillo, cena legendaria en The Witchery y nightcap en cocktail bar.",
@@ -869,7 +916,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 18,
+        number: 19,
         title: "Edimburgo a fondo + pub crawl",
         narrative:
           "Día completo de museos, palacios y pubs históricos. Por la noche, crawl temático por los dos pubs más icónicos de la ciudad.",
@@ -926,7 +973,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 19,
+        number: 20,
         title: "Duddingston + Craigmillar Castle",
         narrative:
           "Día relajado en las afueras. Recoger coche rentado, visitar el cluster de Duddingston (jardín secreto + pub más antiguo de Escocia) y Craigmillar Castle.",
@@ -973,7 +1020,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 20,
+        number: 21,
         title: "Edimburgo → Glencoe → Fort William",
         narrative:
           "Primera ruta al oeste por las Highlands. Glencoe valley es el primer wow de paisaje escocés, con sus Three Sisters dramáticas.",
@@ -1012,7 +1059,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 21,
+        number: 22,
         title: "Glenfinnan + Eilean Donan + Skye",
         narrative:
           "Día épico: viaducto del Hogwarts Express, castillo más fotografiado de Escocia, llegada a Skye con atardecer en Old Man of Storr.",
@@ -1068,7 +1115,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 22,
+        number: 23,
         title: "Skye → Plodda Falls → Loch Ness → Edimburgo",
         narrative:
           "Día largo de regreso al sur. Plodda Falls escondida en Glen Affric, caza de Nessie en Loch Ness, pasada por Inverness y vuelta a la capital.",
@@ -1115,7 +1162,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 23,
+        number: 24,
         title: "Vuelo de regreso a CDMX",
         narrative:
           "Día de transición. Vuelo desde Edimburgo (EDI) a Ciudad de México, con probable layover en Amsterdam (KLM), Londres (BA) o Paris (Air France).",
