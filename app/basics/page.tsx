@@ -4,7 +4,7 @@ import ScrollToTop from "../components/ScrollToTop";
 import BasicsSection from "../components/BasicsSection";
 
 export const metadata: Metadata = {
-  title: "Basics · Three Weeks",
+  title: "Basics · My Travel",
   description: "Items para comprar y empacar antes del viaje a Inglaterra, Irlanda y Escocia.",
 };
 

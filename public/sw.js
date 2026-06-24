@@ -1,7 +1,8 @@
 // Service Worker para PWA installability
 // Cache-first para assets estáticos, network-first para todo lo demás.
 
-const CACHE_NAME = "three-weeks-v1";
+// Bump version on releases to invalidate old caches
+const CACHE_NAME = "my-travel-v2";
 const STATIC_ASSETS = [
   "/",
   "/basics",

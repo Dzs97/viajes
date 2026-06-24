@@ -2,9 +2,9 @@ import type { MetadataRoute } from "next";
 
 export default function manifest(): MetadataRoute.Manifest {
   return {
-    name: "Three Weeks · Inglaterra, Irlanda & Escocia",
-    short_name: "Three Weeks",
-    description: "Itinerario de viaje de 24 días por las Islas Británicas, mayo 2027",
+    name: "My Travel",
+    short_name: "My Travel",
+    description: "Itinerario de viaje de 24 días por Inglaterra, Irlanda y Escocia. Mayo 2027.",
     start_url: "/",
     scope: "/",
     display: "standalone",

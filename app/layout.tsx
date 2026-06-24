@@ -6,30 +6,30 @@ const siteUrl = "https://viajes-eight.vercel.app";
 
 export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
-  title: "Three Weeks · Inglaterra, Irlanda & Escocia (Mayo 2027)",
+  title: "My Travel · Inglaterra, Irlanda & Escocia (Mayo 2027)",
   description:
     "Itinerario de viaje de 24 días por las Islas Británicas. Londres, Irlanda salvaje y Highlands escocesas. Mayo 2027.",
-  applicationName: "Three Weeks",
+  applicationName: "My Travel",
   appleWebApp: {
     capable: true,
-    title: "Three Weeks",
+    title: "My Travel",
     statusBarStyle: "default",
   },
   formatDetection: {
     telephone: false,
   },
   openGraph: {
-    title: "Three Weeks · Inglaterra, Irlanda & Escocia",
+    title: "My Travel · Inglaterra, Irlanda & Escocia",
     description:
       "Tres semanas por las Islas Británicas: Londres, Irlanda y Escocia. Mayo 2027.",
     url: siteUrl,
-    siteName: "Three Weeks",
+    siteName: "My Travel",
     locale: "es_MX",
     type: "website",
   },
   twitter: {
     card: "summary_large_image",
-    title: "Three Weeks · Inglaterra, Irlanda & Escocia",
+    title: "My Travel · Inglaterra, Irlanda & Escocia",
     description: "Itinerario de 24 días por las Islas Británicas, mayo 2027.",
   },
   robots: {
@@ -59,7 +59,7 @@ export default function RootLayout({
       <head>
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
-        <meta name="apple-mobile-web-app-title" content="Three Weeks" />
+        <meta name="apple-mobile-web-app-title" content="My Travel" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
       </head>
       <body>
