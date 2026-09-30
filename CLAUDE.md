@@ -178,3 +178,20 @@ El owner habla **español** principalmente. Responde en español. Es directo, le
 3. Verifica con `npm run build` antes de commit
 4. Mensaje de commit descriptivo en inglés: `feat: add Scotland itinerary`, `fix: mobile budget overflow`, `style: improve map markers contrast`
 5. Si modificas presupuesto, recuerda actualizar la fecha del tipo de cambio en `budget.ts` si pasaron varios meses
+
+## Dependencias externas y cuentas
+
+| Qué | Cuenta | Notas |
+|---|---|---|
+| Repo GitHub `Dzs97/viajes` | personal (`Dzs97`, `dzurita97@gmail.com`) | **Público.** Las credenciales de git en el Keychain de macOS funcionan para los repos de Dzs97. |
+| Vercel (`viajes-eight.vercel.app`) | personal (Dzs97) | Auto-deploy al hacer push a `main`. |
+| Google Maps JS API | Google Cloud del owner (**sin verificar si es personal o de trabajo**) | `NEXT_PUBLIC_GOOGLE_MAPS_API_KEY` en Vercel y en `.env.local` (no en git). Se protege con HTTP referrer restrictions. |
+
+No usa base de datos ni Anthropic API. `.claude/settings.local.json` solo tiene permisos (sin MCP, hooks ni comandos propios).
+
+## Notas de trabajo (antes solo en la memoria de Claude)
+
+- **Haz tú los commits y el push.** No le pases comandos de git a Diego: verifica el cambio, haz commit y push, y confirma el deploy.
+- `gh` CLI no está instalado.
+- **Landing page personal:** repo aparte en `~/Downloads/Projects/Dzs97.github.io` (GitHub Pages, https://dzs97.github.io). Es HTML/CSS plano con toggle EN/ES vía el diccionario `ES` en `index.html`. Sube `styles.css?v=N` cada vez que cambie el CSS. El sourcing tracker aparece listado **sin link, a propósito**: no lo enlaces públicamente.
+- Diego es Recruitment Lead (no desarrollador). El contenido de la landing viene de su CV y LinkedIn.
