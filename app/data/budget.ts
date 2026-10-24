@@ -1,7 +1,8 @@
 // Presupuesto para 2 personas, nivel cómodo, salida desde México, 1-24 mayo 2027
 // Hoteles nivel 3-3.5 estrellas. Temporada baja-media (inicios de mayo): evita el bank holiday del 31 may y el half-term inglés (29 may-6 jun).
 // Tipos de cambio del 23 oct 2026 (BCE vía frankfurter.dev): 1 USD ≈ 18.78 MXN, 1 EUR ≈ 21.10 MXN, 1 GBP ≈ 25.04 MXN
-// Todos los montos están en USD para fácil conversión.
+// Todos los montos están en USD para fácil conversión. Las partidas que se pagan en GBP/EUR
+// se recalcularon con el tipo de cambio del 23 oct 2026 (0.75 GBP, 0.89 EUR por USD).
 
 export type BookingStatus = "pendiente" | "reservado" | "pagado";
 
@@ -52,13 +53,13 @@ export const budgets: CountryBudget[] = [
       },
       {
         label: "Hospedaje Londres (7 noches, hoteles 3-3.5★ centro)",
-        amount: 1400,
-        detail: "Promedio $200/noche en mayo (temporada media). Zonas recomendadas con tube zona 1-2: Bayswater, Bloomsbury, King's Cross, South Kensington. Cadenas: Premier Inn Hub Kings Cross (~£140), Travelodge Plus Bayswater (~£150), Hilton Garden Inn London City (~£180), ibis Styles. Reservar 2-3 meses antes.",
+        amount: 1455,
+        detail: "Promedio $208/noche en mayo (temporada media). Zonas recomendadas con tube zona 1-2: Bayswater, Bloomsbury, King's Cross, South Kensington. Cadenas: Premier Inn Hub Kings Cross (~£140), Travelodge Plus Bayswater (~£150), Hilton Garden Inn London City (~£180), ibis Styles. Reservar 2-3 meses antes.",
       },
       {
         label: "7-Day Travelcard zonas 1-6 (2 personas)",
-        amount: 210,
-        detail: "£81.60/persona × 2 = £163 ≈ $210 (precio TfL 2026, congelado vs 2025). Mismo monto que el cap semanal de contactless. Cubre tube + bus + Overground + DLR durante 7 días. Alternativa: contactless/Oyster con cap diario (~£15/día zonas 1-2). Travelcard sale igual o más barato si harán 6+ viajes diarios.",
+        amount: 220,
+        detail: "£81.60/persona × 2 = £163 ≈ $218 (precio TfL 2026, congelado vs 2025). Mismo monto que el cap semanal de contactless. Cubre tube + bus + Overground + DLR durante 7 días. Alternativa: contactless/Oyster con cap diario (~£15/día zonas 1-2). Travelcard sale igual o más barato si harán 6+ viajes diarios.",
       },
       {
         label: "Trenes día 8 (Paddington → Windsor → Richmond)",
@@ -68,36 +69,36 @@ export const budgets: CountryBudget[] = [
       {
         label: "Tour día Wiltshire (Stonehenge + Bath + Castle Combe)",
         amount: 300,
-        detail: "Tour organizado de día completo desde Londres con bus + guía + entradas a Stonehenge y Roman Baths. ~$130-180/persona según si incluye entradas (precios oct 2026). Operadores: Golden Tours, Premium Tours, Evan Evans. Recoge en hotel central o Victoria Coach. 10-12h. Alternativa self-drive con renta de auto 1 día ~$130 total.",
+        detail: "Precio cotizado en USD por agencias (no se recalcula). Tour organizado de día completo desde Londres con bus + guía + entradas a Stonehenge y Roman Baths. ~$130-180/persona según si incluye entradas (precios oct 2026). Operadores: Golden Tours, Premium Tours, Evan Evans. Recoge en hotel central o Victoria Coach. 10-12h. Alternativa self-drive con renta de auto 1 día ~$130 total.",
       },
       {
         label: "Coche rentado medio día (Seven Sisters)",
-        amount: 115,
+        amount: 120,
         detail: "Pick up en estación perimetral sur (East Croydon o similar — evitar central London por tarifas y tráfico). $60 renta + $20 gasolina + $7 parking Birling Gap + $20 seguro + $15 tube a/desde estación. Roundtrip ~80 millas. Manejar del lado izquierdo en UK — primera vez = estrés, ir despacio.",
       },
       {
         label: "Vuelo Londres (LHR/STN) → Dublín (DUB)",
-        amount: 140,
-        detail: "Ryanair, EasyJet o Aer Lingus, ~1h vuelo, ~$70/persona reservando con 2-3 meses anticipación. Alternativa: ferry Holyhead-Dublin (~$220-300 los 2, 8-10h door-to-door, más experiencia).",
+        amount: 145,
+        detail: "Ryanair, EasyJet o Aer Lingus, ~1h vuelo, ~$72/persona reservando con 2-3 meses anticipación. Alternativa: ferry Holyhead-Dublin (~$220-300 los 2, 8-10h door-to-door, más experiencia).",
       },
       {
         label: "Entradas atracciones pagadas",
-        amount: 570,
-        detail: "Precios oficiales oct 2026: Westminster Abbey £31×2=$80, Tower of London £37×2=$95, St Paul's Cathedral £27×2=$69, Shakespeare's Globe tour ~£27×2=$69, Painted Hall Greenwich £19×2=$49, Royal Observatory Greenwich £18-24×2=$62, Windsor Castle £32×2=$82, Kew Gardens £25×2=$64. Reservar online para evitar colas. GRATIS: British Museum, National Gallery, Tate Modern, Sir John Soane's Museum, Sky Garden (reservar), Columbia Road Flower Market (dom), Queen's House Greenwich, St James's Park, Hill Garden Pergola, Holly Village, Cambio de Guardia Buckingham.",
+        amount: 595,
+        detail: "Precios oficiales oct 2026: Westminster Abbey £31×2=$83, Tower of London £37×2=$99, St Paul's Cathedral £27×2=$72, Shakespeare's Globe tour ~£27×2=$72, Painted Hall Greenwich £19×2=$51, Royal Observatory Greenwich £18-24×2=$64, Windsor Castle £32×2=$85, Kew Gardens £25×2=$67. Reservar online para evitar colas. GRATIS: British Museum, National Gallery, Tate Modern, Sir John Soane's Museum, Sky Garden (reservar), Columbia Road Flower Market (dom), Queen's House Greenwich, St James's Park, Hill Garden Pergola, Holly Village, Cambio de Guardia Buckingham.",
       },
       {
         label: "Comida y bebidas (7 días)",
-        amount: 1500,
-        detail: "7 días × ~$214/día para 2. Mix: desayuno casual/hotel ($30), lunch pub o mercado ($35), cena mid-range ($90-100), 2-3 pints/día ($25). Highlights: cena Sherlock Holmes Pub día 3, curry Brick Lane día 2 dom, dinner Borough Market area día 5, pub Hampstead día 6, lunch Alfriston día 7 Seven Sisters. Una cena especial opcional: The Ivy Market Grill ($120 los 2).",
+        amount: 1560,
+        detail: "7 días × ~$223/día para 2. Mix: desayuno casual/hotel ($30), lunch pub o mercado ($35), cena mid-range ($90-100), 2-3 pints/día ($25). Highlights: cena Sherlock Holmes Pub día 3, curry Brick Lane día 2 dom, dinner Borough Market area día 5, pub Hampstead día 6, lunch Alfriston día 7 Seven Sisters. Una cena especial opcional: The Ivy Market Grill ($120 los 2).",
       },
       {
         label: "Teatro West End (opcional)",
-        amount: 100,
+        amount: 105,
         detail: "Día 3 noche. Mamma Mia, Les Misérables, Phantom, Wicked. TKTS Leicester Square día del show £30-50/persona. Saltable si quieren ahorrar.",
       },
       {
         label: "Buffer (taxis nocturnos, propinas, imprevistos)",
-        amount: 100,
+        amount: 105,
         detail: "Uber/black cab cuando tube cierra ~midnight semana (1 AM weekends). Propinas restaurantes (12.5% típico, verificar si ya incluida en bill). Misc.",
       },
     ],
@@ -107,33 +108,33 @@ export const budgets: CountryBudget[] = [
     items: [
       {
         label: "Hospedaje (9 noches, hoteles 3-3.5★)",
-        amount: 1100,
-        detail: "Dublín (4 noches) $130/noche, Galway (2) $110, Sligo (1) $95, Bushmills (1) $130, Belfast (1) $110. Promedio $122/noche en mayo (shoulder season).",
+        amount: 1125,
+        detail: "Dublín (4 noches) $133/noche, Galway (2) $112, Sligo (1) $97, Bushmills (1) $133, Belfast (1) $112. Promedio $125/noche en mayo (shoulder season).",
       },
       {
         label: "Renta de coche (8 días)",
-        amount: 720,
-        detail: "Automático, seguro completo, cross-border NI incluido. ~$90/día con compañías como Hertz o Europcar.",
+        amount: 735,
+        detail: "Automático, seguro completo, cross-border NI incluido. ~$92/día con compañías como Hertz o Europcar.",
       },
       {
         label: "Gasolina + tolls + parking",
-        amount: 280,
+        amount: 285,
         detail: "~1,500 km en total. Diesel ~€1.70/L. Tolls M50/M1 + parking en ciudades.",
       },
       {
         label: "Comida y bebidas",
-        amount: 1400,
-        detail: "10 días × $140/día para 2 (desayuno casual + comida + cena con pints). Pubs son la experiencia, no escatimar.",
+        amount: 1430,
+        detail: "10 días × $143/día para 2 (desayuno casual + comida + cena con pints). Pubs son la experiencia, no escatimar.",
       },
       {
         label: "Actividades y entradas",
-        amount: 495,
+        amount: 505,
         detail: "Precios oct 2026: Book of Kells (€25×2), Cliffs of Moher online (€12×2), Giant's Causeway (£14-18×2), Titanic Belfast (£24.95×2), Vintage Tea Tour (~€60×2), Powerscourt Waterfall (€8×2), Newgrange + Knowth (€18×2), Black Cab Tour (~£30×2), Kylemore Abbey (€18×2). Guinness Storehouse opcional (desde €26).",
       },
       {
         label: "Vuelo Dublín → Edimburgo",
-        amount: 160,
-        detail: "2 personas, Aer Lingus o Ryanair, ~$80 c/u si se reserva con anticipación.",
+        amount: 165,
+        detail: "2 personas, Aer Lingus o Ryanair, ~$82 c/u si se reserva con anticipación.",
       },
     ],
   },
@@ -142,32 +143,32 @@ export const budgets: CountryBudget[] = [
     items: [
       {
         label: "Hospedaje (7 noches, hoteles 3-3.5★)",
-        amount: 1120,
-        detail: "Edimburgo Old Town (4 noches) $170/noche = $680, Fort William (1) $130, Portree Skye (1) $180 (Skye se llena), Edimburgo cerca aeropuerto (1) $130. Promedio $160/noche en mayo.",
+        amount: 1165,
+        detail: "Edimburgo Old Town (4 noches) $177/noche = $708, Fort William (1) $135, Portree Skye (1) $187 (Skye se llena), Edimburgo cerca aeropuerto (1) $135. Promedio $166/noche en mayo.",
       },
       {
         label: "Coche rentado (3 días)",
-        amount: 240,
-        detail: "Automático con seguro completo. Pickup día 21 (centro o aeropuerto EDI), return en aeropuerto EDI día 23. ~$80/día con Hertz/Europcar/Enterprise. Día 20 sin coche: Duddingston y Craigmillar se hacen caminando/bus.",
+        amount: 250,
+        detail: "Automático con seguro completo. Pickup día 21 (centro o aeropuerto EDI), return en aeropuerto EDI día 23. ~$83/día con Hertz/Europcar/Enterprise. Día 20 sin coche: Duddingston y Craigmillar se hacen caminando/bus.",
       },
       {
         label: "Gasolina + parking",
-        amount: 120,
+        amount: 125,
         detail: "~1,500 km en total. Diesel ~£1.65/L. Sin parking nocturno en Edimburgo (coche se recoge el día 21). Parking gratis en hotel Fort William y Portree.",
       },
       {
         label: "Transporte público (tram + buses)",
-        amount: 80,
+        amount: 85,
         detail: "Tram aeropuerto Edimburgo → centro x2 personas ida = $15. Buses dentro de Edimburgo días 18-20 (~$25). Buffer taxis/Uber ocasionales.",
       },
       {
         label: "Comida y bebidas",
-        amount: 1100,
-        detail: "7 días × ~$157/día. Edimburgo es más caro que Irlanda. Incluye pub food (Sheep Heid Inn), restaurantes de gama media-alta (The Witchery), drinks en pubs históricos (Banshee, Frankenstein) y Lounge 33 en Leith y mariscos en Skye.",
+        amount: 1145,
+        detail: "7 días × ~$164/día. Edimburgo es más caro que Irlanda. Incluye pub food (Sheep Heid Inn), restaurantes de gama media-alta (The Witchery), drinks en pubs históricos (Banshee, Frankenstein) y Lounge 33 en Leith y mariscos en Skye.",
       },
       {
         label: "Actividades y entradas",
-        amount: 475,
+        amount: 480,
         detail: "Precios oct 2026: Edinburgh Castle (£23.50×2), Islander workshop bolsa Harris Tweed (~£85×2), Palace of Holyroodhouse (£22×2), Magic Museum (~£10×2), Craigmillar Castle (£7.50×2), Eilean Donan Castle (~£13×2), Urquhart Castle/Loch Ness (£14×2), Old Man of Storr parking (£4), Glenfinnan parking (£5), Plodda Falls (gratis). Portrait Gallery y Tron Kirk son gratis.",
       },
     ],
