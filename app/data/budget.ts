@@ -1,6 +1,6 @@
 // Presupuesto para 2 personas, nivel cómodo, salida desde México, 1-24 mayo 2027
 // Hoteles nivel 3-3.5 estrellas. Temporada baja-media (inicios de mayo): evita el bank holiday del 31 may y el half-term inglés (29 may-6 jun).
-// Tipos de cambio base (mayo 2027 aproximados): 1 USD ≈ 17.20 MXN, 1 EUR ≈ 18.70 MXN, 1 GBP ≈ 21.80 MXN
+// Tipos de cambio del 23 oct 2026 (BCE vía frankfurter.dev): 1 USD ≈ 18.78 MXN, 1 EUR ≈ 21.10 MXN, 1 GBP ≈ 25.04 MXN
 // Todos los montos están en USD para fácil conversión.
 
 export type BookingStatus = "pendiente" | "reservado" | "pagado";
@@ -19,9 +19,9 @@ export type CountryBudget = {
 
 export const exchangeRates = {
   USD: 1,
-  MXN: 17.2,
-  EUR: 0.91, // 1 USD = 0.91 EUR
-  GBP: 0.78, // 1 USD = 0.78 GBP
+  MXN: 18.78, // 23 oct 2026
+  EUR: 0.89, // 1 USD = 0.89 EUR
+  GBP: 0.75, // 1 USD = 0.75 GBP
 };
 
 export type Currency = keyof typeof exchangeRates;

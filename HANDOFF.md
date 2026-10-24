@@ -7,7 +7,7 @@
 
 ## TL;DR del proyecto
 
-**My Travel** — PWA de itinerario de viaje 24 días por Inglaterra, Irlanda y Escocia (1 – 24 may 2027). 2 personas, salida desde CDMX. Presupuesto total ~$14,765 USD / $253,958 MXN.
+**My Travel** — PWA de itinerario de viaje 24 días por Inglaterra, Irlanda y Escocia (1 – 24 may 2027). 2 personas, salida desde CDMX. Presupuesto total ~$14,765 USD / $277,287 MXN (tipo de cambio 23 oct 2026).
 
 - **Repo:** https://github.com/Dzs97/viajes
 - **Producción:** https://viajes-eight.vercel.app

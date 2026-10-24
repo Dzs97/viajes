@@ -98,10 +98,10 @@ Estas variables tienen overrides en `[data-theme="dark"]`. Si añades colores nu
 
 Configurado para **2 personas, nivel cómodo, salida desde México**. Todos los montos están en USD en `budget.ts` y se convierten dinámicamente con `exchangeRates`. Soporta MXN, USD, EUR, GBP.
 
-Tipos de cambio estimados para mayo 2027 (actualizar antes de reservar si pasa mucho tiempo):
-- 1 USD ≈ 17.20 MXN
-- 1 USD ≈ 0.91 EUR
-- 1 USD ≈ 0.78 GBP
+Tipos de cambio del 23 oct 2026 (BCE, frankfurter.dev). Actualizar antes de reservar si pasa mucho tiempo:
+- 1 USD ≈ 18.78 MXN
+- 1 USD ≈ 0.89 EUR
+- 1 USD ≈ 0.75 GBP
 
 ## Cómo trabajar con este proyecto
 
