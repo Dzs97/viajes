@@ -54,6 +54,13 @@ export default function SiteHeader() {
           >
             Basics
           </Link>
+          <Link
+            href="/reservas"
+            className="site-nav-link"
+            data-active={pathname === "/reservas"}
+          >
+            Reservas
+          </Link>
         </nav>
         <ThemeToggle />
       </div>

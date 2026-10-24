@@ -19,7 +19,7 @@ export default function BasicsPage() {
           Basics <em>&</em> preparación
         </h1>
         <p className="hero-subtitle">
-          Lista de cosas para comprar, empacar y dejar listo antes de salir el sáb 15 may 2027.
+          Lista de cosas para comprar, empacar y dejar listo antes de salir el vie 30 abr 2027.
           Click en cada status para cambiar. Edita libremente.
         </p>
       </section>

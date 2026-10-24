@@ -193,7 +193,7 @@ export const basics: BasicItem[] = [
     brand: "—",
     category: "documentos",
     description:
-      "VERIFICAR que esté vigente con mínimo 6 meses después del fin del viaje (6 jun 2027 + 6 meses = vencimiento ≥ dic 2027). Si vence antes, renovar YA.",
+      "VERIFICAR que esté vigente con mínimo 6 meses después del fin del viaje (24 may 2027 + 6 meses = vencimiento ≥ nov 2027). Si vence antes, renovar YA.",
     status: "pendiente",
     forUser: "ambos",
     notes: "Mexicanos NO necesitan visa para UK, Irlanda ni Schengen (estancia <90 días). Solo pasaporte + boleto de regreso + capacidad financiera demostrable.",
@@ -203,11 +203,11 @@ export const basics: BasicItem[] = [
     brand: "—",
     category: "documentos",
     description:
-      "UK está implementando ETA para no-residentes. Para mayo 2027 ya estará obligatorio. £10/persona, válido 2 años. Tramitar online 1-2 semanas antes del viaje.",
-    priceUSD: 25,
+      "Obligatoria para mexicanos (cubre Inglaterra, Escocia e Irlanda del Norte; Irlanda no la pide). £20/persona desde abr 2026 (antes £16), válida 2 años. Tramitar online 1-2 meses antes del viaje.",
+    priceUSD: 52,
     status: "pendiente",
     forUser: "ambos",
-    notes: "£10×2 = $25. Tramitar en gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta. Verificar requisitos actualizados unos meses antes del viaje.",
+    notes: "£20×2 = $52. Tramitar en gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta. Verificar requisitos actualizados unos meses antes del viaje.",
     url: "https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta",
   },
   {

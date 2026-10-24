@@ -7,7 +7,7 @@
 
 ## TL;DR del proyecto
 
-**My Travel** — PWA de itinerario de viaje 24 días por Inglaterra, Irlanda y Escocia (15 may – 7 jun 2027). 2 personas, salida desde CDMX. Presupuesto total ~$14,315 USD / $246,218 MXN.
+**My Travel** — PWA de itinerario de viaje 24 días por Inglaterra, Irlanda y Escocia (1 – 24 may 2027). 2 personas, salida desde CDMX. Presupuesto total ~$14,765 USD / $253,958 MXN.
 
 - **Repo:** https://github.com/Dzs97/viajes
 - **Producción:** https://viajes-eight.vercel.app
@@ -21,6 +21,7 @@
 ### Rutas
 - `/` → Itinerario completo (hero, mapa general, breakdown de gastos colapsable, secciones por país)
 - `/basics` → Lista editable de items a comprar/empacar antes del viaje
+- `/reservas` → Qué reservar y cuándo, con precios reales (oct 2026) y links directos (`app/data/bookings.ts`)
 
 ### Componentes clave
 - **SiteHeader**: nav con tabs Itinerario/Basics, logo SVG del ícono, theme toggle
@@ -47,12 +48,12 @@
 
 ### Duración
 1. Empezó como 21 días → 22 → 23 → **24 días** (extendió por agregar Seven Sisters)
-2. Fecha inicio se movió de lun 17 may 2027 → **sáb 15 may 2027** para tener Sunday cluster (Barbican Conservatory + Brick Lane)
+2. Fecha inicio se movió de lun 17 may 2027 → sáb 15 may 2027 → **sáb 1 may 2027** (oct 2026) para evitar bank holiday 31 may + half-term inglés + Chelsea Flower Show + June bank holiday irlandés. Se mantuvo inicio en sábado (Sunday cluster: Columbia Road + Brick Lane; el Barbican Conservatory cerró hasta 2030).
 
 ### Coche
 - **Inglaterra**: sin coche excepto medio día para Seven Sisters (día 7, ~$115)
 - **Irlanda**: coche 8 días (día 10-17), $720 renta + $280 gasolina
-- **Escocia**: coche 4 días (día 20-23) para Highlands+Skye, $320 renta + $145 gasolina
+- **Escocia**: coche 3 días (día 21-23) para Highlands+Skye, $240 renta + $120 gasolina
 - Resto: transporte público (Travelcard Londres, tren para transiciones)
 
 ### Hoteles
@@ -84,8 +85,9 @@
 
 ## Pendientes reales del owner (acciones que él debe hacer)
 
-**Urgencia alta (próximas semanas):**
-- [ ] Cotizar vuelos multi-city en Hot Sale AeroMéxico (~mayo cada año)
+**Urgencia alta (próximas semanas):** ver `/reservas` fase "Reservar ya"
+- [ ] Comprar vuelos multi-city MEX→LHR 30 abr / EDI→MEX 24 may (Buen Fin nov 2026)
+- [ ] Hoteles con cancelación gratis (Portree primero) + coches automáticos
 - [ ] Renovar pasaportes si vencen antes de dic 2027
 - [ ] Comprar Adidas Terrex Skychaser GTX + calceta merino (romperlos con 15-20h antes del viaje)
 
@@ -108,7 +110,7 @@
 Cosas que Diego mencionó querer pero no se hicieron:
 - Imágenes por lugar (opcional)
 - Tiempo estimado de manejo entre paradas usando Distance Matrix API (existe estimación con haversine ya en `app/lib/geo.ts`, pero no llamadas reales)
-- Dirección exacta de **Lounge 33** en Edimburgo (actualmente coord aprox)
+- Dirección exacta de **Lounge 33** (está en Leith, coord aprox)
 
 Ideas mías (Claude) que quedaron abiertas:
 - Sync de Basics entre dispositivos (Vercel KV — se implementó y revirtió, o Supabase)

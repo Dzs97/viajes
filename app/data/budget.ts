@@ -1,5 +1,5 @@
-// Presupuesto para 2 personas, nivel cómodo, salida desde México, mitades de mayo 2027
-// Hoteles nivel 3-3.5 estrellas. Temporada baja-media (mayo), antes del pico de verano.
+// Presupuesto para 2 personas, nivel cómodo, salida desde México, 1-24 mayo 2027
+// Hoteles nivel 3-3.5 estrellas. Temporada baja-media (inicios de mayo): evita el bank holiday del 31 may y el half-term inglés (29 may-6 jun).
 // Tipos de cambio base (mayo 2027 aproximados): 1 USD ≈ 17.20 MXN, 1 EUR ≈ 18.70 MXN, 1 GBP ≈ 21.80 MXN
 // Todos los montos están en USD para fácil conversión.
 
@@ -57,18 +57,18 @@ export const budgets: CountryBudget[] = [
       },
       {
         label: "7-Day Travelcard zonas 1-6 (2 personas)",
-        amount: 165,
-        detail: "£65/persona × 2 = £130 ≈ $165. Cubre tube + bus + Overground + DLR durante 7 días. Alternativa: contactless/Oyster con cap diario (~£15/día zonas 1-2). Travelcard sale igual o más barato si harán 6+ viajes diarios.",
+        amount: 210,
+        detail: "£81.60/persona × 2 = £163 ≈ $210 (precio TfL 2026, congelado vs 2025). Mismo monto que el cap semanal de contactless. Cubre tube + bus + Overground + DLR durante 7 días. Alternativa: contactless/Oyster con cap diario (~£15/día zonas 1-2). Travelcard sale igual o más barato si harán 6+ viajes diarios.",
       },
       {
-        label: "Tren ida-vuelta Paddington → Windsor (día 7)",
-        amount: 30,
-        detail: "GWR off-peak return 2 personas ~£24-30. 38 min cada lado. Compra online en gwr.com con anticipación para tarifas Advance más baratas.",
+        label: "Trenes día 8 (Paddington → Windsor → Richmond)",
+        amount: 40,
+        detail: "GWR Paddington → Windsor & Eton Central (sencillo) + SWR Windsor & Eton Riverside → Richmond (sencillo), 2 personas ~£30. El Travelcard de 7 días ya venció el día 8. Comprar en gwr.com / southwesternrailway.com o contactless.",
       },
       {
         label: "Tour día Wiltshire (Stonehenge + Bath + Castle Combe)",
-        amount: 220,
-        detail: "Tour organizado de día completo desde Londres con bus + guía + entradas a Stonehenge. ~$110/persona × 2. Operadores: Golden Tours, Premium Tours, Evan Evans. Recoge en hotel central o Victoria Coach. 10-12h. Alternativa self-drive con renta de auto 1 día ~$130 total.",
+        amount: 300,
+        detail: "Tour organizado de día completo desde Londres con bus + guía + entradas a Stonehenge y Roman Baths. ~$130-180/persona según si incluye entradas (precios oct 2026). Operadores: Golden Tours, Premium Tours, Evan Evans. Recoge en hotel central o Victoria Coach. 10-12h. Alternativa self-drive con renta de auto 1 día ~$130 total.",
       },
       {
         label: "Coche rentado medio día (Seven Sisters)",
@@ -82,8 +82,8 @@ export const budgets: CountryBudget[] = [
       },
       {
         label: "Entradas atracciones pagadas",
-        amount: 510,
-        detail: "Westminster Abbey £29×2=$80, Tower of London £35×2=$90, St Paul's Cathedral £21×2=$50, Shakespeare's Globe tour £22×2=$55, Painted Hall Greenwich £15×2=$40, Royal Observatory Greenwich £18×2=$45, Windsor Castle £30×2=$80, Kew Gardens £22×2=$55. Reservar online para evitar colas. GRATIS: British Museum, National Gallery, Tate Modern, Sir John Soane's Museum, Sky Garden (reservar), Barbican Conservatory (sun), Queen's House Greenwich, St James's Park, Hill Garden Pergola, Holly Village, Cambio de Guardia Buckingham.",
+        amount: 570,
+        detail: "Precios oficiales oct 2026: Westminster Abbey £31×2=$80, Tower of London £37×2=$95, St Paul's Cathedral £27×2=$69, Shakespeare's Globe tour ~£27×2=$69, Painted Hall Greenwich £19×2=$49, Royal Observatory Greenwich £18-24×2=$62, Windsor Castle £32×2=$82, Kew Gardens £25×2=$64. Reservar online para evitar colas. GRATIS: British Museum, National Gallery, Tate Modern, Sir John Soane's Museum, Sky Garden (reservar), Columbia Road Flower Market (dom), Queen's House Greenwich, St James's Park, Hill Garden Pergola, Holly Village, Cambio de Guardia Buckingham.",
       },
       {
         label: "Comida y bebidas (7 días)",
@@ -92,7 +92,7 @@ export const budgets: CountryBudget[] = [
       },
       {
         label: "Teatro West End (opcional)",
-        amount: 80,
+        amount: 100,
         detail: "Día 3 noche. Mamma Mia, Les Misérables, Phantom, Wicked. TKTS Leicester Square día del show £30-50/persona. Saltable si quieren ahorrar.",
       },
       {
@@ -127,8 +127,8 @@ export const budgets: CountryBudget[] = [
       },
       {
         label: "Actividades y entradas",
-        amount: 380,
-        detail: "Book of Kells (€25×2), Cliffs of Moher (€10×2), Giant's Causeway (£15×2), Titanic Museum (£25×2), Vintage Tea Tour (€50×2), Powerscourt (€10×2), Newgrange (€18×2), Black Cab Tour (£40×2).",
+        amount: 495,
+        detail: "Precios oct 2026: Book of Kells (€25×2), Cliffs of Moher online (€12×2), Giant's Causeway (£14-18×2), Titanic Belfast (£24.95×2), Vintage Tea Tour (~€60×2), Powerscourt Waterfall (€8×2), Newgrange + Knowth (€18×2), Black Cab Tour (~£30×2), Kylemore Abbey (€18×2). Guinness Storehouse opcional (desde €26).",
       },
       {
         label: "Vuelo Dublín → Edimburgo",
@@ -146,29 +146,29 @@ export const budgets: CountryBudget[] = [
         detail: "Edimburgo Old Town (4 noches) $170/noche = $680, Fort William (1) $130, Portree Skye (1) $180 (Skye se llena), Edimburgo cerca aeropuerto (1) $130. Promedio $160/noche en mayo.",
       },
       {
-        label: "Coche rentado (4 días)",
-        amount: 320,
-        detail: "Automático con seguro completo. Pickup en oficina centro Edimburgo día 18, return en aeropuerto EDI día 21. ~$80/día con Hertz/Europcar/Enterprise.",
+        label: "Coche rentado (3 días)",
+        amount: 240,
+        detail: "Automático con seguro completo. Pickup día 21 (centro o aeropuerto EDI), return en aeropuerto EDI día 23. ~$80/día con Hertz/Europcar/Enterprise. Día 20 sin coche: Duddingston y Craigmillar se hacen caminando/bus.",
       },
       {
         label: "Gasolina + parking",
-        amount: 145,
-        detail: "~1,500 km en total. Diesel ~£1.65/L. Parking 1 noche en Edimburgo céntrico (~£20) + parking gratis en hotel Fort William y Portree.",
+        amount: 120,
+        detail: "~1,500 km en total. Diesel ~£1.65/L. Sin parking nocturno en Edimburgo (coche se recoge el día 21). Parking gratis en hotel Fort William y Portree.",
       },
       {
         label: "Transporte público (tram + buses)",
         amount: 80,
-        detail: "Tram aeropuerto Edimburgo → centro x2 personas ida = $15. Buses dentro de Edimburgo días 16-17 (~$25). Buffer taxis/Uber ocasionales.",
+        detail: "Tram aeropuerto Edimburgo → centro x2 personas ida = $15. Buses dentro de Edimburgo días 18-20 (~$25). Buffer taxis/Uber ocasionales.",
       },
       {
         label: "Comida y bebidas",
         amount: 1100,
-        detail: "7 días × ~$157/día. Edimburgo es más caro que Irlanda. Incluye pub food (Sheep Heid Inn), restaurantes de gama media-alta (The Witchery), drinks en pubs históricos (Banshee, Frankenstein, Lounge 33) y mariscos en Skye.",
+        detail: "7 días × ~$157/día. Edimburgo es más caro que Irlanda. Incluye pub food (Sheep Heid Inn), restaurantes de gama media-alta (The Witchery), drinks en pubs históricos (Banshee, Frankenstein) y Lounge 33 en Leith y mariscos en Skye.",
       },
       {
         label: "Actividades y entradas",
-        amount: 250,
-        detail: "Palace of Holyroodhouse (£20×2), Magic Museum (£10×2), Craigmillar Castle (£10×2), Eilean Donan Castle (£12×2), Urquhart Castle/Loch Ness (£15×2), Old Man of Storr parking (£4), Glenfinnan parking (£5), Plodda Falls (gratis). Portrait Gallery y Tron Kirk son gratis.",
+        amount: 475,
+        detail: "Precios oct 2026: Edinburgh Castle (£23.50×2), Islander workshop bolsa Harris Tweed (~£85×2), Palace of Holyroodhouse (£22×2), Magic Museum (~£10×2), Craigmillar Castle (£7.50×2), Eilean Donan Castle (~£13×2), Urquhart Castle/Loch Ness (£14×2), Old Man of Storr parking (£4), Glenfinnan parking (£5), Plodda Falls (gratis). Portrait Gallery y Tron Kirk son gratis.",
       },
     ],
   },

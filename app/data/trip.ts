@@ -1,5 +1,5 @@
 // Fecha de inicio del viaje (día 1 global). Cambia esto si la fecha del viaje cambia.
-export const tripStartDate = new Date("2027-05-15T00:00:00");
+export const tripStartDate = new Date("2027-05-01T00:00:00");
 
 // Total de días planeados del viaje completo (~3.5 semanas).
 export const totalTripDays = 24;
@@ -51,7 +51,7 @@ export const trip: Country[] = [
             lat: 51.47,
             lng: -0.4543,
             time: "5:00 PM",
-            notes: "Llegada desde CDMX. Heathrow Express a Paddington (15 min, £25/persona) o tube Piccadilly line al centro (1h, £6 con Oyster). Recoger Oyster Card / 7-Day Travelcard zonas 1-6 en máquinas del aeropuerto.",
+            notes: "Llegada desde CDMX (vuelo nocturno, sale vie 30 abr). Heathrow Express a Paddington (15 min, £25/persona) o tube Piccadilly line al centro (1h, £6 con Oyster). Recoger Oyster Card / 7-Day Travelcard zonas 1-6 en máquinas del aeropuerto.",
           },
           {
             name: "Hotel central (Bayswater/Bloomsbury/King's Cross)",
@@ -80,26 +80,34 @@ export const trip: Country[] = [
       },
       {
         number: 2,
-        title: "Domingo: Brick Lane + Barbican + British Museum + Sky Garden",
+        title: "Domingo: Columbia Road + Brick Lane + Soane + British Museum + Sky Garden",
         narrative:
-          "Día dominical aprovechando lugares solo abiertos en domingo (Brick Lane Vintage Market + Barbican Conservatory gratis), museo icónico y sunset desde el rascacielos Walkie Talkie.",
+          "Día dominical aprovechando mercados que solo abren en domingo (Columbia Road Flower Market + Brick Lane Vintage Market), dos museos gratis en Bloomsbury/Holborn y sunset desde el rascacielos Walkie Talkie.",
         sleep: "Londres central",
         locations: [
           {
-            name: "Barbican Conservatory",
-            lat: 51.5202,
-            lng: -0.0937,
-            time: "10:00 AM",
+            name: "Columbia Road Flower Market",
+            lat: 51.5296,
+            lng: -0.0712,
+            time: "9:30 AM",
             duration: "1h",
-            notes: "Segundo jardín tropical más grande de Londres. SOLO ABRE DOMINGOS + festivos. GRATIS. Verificar horario en barbican.org.uk.",
+            notes: "Mercado de flores SOLO DOMINGOS (~8 AM-3 PM). Calle victoriana con tiendas independientes y cafés. Llegar temprano, a mediodía se llena. Reemplaza al Barbican Conservatory (cerrado por restauración hasta 2030).",
           },
           {
             name: "Brick Lane Vintage Market + curry lunch",
             lat: 51.523,
             lng: -0.0712,
-            time: "12:00 PM",
-            duration: "3h",
-            notes: "Mejor día del mercado vintage (domingo 10-6). Caminata por Shoreditch, street art (incl. Banksy). Lunch en curry house (Aladin, Brick Lane Brasserie).",
+            time: "11:00 AM",
+            duration: "2.5h",
+            notes: "A 10 min caminando de Columbia Road. Mejor día del mercado vintage (domingo 10-6). Caminata por Shoreditch, street art (incl. Banksy). Lunch en curry house (Aladin, Brick Lane Brasserie).",
+          },
+          {
+            name: "Sir John Soane's Museum",
+            lat: 51.517,
+            lng: -0.1175,
+            time: "2:15 PM",
+            duration: "1h",
+            notes: "13 Lincoln's Inn Fields. Casa-museo del arquitecto del s.XIX, colección excéntrica. GRATIS, sin reserva (puede haber fila corta). Abre mié-dom 10-5, última entrada 4:30. CERRADO lun-mar.",
           },
           {
             name: "British Museum",
@@ -107,7 +115,7 @@ export const trip: Country[] = [
             lng: -0.127,
             time: "3:30 PM",
             duration: "1.5h",
-            notes: "Rosetta Stone, Parthenon Marbles, Egyptian mummies. GRATIS. Cierra 5 PM dom. Entrada por Great Russell Street.",
+            notes: "A 12 min caminando del Soane. Rosetta Stone, Parthenon Marbles, Egyptian mummies. GRATIS. Cierra 5 PM. Entrada por Great Russell Street.",
           },
           {
             name: "Sky Garden",
@@ -132,7 +140,7 @@ export const trip: Country[] = [
             lng: -0.1274,
             time: "9:30 AM",
             duration: "1.5h",
-            notes: "Iglesia gótica donde se coronan los monarcas. Reservar entrada online (£29/persona). Foto rápida de Big Ben de paso al salir.",
+            notes: "Iglesia gótica donde se coronan los monarcas. Reservar entrada online (£31/persona). Foto rápida de Big Ben de paso al salir.",
           },
           {
             name: "Buckingham Palace + Changing of the Guard",
@@ -140,7 +148,7 @@ export const trip: Country[] = [
             lng: -0.1419,
             time: "11:00 AM",
             duration: "1h",
-            notes: "Cambio de Guardia lun/mié/vie/dom 11:00 AM (verificar en royal.uk). Llegar 10:30 para buen lugar. Solo exterior (State Rooms abren julio-octubre).",
+            notes: "Cambio de Guardia lun/mié/vie/dom 11:00 AM (verificar en royal.uk). Lun 3 may es bank holiday: más gente, llegar 10:15 para buen lugar. Solo exterior (State Rooms abren julio-octubre).",
           },
           {
             name: "St James's Park + The Mall",
@@ -243,7 +251,7 @@ export const trip: Country[] = [
         number: 5,
         title: "City + South Bank (Tower, St Paul's, Tate Modern)",
         narrative:
-          "Día denso por la City histórica y la ribera sur del Támesis. Tower of London, catedral, museos gratuitos y caminata por el Thames con dinner en Borough.",
+          "Día denso por la City histórica y la ribera sur del Támesis, en línea recta de este a oeste: Tower of London, Leadenhall, catedral, Millennium Bridge, Tate Modern y dinner en Borough.",
         sleep: "Londres central",
         locations: [
           {
@@ -252,7 +260,7 @@ export const trip: Country[] = [
             lng: -0.0759,
             time: "9:00 AM",
             duration: "2.5h",
-            notes: "Fortaleza del s.XI. Joyas de la Corona, White Tower, Beefeater tour. £35/persona. Reservar online. Tube: Tower Hill.",
+            notes: "Fortaleza del s.XI. Joyas de la Corona, White Tower, Beefeater tour. £37/persona. Reservar online. Tube: Tower Hill.",
           },
           {
             name: "Tower Bridge",
@@ -271,44 +279,36 @@ export const trip: Country[] = [
             notes: "Mercado victoriano cubierto (Diagon Alley exterior en Harry Potter). Lunch en pub interior. 30 St Mary Axe (Gherkin) a 2 min caminando para foto.",
           },
           {
-            name: "St Paul's Cathedral",
-            lat: 51.5138,
-            lng: -0.0984,
-            time: "1:45 PM",
-            duration: "1.5h",
-            notes: "Catedral de Christopher Wren. Subir a Whispering Gallery + Stone Gallery + Golden Gallery (528 escalones, vista panorámica). £21/persona.",
-          },
-          {
             name: "Reflection Garden (25 Cannon St)",
             lat: 51.5118,
             lng: -0.0916,
-            time: "3:15 PM",
+            time: "1:45 PM",
             duration: "15 min",
-            notes: "25 Cannon Street EC4M 9AF. Jardín de bolsillo cerca de St Paul's. Verificar ubicación exacta al llegar.",
+            notes: "25 Cannon Street EC4M 9AF. Jardín de bolsillo de camino a St Paul's. Verificar ubicación exacta al llegar.",
           },
           {
-            name: "Sir John Soane's Museum",
-            lat: 51.517,
-            lng: -0.1175,
-            time: "3:45 PM",
-            duration: "1h",
-            notes: "55-56 Lincoln's Inn Fields. Casa-museo del arquitecto del s.XIX, colección excéntrica. GRATIS. Cierra 5 PM. Llegar antes de 4:15 PM.",
+            name: "St Paul's Cathedral",
+            lat: 51.5138,
+            lng: -0.0984,
+            time: "2:15 PM",
+            duration: "1.5h",
+            notes: "Catedral de Christopher Wren. Subir a Whispering Gallery + Stone Gallery + Golden Gallery (528 escalones, vista panorámica). £27/persona online.",
           },
           {
             name: "Tate Modern",
             lat: 51.5076,
             lng: -0.0994,
-            time: "5:00 PM",
-            duration: "1h",
-            notes: "Cruzar Millennium Bridge desde St Paul's. Arte moderno. GRATIS. Cierra 6 PM Sun-Thu, 10 PM Fri-Sat. Solo highlights por tiempo.",
+            time: "4:00 PM",
+            duration: "1.5h",
+            notes: "Cruzar Millennium Bridge desde St Paul's. Arte moderno. GRATIS. Cierra 6 PM. Solo highlights por tiempo.",
           },
           {
             name: "Shakespeare's Globe",
             lat: 51.5081,
             lng: -0.0972,
-            time: "6:15 PM",
+            time: "5:40 PM",
             duration: "15 min",
-            notes: "Réplica del teatro original isabelino, al lado de Tate Modern. Exterior gratis. Tours guiados £22 (verificar si quedan).",
+            notes: "Réplica del teatro original isabelino, al lado de Tate Modern. Exterior gratis. Tours guiados ~£27 (son de día; opcional).",
           },
           {
             name: "Borough Market area (cena)",
@@ -333,7 +333,7 @@ export const trip: Country[] = [
             lng: -0.0067,
             time: "10:00 AM",
             duration: "1h",
-            notes: "College Way SE10 9NN. Antiguo refectorio del Old Royal Naval College con techos pintados por Sir James Thornhill (la 'Sistine Chapel de Inglaterra'). £15/persona. DLR Cutty Sark.",
+            notes: "College Way SE10 9NN. Antiguo refectorio del Old Royal Naval College con techos pintados por Sir James Thornhill (la 'Sistine Chapel de Inglaterra'). £19/persona. DLR Cutty Sark.",
           },
           {
             name: "Queen's House (Greenwich)",
@@ -349,7 +349,7 @@ export const trip: Country[] = [
             lng: -0.0015,
             time: "12:30 PM",
             duration: "1h",
-            notes: "Pararte en el meridiano de Greenwich (línea 0 de longitud). £18/persona. Vista panorámica de Londres desde Greenwich Park.",
+            notes: "Pararte en el meridiano de Greenwich (línea 0 de longitud). £18-24/persona (hay obras de renovación: revisar qué está abierto). Vista panorámica de Londres desde Greenwich Park.",
           },
           {
             name: "Lunch en Greenwich Market",
@@ -453,7 +453,7 @@ export const trip: Country[] = [
         number: 8,
         title: "Windsor + Kew + vuelo a Dublín",
         narrative:
-          "Día de transición: mañana Windsor Castle, tarde Kew Gardens, vuelo nocturno a Dublín. Llegada tarde, dormir.",
+          "Día de transición: mañana Windsor Castle, tarde Kew Gardens (tren directo Windsor → Richmond), recoger maletas y vuelo nocturno a Dublín. Llegada tarde, dormir.",
         sleep: "Dublín centro",
         locations: [
           {
@@ -469,22 +469,30 @@ export const trip: Country[] = [
             lng: -0.6044,
             time: "9:00 AM",
             duration: "3h",
-            notes: "Tren Paddington → Windsor & Eton Central, 38 min. Residencia oficial de la realeza. State Apartments + St George's Chapel. £30/persona. Reservar online.",
+            notes: "Tren Paddington → Slough → Windsor & Eton Central (~40 min). Residencia oficial de la realeza. State Apartments + St George's Chapel. £32/persona online (£36 en taquilla).",
           },
           {
             name: "Kew Gardens + Waterlily House",
             lat: 51.4787,
             lng: -0.2956,
-            time: "2:00 PM",
-            duration: "3h",
-            notes: "Tren Windsor → Slough → Paddington → Tube District line a Kew Gardens. Palm House, Temperate House, Waterlily House. £22/persona.",
+            time: "1:30 PM",
+            duration: "2.5h",
+            notes: "Tren directo Windsor & Eton Riverside → Richmond (SWR, ~40 min), luego 1 parada de District line/Overground a Kew Gardens. Palm House, Temperate House, Waterlily House. £25/persona online. Salir a las 4:00 PM a más tardar.",
+          },
+          {
+            name: "Recoger maletas en hotel",
+            lat: 51.5305,
+            lng: -0.124,
+            time: "5:00 PM",
+            duration: "15 min",
+            notes: "District line Kew → centro (~45 min), recoger maletas de la consigna del hotel y seguir a Paddington. Si el hotel está en Bayswater/Paddington, este paso es casi de camino.",
           },
           {
             name: "Heathrow Airport (LHR)",
             lat: 51.47,
             lng: -0.4543,
-            time: "6:30 PM",
-            notes: "Heathrow Express desde Paddington (15 min). Check-in 7 PM para vuelo Ryanair/Aer Lingus 9 PM. Recoger maletas del hotel antes.",
+            time: "6:15 PM",
+            notes: "Elizabeth line o Heathrow Express desde Paddington (15-30 min). Vuelos LHR→DUB ~1h15. Reservar uno que salga 8:30 PM o después para no correr.",
           },
           {
             name: "Dublin Airport (DUB)",
@@ -508,7 +516,7 @@ export const trip: Country[] = [
             lng: -6.2545716,
             time: "9:00 AM",
             duration: "2h",
-            notes: "Book of Kells + Long Room. Reservar online con anticipación.",
+            notes: "Book of Kells + Long Room. €25/persona, entrada con horario obligatoria: reservar 9:00 AM online.",
           },
           {
             name: "Leo Burdock's",
@@ -524,7 +532,7 @@ export const trip: Country[] = [
             lng: -6.2603,
             time: "2:30 PM",
             duration: "1.5h",
-            notes: "Tour en autobús vintage con té y pasteles. Reservar antes.",
+            notes: "Tour en autobús de los 60s con té y pasteles (~€60/persona, 1.5h). Reservar antes y confirmar salida en domingo.",
           },
           {
             name: "Guinness Storehouse",
@@ -548,8 +556,8 @@ export const trip: Country[] = [
         number: 10,
         title: "Wicklow: cascada, lago y monasterio",
         narrative:
-          "Day trip al sur de Dublín con el coche recién rentado. Powerscourt, Avoca, Lough Tay y Glendalough.",
-        sleep: "Dublín centro (última noche)",
+          "Day trip al sur de Dublín con el coche recién rentado, en loop sin regresar sobre tus pasos: Powerscourt, Lough Tay, Glendalough y Avoca.",
+        sleep: "Dublín centro",
         locations: [
           {
             name: "Recoger coche en Dublín centro",
@@ -567,28 +575,28 @@ export const trip: Country[] = [
             notes: "Cascada más alta de Irlanda. ~1h desde Dublín.",
           },
           {
-            name: "Avoca Handweavers (Weavers of Ireland)",
-            lat: 52.9866,
-            lng: -6.2056,
-            time: "12:30 PM",
-            duration: "1.5h",
-            notes: "Tienda artesanal histórica + café para almuerzo.",
-          },
-          {
             name: "Lough Tay (Guinness Lake)",
             lat: 53.1547,
             lng: -6.3275,
-            time: "2:30 PM",
+            time: "12:15 PM",
             duration: "45 min",
-            notes: "Mirador desde la R759. Famoso por Vikings.",
+            notes: "Mirador desde la R759 (~25 min de Powerscourt). Famoso por Vikings.",
           },
           {
             name: "Glendalough",
             lat: 53.0114,
             lng: -6.3271,
-            time: "4:00 PM",
+            time: "1:30 PM",
             duration: "2h",
-            notes: "Ruinas monásticas medievales. Opcional pero recomendado.",
+            notes: "Ruinas monásticas medievales + Upper Lake. Almuerzo en el Glendalough Hotel o café del visitor centre.",
+          },
+          {
+            name: "Avoca Handweavers (Weavers of Ireland)",
+            lat: 52.9866,
+            lng: -6.2056,
+            time: "4:00 PM",
+            duration: "1h",
+            notes: "Molino de tejidos más antiguo de Irlanda (1723), tienda + café. Verificar hora de cierre (~5-5:30 PM). Regreso a Dublín ~1h por la M11.",
           },
         ],
       },
@@ -644,7 +652,7 @@ export const trip: Country[] = [
             lng: -9.4308825,
             time: "10:00 AM",
             duration: "3h",
-            notes: "Llega 9-10 AM. Camina hacia O'Brien's Tower.",
+            notes: "Llega 9-10 AM (antes de las 11 es tarifa off-peak online, €8-12). Camina hacia O'Brien's Tower.",
           },
           {
             name: "Doolin",
@@ -741,7 +749,7 @@ export const trip: Country[] = [
             lng: -6.5115554,
             time: "3:30 PM",
             duration: "3h",
-            notes: "Reservar entrada online. Columnas basálticas legendarias.",
+            notes: "Columnas basálticas legendarias. Caminar es gratis; el Visitor Experience (£14-18/persona) incluye parking y audioguía.",
           },
         ],
       },
@@ -766,7 +774,7 @@ export const trip: Country[] = [
             lng: -5.9106,
             time: "11:00 AM",
             duration: "3h",
-            notes: "Museo excelente. Reservar entrada online.",
+            notes: "Museo excelente. £24.95/persona online (incluye SS Nomadic). Sábado: reservar horario.",
           },
           {
             name: "Cathedral Quarter",
@@ -807,7 +815,7 @@ export const trip: Country[] = [
             lng: -6.4756,
             time: "2:00 PM",
             duration: "3h",
-            notes: "Túmulo prehistórico más antiguo que las pirámides. Reservar online.",
+            notes: "Túmulo prehistórico más antiguo que las pirámides. Tour de ~3h desde el Visitor Centre (Newgrange + Knowth, ~€18/persona). Los boletos salen online exactamente 30 días antes, a medianoche hora de Irlanda: reservar ese día. No se puede llegar en coche directo al túmulo.",
           },
           {
             name: "Dublín",
@@ -822,7 +830,8 @@ export const trip: Country[] = [
         number: 17,
         title: "Dublín → Edimburgo (vuelo)",
         narrative:
-          "Día final. Devuelves el coche en el aeropuerto y vuelas a Escocia (~1h con Aer Lingus o Ryanair).",
+          "Día final en Irlanda. Devuelves el coche en el aeropuerto y vuelas a Escocia (~1h con Aer Lingus o Ryanair). Primera noche en Edimburgo.",
+        sleep: "Edimburgo Old Town (4 noches)",
         locations: [
           {
             name: "Mañana libre en Dublín",
@@ -837,7 +846,14 @@ export const trip: Country[] = [
             lat: 53.4264,
             lng: -6.2499,
             time: "3:00 PM",
-            notes: "Devolver coche. Vuelo Aer Lingus/Ryanair a Edimburgo.",
+            notes: "Devolver coche. Vuelo Aer Lingus/Ryanair a Edimburgo (~1h).",
+          },
+          {
+            name: "Edinburgh Airport (EDI)",
+            lat: 55.9505,
+            lng: -3.368,
+            time: "6:00 PM",
+            notes: "Tram al centro (~35 min) o Airlink 100 bus. Check-in en Old Town y cena ligera.",
           },
         ],
       },
@@ -849,27 +865,20 @@ export const trip: Country[] = [
     flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
     subtitle: "Última etapa · 7 días · Coche rentado para Highlands y Skye",
     description:
-      "Base en Edimburgo (4 noches Old Town + 1 cerca aeropuerto), loop por West Highlands (Glencoe, Fort William), Isle of Skye (Portree) y regreso por Loch Ness. Coche rentado del día 20 al día 23. Vuelo de regreso a CDMX desde Edimburgo el día 24.",
+      "Base en Edimburgo (4 noches Old Town + 1 cerca aeropuerto), loop por West Highlands (Glencoe, Fort William), Isle of Skye (Portree) y regreso por Loch Ness. Coche rentado del día 21 al día 23. Vuelo de regreso a CDMX desde Edimburgo el día 24.",
     days: [
       {
         number: 18,
-        title: "Llegada a Edimburgo + Royal Mile",
+        title: "Edimburgo: Princes Street + Royal Mile",
         narrative:
-          "Llegada desde Dublín por la mañana. Caminata por el Royal Mile con vistas al castillo, cena legendaria en The Witchery y nightcap en cocktail bar.",
+          "Primer día completo en Edimburgo. Princes Street y el Mound por la mañana, Royal Mile con vistas al castillo, cena legendaria en The Witchery y nightcap.",
         sleep: "Edimburgo Old Town",
         locations: [
-          {
-            name: "Edinburgh Airport",
-            lat: 55.9505,
-            lng: -3.368,
-            time: "11:00 AM",
-            notes: "Vuelo de Dublín. Tram Airlink al centro (~30 min, £7.50/persona).",
-          },
           {
             name: "Scott Monument",
             lat: 55.9521,
             lng: -3.1929,
-            time: "2:30 PM",
+            time: "10:30 AM",
             duration: "30 min",
             notes: "Monumento gótico victoriano en Princes Street. Opcional subir 287 escalones para vista panorámica.",
           },
@@ -877,7 +886,7 @@ export const trip: Country[] = [
             name: "Waterstones Cafe (West End)",
             lat: 55.9527,
             lng: -3.1936,
-            time: "3:15 PM",
+            time: "11:15 AM",
             duration: "20 min",
             notes: "Café en la sucursal de Princes Street con la mejor vista al Edinburgh Castle desde el último piso.",
           },
@@ -885,17 +894,25 @@ export const trip: Country[] = [
             name: "New College (The Mound)",
             lat: 55.9498,
             lng: -3.1928,
-            time: "3:45 PM",
+            time: "11:45 AM",
             duration: "15 min",
             notes: "Foto del arco icónico del Mound desde el patio interior con vista al castillo.",
+          },
+          {
+            name: "Edinburgh Castle",
+            lat: 55.9486,
+            lng: -3.1999,
+            time: "12:30 PM",
+            duration: "2.5h",
+            notes: "Imprescindible: Crown Jewels de Escocia, Stone of Destiny, One O'Clock Gun (dispara a la 1 PM, salvo domingos). Boletos con horario, más baratos online. Lunch en el café del castillo.",
           },
           {
             name: "Tron Kirk",
             lat: 55.9499,
             lng: -3.1882,
-            time: "4:00 PM",
+            time: "3:30 PM",
             duration: "30 min",
-            notes: "Antigua iglesia del Royal Mile (1647), ahora centro cultural y mercado de productores locales.",
+            notes: "Antigua iglesia del Royal Mile (1647), ahora centro cultural y mercado de productores locales. Bajar caminando el Royal Mile desde el castillo.",
           },
           {
             name: "The Witchery by the Castle",
@@ -906,12 +923,12 @@ export const trip: Country[] = [
             notes: "Cena en el restaurante más legendario de Edimburgo, al lado del castillo. RESERVAR 2 meses antes.",
           },
           {
-            name: "Lounge 33",
-            lat: 55.9485,
-            lng: -3.1893,
+            name: "Lounge 33 (Leith)",
+            lat: 55.975,
+            lng: -3.172,
             time: "10:00 PM",
             duration: "1h",
-            notes: "Cocktail bar en Old Town para nightcap. Confirma dirección exacta al reservar.",
+            notes: "OJO: no está en Old Town. Es un listening lounge de vinilos estilo jazz kissa japonés en Leith (~15 min en taxi/tram). Coordenadas aproximadas: confirmar dirección y horario en sus redes antes de ir.",
           },
         ],
       },
@@ -932,11 +949,11 @@ export const trip: Country[] = [
           },
           {
             name: "Islander Workshop",
-            lat: 55.9522,
-            lng: -3.1801,
+            lat: 55.9516,
+            lng: -3.1785,
             time: "11:30 AM",
-            duration: "45 min",
-            notes: "156 Canongate (parte baja del Royal Mile, cerca de Holyroodhouse). Taller/tienda artesanal escocesa de knitwear y tweed. Verificar horario de apertura.",
+            duration: "1.5h",
+            notes: "6 Sibbald Walk, EH8 8FT (junto al Canongate, cerca de Holyroodhouse). Taller de 60-90 min donde armas tu propia bolsa de Harris Tweed. Reservar horario en islanderuk.com; llegar 10 min antes.",
           },
           {
             name: "Palace of Holyroodhouse",
@@ -944,7 +961,7 @@ export const trip: Country[] = [
             lng: -3.1719,
             time: "2:00 PM",
             duration: "1.5h",
-            notes: "Residencia oficial del monarca en Escocia, al pie del Royal Mile. Reservar online (£20/persona).",
+            notes: "Residencia oficial del monarca en Escocia, al pie del Royal Mile. Reservar online (£22/persona, £26 el mismo día).",
           },
           {
             name: "Museum of Magic, Fortune-telling & Witchcraft Ltd",
@@ -968,7 +985,7 @@ export const trip: Country[] = [
             lng: -3.1908,
             time: "11:00 PM",
             duration: "30 min",
-            notes: "Pub temático en George IV Bridge. Show del monstruo a medianoche.",
+            notes: "Pub temático en George IV Bridge. Show del monstruo a medianoche. Verificar que siga operando (la calle cerró tras el incendio de 2021).",
           },
         ],
       },
@@ -976,23 +993,16 @@ export const trip: Country[] = [
         number: 20,
         title: "Duddingston + Craigmillar Castle",
         narrative:
-          "Día relajado en las afueras. Recoger coche rentado, visitar el cluster de Duddingston (jardín secreto + pub más antiguo de Escocia) y Craigmillar Castle.",
+          "Día relajado en las afueras sin coche: caminata por Holyrood Park al cluster de Duddingston (jardín secreto + pub más antiguo de Escocia) y Craigmillar Castle.",
         sleep: "Edimburgo Old Town",
         locations: [
-          {
-            name: "Recoger coche rentado",
-            lat: 55.95,
-            lng: -3.192,
-            time: "9:00 AM",
-            notes: "Oficina céntrica de Edimburgo. Pedir automático para Highlands. Tener tarjeta de crédito + licencia válida.",
-          },
           {
             name: "Dr Neil's Garden",
             lat: 55.9385,
             lng: -3.1497,
-            time: "10:15 AM",
+            time: "10:00 AM",
             duration: "1h",
-            notes: "Jardín secreto al lado de Duddingston Loch. Donación voluntaria. Cherry blossoms en primavera.",
+            notes: "Jardín secreto al lado de Duddingston Loch. Donación voluntaria. Llegar caminando por Holyrood Park (~40 min desde Old Town, bordeando Arthur's Seat) o bus 42.",
           },
           {
             name: "Craigmillar Castle",
@@ -1000,7 +1010,7 @@ export const trip: Country[] = [
             lng: -3.1462,
             time: "11:30 AM",
             duration: "1.5h",
-            notes: "Castillo medieval del siglo XIV. Refugio de Mary Queen of Scots. Cierra a las 5:30 PM (£10/persona).",
+            notes: "Castillo medieval del siglo XIV. Refugio de Mary Queen of Scots. Cierra a las 5:30 PM (£7.50/persona online). ~25 min caminando desde Duddingston o taxi/Uber corto.",
           },
           {
             name: "The Sheep Heid Inn",
@@ -1027,11 +1037,11 @@ export const trip: Country[] = [
         sleep: "Fort William",
         locations: [
           {
-            name: "Salida de Edimburgo",
-            lat: 55.9533,
-            lng: -3.1883,
+            name: "Recoger coche rentado + salida",
+            lat: 55.95,
+            lng: -3.192,
             time: "8:00 AM",
-            notes: "Salir temprano para evitar tráfico de hora pico en M9. ~2.5h hasta Glencoe.",
+            notes: "Oficina céntrica de Edimburgo (o en el aeropuerto, que tiene más automáticos y queda de camino). Pedir automático. Tener tarjeta de crédito + licencia + IDP. ~2.5h hasta Glencoe.",
           },
           {
             name: "Glencoe Valley (Three Sisters)",
@@ -1071,7 +1081,7 @@ export const trip: Country[] = [
             lng: -5.4291,
             time: "8:30 AM",
             duration: "2h",
-            notes: "Viaducto del Hogwarts Express. Jacobite Steam Train pasa ~10:45 AM. Verificar horario en jacobitesteamtrain.co.uk.",
+            notes: "Viaducto del Hogwarts Express. El Jacobite Steam Train suele pasar ~10:45-11:00 AM, PERO en 2026 la temporada arrancó tarde (mayo/junio) por un pleito con el regulador: confirmar fechas 2027 en westcoastrailways.co.uk. Mirador: sendero de 15 min desde el parking del Visitor Centre (£5).",
           },
           {
             name: "Eilean Donan Castle",
@@ -1079,7 +1089,7 @@ export const trip: Country[] = [
             lng: -5.516,
             time: "12:45 PM",
             duration: "1.5h",
-            notes: "Castillo más fotografiado de Escocia, en una isla rocosa. Lunch en café al cruzar el puente. £12/persona.",
+            notes: "Castillo más fotografiado de Escocia, en una isla rocosa. Lunch en café al cruzar el puente. ~£13/persona.",
           },
           {
             name: "Portree (check-in hotel)",
@@ -1087,7 +1097,7 @@ export const trip: Country[] = [
             lng: -6.1959,
             time: "3:15 PM",
             duration: "30 min",
-            notes: "Pueblo principal de Skye. Casas de colores en el puerto. Reservar hotel 2-3 meses antes.",
+            notes: "Pueblo principal de Skye. Casas de colores en el puerto. Reservar hotel YA (es lo primero que se agota del viaje).",
           },
           {
             name: "Fairy Glen (Uig)",
@@ -1118,7 +1128,7 @@ export const trip: Country[] = [
         number: 23,
         title: "Skye → Plodda Falls → Loch Ness → Edimburgo",
         narrative:
-          "Día largo de regreso al sur. Plodda Falls escondida en Glen Affric, caza de Nessie en Loch Ness, pasada por Inverness y vuelta a la capital.",
+          "Día largo de regreso al sur (~7.5h de manejo total). Plodda Falls escondida en Glen Affric, caza de Nessie en Loch Ness, pasada por Inverness y vuelta a la capital.",
         sleep: "Edimburgo (cerca aeropuerto)",
         locations: [
           {
@@ -1134,7 +1144,7 @@ export const trip: Country[] = [
             lng: -4.8761,
             time: "10:00 AM",
             duration: "45 min",
-            notes: "Cascada de 46m en Glen Affric con viewing platform desde arriba. Gratis. Walk de 10 min desde estacionamiento.",
+            notes: "Cascada de 46m en Glen Affric con viewing platform desde arriba. Gratis. Walk de 10 min desde estacionamiento. El camino forestal de acceso tiene muchos baches: ir despacio.",
           },
           {
             name: "Loch Ness (Urquhart Castle)",
@@ -1142,7 +1152,7 @@ export const trip: Country[] = [
             lng: -4.4422,
             time: "11:30 AM",
             duration: "45 min",
-            notes: "Vista del lago y ruinas medievales. Caza de Nessie opcional. £15/persona si entras al castillo, gratis desde lookout.",
+            notes: "Vista del lago y ruinas medievales. Caza de Nessie opcional. £14/persona online si entras al castillo, gratis desde lookout.",
           },
           {
             name: "Inverness",

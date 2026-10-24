@@ -4,7 +4,7 @@
 
 ## Qué es esto
 
-Página web personal de itinerario de viaje de ~3.5 semanas (24 días) por Inglaterra, Irlanda y Escocia (mitades de mayo 2027, salida sáb 15 may). El owner (Diego) es el único usuario real; el sitio es semi-público en Vercel para compartir con familia y compañeros de viaje.
+Página web personal de itinerario de viaje de ~3.5 semanas (24 días) por Inglaterra, Irlanda y Escocia (1-24 mayo 2027, salida de CDMX vie 30 abr en vuelo nocturno). El owner (Diego) es el único usuario real; el sitio es semi-público en Vercel para compartir con familia y compañeros de viaje.
 
 URL en producción: `https://viajes-eight.vercel.app/`
 
@@ -28,9 +28,12 @@ app/
     ScrollToTop.tsx      Botón flotante "volver arriba"
     ExportMenu.tsx       Botón flotante → PDF (vía print) o Markdown
     BudgetSection.tsx    Sección de presupuesto por país + GrandTotalBanner
+    BookingsSection.tsx  Página /reservas: qué reservar, cuándo, precio real y link
   data/
     trip.ts              ← TODO el itinerario vive aquí
     budget.ts            ← TODOS los costos del presupuesto viven aquí
+    bookings.ts          ← Reservas: precios investigados + links + fase (cuándo reservar)
+  reservas/page.tsx      Ruta /reservas
   globals.css            Estilos completos (vanilla CSS + custom properties)
   layout.tsx             Layout raíz
   page.tsx               Página principal (ensambla todo)
@@ -66,30 +69,30 @@ Estas variables tienen overrides en `[data-theme="dark"]`. Si añades colores nu
 
 ## Datos del viaje (estado actual)
 
-**Orden del viaje:** Inglaterra (días 1-7) → Irlanda (días 8-17) → Escocia (días 18-24). Día 1 = sáb 15 may 2027, día 24 = lun 7 jun 2027.
+**Orden del viaje:** Inglaterra (días 1-7) → Irlanda (días 8-17) → Escocia (días 18-24). Día 1 = sáb 1 may 2027, día 24 = lun 24 may 2027. Fechas elegidas para evitar el bank holiday del 31 may, el half-term inglés (29 may-6 jun), el Chelsea Flower Show (18-22 may) y el June bank holiday irlandés (7 jun).
 
 ### Inglaterra (completo - 7 días, días 1-7)
-- Día 1 sáb 15 may: Llegada + Piccadilly + Covent Garden evening
-- Día 2 dom 16 may: SUNDAY CLUSTER (Barbican Conservatory + Brick Lane Vintage Market + British Museum + Sky Garden sunset)
-- Día 3 lun 17 may: Westminster + West End (Abbey, Buckingham, National Gallery, Sherlock Holmes Pub, opcional teatro)
-- Día 4 mar 18 may: DAY TRIP Wiltshire (Stonehenge + Bath + Castle Combe, tour organizado)
-- Día 5 mié 19 may: City + South Bank (Tower, St Paul's, Soane's Museum, Reflection Garden, Leadenhall, Tate Modern, Shakespeare's Globe, Borough Market)
-- Día 6 jue 20 may: Greenwich (Painted Hall + Queen's House + Royal Observatory) + Hampstead (Hill Garden Pergola + Holly Village)
-- Día 7 vie 21 may: DAY TRIP Seven Sisters (acantilados East Sussex con coche rentado medio día desde East Croydon)
+- Día 1 sáb 1 may: Llegada + Piccadilly + Covent Garden evening
+- Día 2 dom 2 may: SUNDAY CLUSTER (Columbia Road Flower Market + Brick Lane Vintage Market + Soane's Museum + British Museum + Sky Garden sunset). El Barbican Conservatory cerró por restauración hasta 2030.
+- Día 3 lun 3 may (bank holiday): Westminster + West End (Abbey, Buckingham, National Gallery, Sherlock Holmes Pub, opcional teatro)
+- Día 4 mar 4 may: DAY TRIP Wiltshire (Stonehenge + Bath + Castle Combe, tour organizado)
+- Día 5 mié 5 may: City + South Bank en línea este→oeste (Tower, Leadenhall, Reflection Garden, St Paul's, Tate Modern, Shakespeare's Globe, Borough Market)
+- Día 6 jue 6 may: Greenwich (Painted Hall + Queen's House + Royal Observatory) + Hampstead (Hill Garden Pergola + Holly Village)
+- Día 7 vie 7 may: DAY TRIP Seven Sisters (acantilados East Sussex con coche rentado medio día desde East Croydon)
 - Transporte: 7-Day Travelcard zonas 1-6 todo Londres. Coche rentado solo el día 7 (medio día).
 
 ### Irlanda (completo - 10 días, días 8-17)
-- Día 8 sáb 22 may: TRANSICIÓN — Mañana Windsor Castle + Tarde Kew Gardens + vuelo nocturno LHR→DUB
-- Días 9-17: Dublín → Galway → Cliffs of Moher → Sligo → Belfast → vuelo a Edimburgo
+- Día 8 sáb 8 may: TRANSICIÓN — Mañana Windsor Castle + Tarde Kew Gardens (tren directo Windsor→Richmond) + recoger maletas + vuelo nocturno LHR→DUB
+- Días 9-17: Dublín → Galway → Cliffs of Moher → Sligo → Belfast → vuelo a Edimburgo la tarde del día 17 (primera noche en Edimburgo)
 - Coche rentado del día 10 al día 17 (8 días)
 - Todos los datos en `app/data/trip.ts` con coordenadas reales y notas
 
 ### Escocia (completo - 7 días, días 18-24)
 - Días 18-24: Edimburgo → Glencoe → Fort William → Skye → Loch Ness → Edimburgo → vuelo CDMX
-- Coche rentado del día 20 al día 23 (4 días)
-- Lugares principales: Royal Mile, Holyroodhouse, Duddingston cluster, Craigmillar Castle, Glencoe, Glenfinnan Viaduct, Eilean Donan, Isle of Skye (Old Man of Storr, Fairy Glen), Plodda Falls, Loch Ness, Inverness
+- Coche rentado del día 21 al día 23 (3 días). Día 20 (Duddingston/Craigmillar) es sin coche.
+- Lugares principales: Edinburgh Castle, Royal Mile, Holyroodhouse, Duddingston cluster, Craigmillar Castle, Glencoe, Glenfinnan Viaduct, Eilean Donan, Isle of Skye (Old Man of Storr, Fairy Glen), Plodda Falls, Loch Ness, Inverness
 - Día 24 = solo vuelo de regreso desde EDI
-- Coordenadas aproximadas para Lounge 33 — verificar dirección exacta antes del viaje
+- Lounge 33 es un listening lounge de vinilos en Leith (no en Old Town); coordenadas aproximadas, verificar dirección. Islander = 6 Sibbald Walk (taller de bolsa Harris Tweed).
 
 ## Presupuesto (estado actual)
 
@@ -126,6 +129,10 @@ Edita `app/data/trip.ts`. Busca la sección del país correspondiente, añade un
 ```
 
 **Para obtener coordenadas:** Google Maps → click derecho → primer número (lat, lng).
+
+### Para marcar una reserva
+
+Edita `app/data/bookings.ts` y cambia `status` a `"reservado"` o `"pagado"` (y si aplica también en `budget.ts`). Los precios ahí fueron investigados en oct 2026; `priceSource` dice si es oficial o estimado.
 
 ### Para agregar/cambiar costos
 
@@ -164,8 +171,6 @@ Antes de hacer push, ejecuta `npm run build` para verificar que no hay errores d
 
 - Imágenes de cada lugar (opcional)
 - Tiempo estimado de manejo entre paradas (Distance Matrix API)
-- Sección de Escocia detallada
-- Sección de Inglaterra detallada
 
 ## Comunicación
 
