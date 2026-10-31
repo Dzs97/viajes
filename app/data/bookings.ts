@@ -79,13 +79,13 @@ export const bookings: Booking[] = [
     countryId: "general",
     day: "Vie 30 abr 10:30 PM → sáb 1 may 4:00 PM",
     phase: "ahora",
-    price: "Comprado (ida + regreso)",
-    totalUSD: 3000,
-    priceSource: "estimado",
+    price: "$52,114 MXN (2 personas, ida + regreso)",
+    totalUSD: 2775,
+    priceSource: "oficial",
     url: "https://aeromexico.com/es-mx/mis-viajes",
     linkLabel: "AeroMéxico · Mis viajes",
     notes:
-      "Comprado. Monto mostrado = presupuesto original: actualizar con lo que se pagó. Elegir asientos y revisar franquicia de equipaje en Mis viajes.",
+      "Comprado. Elegir asientos y revisar franquicia de equipaje en Mis viajes.",
     status: "pagado",
   },
   {

@@ -48,9 +48,9 @@ export const budgets: CountryBudget[] = [
     items: [
       {
         label: "Vuelo redondo CDMX → Londres (regreso desde Edimburgo)",
-        amount: 3000,
+        amount: 2775,
         status: "pagado",
-        detail: "COMPRADO. Ida: AM 7 CDMX → LHR, vie 30 abr 10:30 PM → sáb 1 may 4:00 PM. Regreso: AF 1887 EDI → CDG dom 23 may 5:40 AM → 8:45 AM, AM 6 CDG → CDMX 2:55 PM → 7:10 PM. Monto = presupuesto original; actualizar con el precio real pagado.",
+        detail: "COMPRADO. Ida: AM 7 CDMX → LHR, vie 30 abr 10:30 PM → sáb 1 may 4:00 PM. Regreso: AF 1887 EDI → CDG dom 23 may 5:40 AM → 8:45 AM, AM 6 CDG → CDMX 2:55 PM → 7:10 PM. Pagado: $52,114 MXN los 2 (≈ $2,775 USD al tipo de cambio de oct 2026).",
       },
       {
         label: "Hospedaje Londres (7 noches, hoteles 3-3.5★ centro)",
