@@ -8,7 +8,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "My Travel · Inglaterra, Irlanda & Escocia (Mayo 2027)",
   description:
-    "Itinerario de viaje de 24 días por las Islas Británicas. Londres, Irlanda salvaje y Highlands escocesas. Mayo 2027.",
+    "Itinerario de viaje de 23 días por las Islas Británicas. Londres, Irlanda salvaje y Highlands escocesas. Mayo 2027.",
   applicationName: "My Travel",
   appleWebApp: {
     capable: true,
@@ -30,7 +30,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "My Travel · Inglaterra, Irlanda & Escocia",
-    description: "Itinerario de 24 días por las Islas Británicas, mayo 2027.",
+    description: "Itinerario de 23 días por las Islas Británicas, mayo 2027.",
   },
   robots: {
     index: false,

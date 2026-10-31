@@ -1,4 +1,4 @@
-// Presupuesto para 2 personas, nivel cómodo, salida desde México, 1-24 mayo 2027
+// Presupuesto para 2 personas, nivel cómodo, salida desde México, 1-23 mayo 2027
 // Hoteles nivel 3-3.5 estrellas. Temporada baja-media (inicios de mayo): evita el bank holiday del 31 may y el half-term inglés (29 may-6 jun).
 // Tipos de cambio del 23 oct 2026 (BCE vía frankfurter.dev): 1 USD ≈ 18.78 MXN, 1 EUR ≈ 21.10 MXN, 1 GBP ≈ 25.04 MXN
 // Todos los montos están en USD para fácil conversión. Las partidas que se pagan en GBP/EUR
@@ -49,7 +49,8 @@ export const budgets: CountryBudget[] = [
       {
         label: "Vuelo redondo CDMX → Londres (regreso desde Edimburgo)",
         amount: 3000,
-        detail: "2 personas, multi-city: CDMX→LHR, EDI→CDMX. British Airways directo, AeroMéxico, KLM o Air France con conexión. Best case $2,400-2,800 si reservan en sweet spot (sep-nov 2026) o aprovechan Hot Sale. Realista $2,800-3,200 reservando 3-4 meses antes. Buffer hasta $3,000 por fluctuación de precio + selección asientos + maletas. AeroMéxico directo MEX-LHR es más cómodo (~$1,400/pp), KLM/AF con escala más barato (~$1,200/pp).",
+        status: "pagado",
+        detail: "COMPRADO. Ida: AM 7 CDMX → LHR, vie 30 abr 10:30 PM → sáb 1 may 4:00 PM. Regreso: AF 1887 EDI → CDG dom 23 may 5:40 AM → 8:45 AM, AM 6 CDG → CDMX 2:55 PM → 7:10 PM. Monto = presupuesto original; actualizar con el precio real pagado.",
       },
       {
         label: "Hospedaje Londres (7 noches, hoteles 3-3.5★ centro)",
@@ -142,34 +143,34 @@ export const budgets: CountryBudget[] = [
     countryId: "escocia",
     items: [
       {
-        label: "Hospedaje (7 noches, hoteles 3-3.5★)",
-        amount: 1165,
-        detail: "Edimburgo Old Town (4 noches) $177/noche = $708, Fort William (1) $135, Portree Skye (1) $187 (Skye se llena), Edimburgo cerca aeropuerto (1) $135. Promedio $166/noche en mayo.",
+        label: "Hospedaje (6 noches, hoteles 3-3.5★)",
+        amount: 990,
+        detail: "Edimburgo Old Town (3 noches, 17-19 may) $177/noche = $531, Fort William (1) $135, Portree Skye (1) $187 (Skye se llena), Edimburgo aeropuerto (1, a pie de la terminal por el vuelo de 5:40 AM) $135. Promedio $165/noche en mayo.",
       },
       {
         label: "Coche rentado (3 días)",
         amount: 250,
-        detail: "Automático con seguro completo. Pickup día 21 (centro o aeropuerto EDI), return en aeropuerto EDI día 23. ~$83/día con Hertz/Europcar/Enterprise. Día 20 sin coche: Duddingston y Craigmillar se hacen caminando/bus.",
+        detail: "Automático con seguro completo. Pickup día 20 (centro o aeropuerto EDI), return en aeropuerto EDI la tarde del día 22. ~$83/día con Hertz/Europcar/Enterprise. Días 18-19 sin coche: Duddingston se hace caminando por Holyrood Park.",
       },
       {
         label: "Gasolina + parking",
         amount: 125,
-        detail: "~1,500 km en total. Diesel ~£1.65/L. Sin parking nocturno en Edimburgo (coche se recoge el día 21). Parking gratis en hotel Fort William y Portree.",
+        detail: "~1,500 km en total. Diesel ~£1.65/L. Sin parking nocturno en Edimburgo (coche se recoge el día 20). Parking gratis en hotel Fort William y Portree.",
       },
       {
         label: "Transporte público (tram + buses)",
         amount: 85,
-        detail: "Tram aeropuerto Edimburgo → centro x2 personas ida = $15. Buses dentro de Edimburgo días 18-20 (~$25). Buffer taxis/Uber ocasionales.",
+        detail: "Tram aeropuerto Edimburgo → centro x2 personas ida = $15. Buses/taxis dentro de Edimburgo días 18-19 (~$25). Buffer taxis/Uber ocasionales.",
       },
       {
         label: "Comida y bebidas",
-        amount: 1145,
-        detail: "7 días × ~$164/día. Edimburgo es más caro que Irlanda. Incluye pub food (Sheep Heid Inn), restaurantes de gama media-alta (The Witchery), drinks en pubs históricos (Banshee, Frankenstein) y Lounge 33 en Leith y mariscos en Skye.",
+        amount: 985,
+        detail: "6 días × ~$164/día. Edimburgo es más caro que Irlanda. Incluye pub food (Sheep Heid Inn), restaurantes de gama media-alta (The Witchery), drinks en pubs históricos (Banshee, Frankenstein) y Lounge 33 en Leith y mariscos en Skye.",
       },
       {
         label: "Actividades y entradas",
-        amount: 480,
-        detail: "Precios oct 2026: Edinburgh Castle (£23.50×2), Islander workshop bolsa Harris Tweed (~£85×2), Palace of Holyroodhouse (£22×2), Magic Museum (~£10×2), Craigmillar Castle (£7.50×2), Eilean Donan Castle (~£13×2), Urquhart Castle/Loch Ness (£14×2), Old Man of Storr parking (£4), Glenfinnan parking (£5), Plodda Falls (gratis). Portrait Gallery y Tron Kirk son gratis.",
+        amount: 460,
+        detail: "Precios oct 2026: Edinburgh Castle (£23.50×2), Islander workshop bolsa Harris Tweed (~£85×2), Palace of Holyroodhouse (£22×2), Magic Museum (~£10×2), Eilean Donan Castle (~£13×2), Urquhart Castle/Loch Ness (£14×2), Old Man of Storr parking (£4), Glenfinnan parking (£5), Plodda Falls (gratis). Portrait Gallery y Tron Kirk son gratis.",
       },
     ],
   },

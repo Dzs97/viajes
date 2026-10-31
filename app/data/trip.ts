@@ -1,8 +1,8 @@
 // Fecha de inicio del viaje (día 1 global). Cambia esto si la fecha del viaje cambia.
 export const tripStartDate = new Date("2027-05-01T00:00:00");
 
-// Total de días planeados del viaje completo (~3.5 semanas).
-export const totalTripDays = 24;
+// Total de días del viaje: llegada a LHR sáb 1 may (AM 7) → regreso desde EDI dom 23 may 5:40 AM (AF 1887 + AM 6).
+export const totalTripDays = 23;
 
 export type Location = {
   name: string;
@@ -43,15 +43,15 @@ export const trip: Country[] = [
         number: 1,
         title: "Llegada a Londres + Soho evening",
         narrative:
-          "Llegada desde CDMX (vuelo ~13h). Tarde-noche light: drop maletas, caminata por Piccadilly Circus y Covent Garden, cena casual cerca del hotel.",
+          "Llegada desde CDMX (AM 7, ~10.5h). Tarde-noche light: drop maletas, caminata por Piccadilly Circus y Covent Garden, cena casual cerca del hotel.",
         sleep: "Londres central (Bloomsbury / Bayswater / King's Cross)",
         locations: [
           {
             name: "Heathrow Airport (LHR)",
             lat: 51.47,
             lng: -0.4543,
-            time: "5:00 PM",
-            notes: "Llegada desde CDMX (vuelo nocturno, sale vie 30 abr). Heathrow Express a Paddington (15 min, £25/persona) o tube Piccadilly line al centro (1h, £6 con Oyster). Recoger Oyster Card / 7-Day Travelcard zonas 1-6 en máquinas del aeropuerto.",
+            time: "4:00 PM",
+            notes: "Vuelo AM 7: sale de CDMX vie 30 abr 10:30 PM, llega a LHR sáb 1 may 4:00 PM. Migración + ETA ~45 min. Elizabeth line a Paddington/centro (~30 min, cubierta por la Travelcard) o Heathrow Express (15 min, ~£25). Recoger Oyster Card / 7-Day Travelcard zonas 1-6 en máquinas del aeropuerto.",
           },
           {
             name: "Hotel central (Bayswater/Bloomsbury/King's Cross)",
@@ -831,7 +831,7 @@ export const trip: Country[] = [
         title: "Dublín → Edimburgo (vuelo)",
         narrative:
           "Día final en Irlanda. Devuelves el coche en el aeropuerto y vuelas a Escocia (~1h con Aer Lingus o Ryanair). Primera noche en Edimburgo.",
-        sleep: "Edimburgo Old Town (4 noches)",
+        sleep: "Edimburgo Old Town (3 noches)",
         locations: [
           {
             name: "Mañana libre en Dublín",
@@ -863,15 +863,15 @@ export const trip: Country[] = [
     id: "escocia",
     name: "Escocia",
     flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
-    subtitle: "Última etapa · 7 días · Coche rentado para Highlands y Skye",
+    subtitle: "Última etapa · 6 días · Coche rentado para Highlands y Skye",
     description:
-      "Base en Edimburgo (4 noches Old Town + 1 cerca aeropuerto), loop por West Highlands (Glencoe, Fort William), Isle of Skye (Portree) y regreso por Loch Ness. Coche rentado del día 21 al día 23. Vuelo de regreso a CDMX desde Edimburgo el día 24.",
+      "Base en Edimburgo (3 noches Old Town + 1 cerca aeropuerto), loop por West Highlands (Glencoe, Fort William), Isle of Skye (Portree) y regreso por Loch Ness. Coche rentado del día 20 al día 22. Vuelo de regreso a CDMX vía París la madrugada del día 23 (AF 1887 sale 5:40 AM).",
     days: [
       {
         number: 18,
-        title: "Edimburgo: Princes Street + Royal Mile",
+        title: "Edimburgo: Princes Street + Castle + Royal Mile",
         narrative:
-          "Primer día completo en Edimburgo. Princes Street y el Mound por la mañana, Royal Mile con vistas al castillo, cena legendaria en The Witchery y nightcap.",
+          "Primer día completo en Edimburgo. Princes Street y el Mound por la mañana, castillo, bajada por el Royal Mile con un museo curioso, cena legendaria en The Witchery y nightcap.",
         sleep: "Edimburgo Old Town",
         locations: [
           {
@@ -915,12 +915,20 @@ export const trip: Country[] = [
             notes: "Antigua iglesia del Royal Mile (1647), ahora centro cultural y mercado de productores locales. Bajar caminando el Royal Mile desde el castillo.",
           },
           {
+            name: "Museum of Magic, Fortune-telling & Witchcraft Ltd",
+            lat: 55.9436,
+            lng: -3.1872,
+            time: "4:15 PM",
+            duration: "1h",
+            notes: "Chalmers Close, junto al Royal Mile. Museo pequeño y curioso: juicios de brujas, folk magic, espiritismo. Verificar horario y precio (~£10).",
+          },
+          {
             name: "The Witchery by the Castle",
             lat: 55.9494,
             lng: -3.1968,
             time: "7:30 PM",
             duration: "2h",
-            notes: "Cena en el restaurante más legendario de Edimburgo, al lado del castillo. RESERVAR 2 meses antes.",
+            notes: "Cena en el restaurante más legendario de Edimburgo, al lado del castillo. RESERVAR 2-3 meses antes.",
           },
           {
             name: "Lounge 33 (Leith)",
@@ -934,42 +942,50 @@ export const trip: Country[] = [
       },
       {
         number: 19,
-        title: "Edimburgo a fondo + pub crawl",
+        title: "Holyrood + Duddingston + pub crawl",
         narrative:
-          "Día completo de museos, palacios y pubs históricos. Por la noche, crawl temático por los dos pubs más icónicos de la ciudad.",
+          "Mañana en New Town y la parte baja del Royal Mile, palacio real, caminata por Holyrood Park al jardín secreto de Duddingston y cena en el pub más antiguo de Escocia. Por la noche, crawl por los dos pubs más icónicos.",
         sleep: "Edimburgo Old Town",
         locations: [
           {
             name: "Scottish National Portrait Gallery",
             lat: 55.9572,
             lng: -3.1924,
-            time: "9:00 AM",
-            duration: "2h",
-            notes: "Galería gratuita en New Town. Retratos icónicos de la historia escocesa, arquitectura victoriana espectacular.",
+            time: "9:30 AM",
+            duration: "1h",
+            notes: "Galería gratuita en New Town (abre 10 AM; llegar a la apertura). Retratos icónicos de la historia escocesa, Great Hall victoriano espectacular.",
           },
           {
             name: "Islander Workshop",
             lat: 55.9516,
             lng: -3.1785,
-            time: "11:30 AM",
+            time: "11:00 AM",
             duration: "1.5h",
-            notes: "6 Sibbald Walk, EH8 8FT (junto al Canongate, cerca de Holyroodhouse). Taller de 60-90 min donde armas tu propia bolsa de Harris Tweed. Reservar horario en islanderuk.com; llegar 10 min antes.",
+            notes: "6 Sibbald Walk, EH8 8FT (junto al Canongate, cerca de Holyroodhouse). Taller de 60-90 min donde armas tu propia bolsa de Harris Tweed. Reservar horario de 11 AM en islanderuk.com; llegar 10 min antes.",
           },
           {
             name: "Palace of Holyroodhouse",
             lat: 55.9527,
             lng: -3.1719,
-            time: "2:00 PM",
+            time: "1:00 PM",
             duration: "1.5h",
-            notes: "Residencia oficial del monarca en Escocia, al pie del Royal Mile. Reservar online (£22/persona, £26 el mismo día).",
+            notes: "Residencia oficial del monarca en Escocia, al pie del Royal Mile. Reservar online (£22/persona, £26 el mismo día). Lunch ligero en el Café at the Palace.",
           },
           {
-            name: "Museum of Magic, Fortune-telling & Witchcraft Ltd",
-            lat: 55.9436,
-            lng: -3.1872,
-            time: "3:45 PM",
-            duration: "1h",
-            notes: "Museo pequeño y curioso. Colección privada de artefactos ocultistas, predicciones y brujería.",
+            name: "Dr Neil's Garden",
+            lat: 55.9385,
+            lng: -3.1497,
+            time: "3:15 PM",
+            duration: "45 min",
+            notes: "Jardín secreto al lado de Duddingston Loch. Donación voluntaria. Desde Holyrood, ~35 min caminando por Holyrood Park bordeando Arthur's Seat (Queen's Drive).",
+          },
+          {
+            name: "The Sheep Heid Inn",
+            lat: 55.9417,
+            lng: -3.1499,
+            time: "4:30 PM",
+            duration: "1.5h",
+            notes: "Pub más antiguo de Escocia (1360), a 3 min de Dr Neil's. Cena temprana. Skittle alley histórica al fondo. Regreso a Old Town en taxi/Uber (~10 min) o bus 42.",
           },
           {
             name: "The Banshee Labyrinth",
@@ -991,46 +1007,6 @@ export const trip: Country[] = [
       },
       {
         number: 20,
-        title: "Duddingston + Craigmillar Castle",
-        narrative:
-          "Día relajado en las afueras sin coche: caminata por Holyrood Park al cluster de Duddingston (jardín secreto + pub más antiguo de Escocia) y Craigmillar Castle.",
-        sleep: "Edimburgo Old Town",
-        locations: [
-          {
-            name: "Dr Neil's Garden",
-            lat: 55.9385,
-            lng: -3.1497,
-            time: "10:00 AM",
-            duration: "1h",
-            notes: "Jardín secreto al lado de Duddingston Loch. Donación voluntaria. Llegar caminando por Holyrood Park (~40 min desde Old Town, bordeando Arthur's Seat) o bus 42.",
-          },
-          {
-            name: "Craigmillar Castle",
-            lat: 55.9275,
-            lng: -3.1462,
-            time: "11:30 AM",
-            duration: "1.5h",
-            notes: "Castillo medieval del siglo XIV. Refugio de Mary Queen of Scots. Cierra a las 5:30 PM (£7.50/persona online). ~25 min caminando desde Duddingston o taxi/Uber corto.",
-          },
-          {
-            name: "The Sheep Heid Inn",
-            lat: 55.9417,
-            lng: -3.1499,
-            time: "1:30 PM",
-            duration: "1.5h",
-            notes: "Pub más antiguo de Escocia (1360). Almuerzo en el pub o terraza. Skittle alley histórica al fondo.",
-          },
-          {
-            name: "Tarde libre en Edimburgo",
-            lat: 55.9499,
-            lng: -3.1882,
-            time: "4:00 PM",
-            notes: "Royal Mile, shopping, café o descanso antes del día épico de Highlands mañana.",
-          },
-        ],
-      },
-      {
-        number: 21,
         title: "Edimburgo → Glencoe → Fort William",
         narrative:
           "Primera ruta al oeste por las Highlands. Glencoe valley es el primer wow de paisaje escocés, con sus Three Sisters dramáticas.",
@@ -1069,7 +1045,7 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 22,
+        number: 21,
         title: "Glenfinnan + Eilean Donan + Skye",
         narrative:
           "Día épico: viaducto del Hogwarts Express, castillo más fotografiado de Escocia, llegada a Skye con atardecer en Old Man of Storr.",
@@ -1125,11 +1101,11 @@ export const trip: Country[] = [
         ],
       },
       {
-        number: 23,
-        title: "Skye → Plodda Falls → Loch Ness → Edimburgo",
+        number: 22,
+        title: "Skye → Plodda Falls → Loch Ness → aeropuerto de Edimburgo",
         narrative:
-          "Día largo de regreso al sur (~7.5h de manejo total). Plodda Falls escondida en Glen Affric, caza de Nessie en Loch Ness, pasada por Inverness y vuelta a la capital.",
-        sleep: "Edimburgo (cerca aeropuerto)",
+          "Último día y el más largo (~7.5h de manejo). Plodda Falls escondida en Glen Affric, Loch Ness, Inverness y directo al hotel junto al aeropuerto. Devolver el coche esta noche y dormir temprano: el vuelo de regreso sale 5:40 AM.",
+        sleep: "Edimburgo aeropuerto (hotel caminando a la terminal)",
         locations: [
           {
             name: "Salir de Skye",
@@ -1160,29 +1136,44 @@ export const trip: Country[] = [
             lng: -4.2247,
             time: "1:15 PM",
             duration: "1.5h",
-            notes: "Capital de las Highlands. Caminata Old Town + Inverness Castle exterior + lunch en el River Ness.",
+            notes: "Capital de las Highlands. Caminata Old Town + Inverness Castle exterior + lunch en el River Ness. Salir a más tardar 3:00 PM.",
           },
           {
-            name: "Llegada a Edimburgo",
+            name: "Edinburgh Airport · devolver coche + hotel",
             lat: 55.9505,
             lng: -3.368,
             time: "6:30 PM",
-            notes: "~3.5h manejo por A9. Hotel cerca aeropuerto para fácil acceso al vuelo del día siguiente. Devolver coche aquí.",
+            notes: "~3.5h por A9. Devolver el coche HOY (los mostradores no abren a las 4 AM; usar key drop si llegan tarde). Hotel a pie de la terminal (Moxy, Hilton Garden Inn o Premier Inn Edinburgh Airport). Cena, maletas listas y a dormir antes de las 10 PM.",
           },
         ],
       },
       {
-        number: 24,
-        title: "Vuelo de regreso a CDMX",
+        number: 23,
+        title: "Vuelo de regreso: Edimburgo → París → CDMX",
         narrative:
-          "Día de transición. Vuelo desde Edimburgo (EDI) a Ciudad de México, con probable layover en Amsterdam (KLM), Londres (BA) o Paris (Air France).",
+          "Día de transición. AF 1887 sale de Edimburgo 5:40 AM, escala de ~6h en París CDG y AM 6 a Ciudad de México, llegada 7:10 PM hora local.",
         locations: [
           {
-            name: "Edinburgh Airport",
+            name: "Edinburgh Airport (EDI) · AF 1887",
             lat: 55.9505,
             lng: -3.368,
-            time: "8:00 AM",
-            notes: "Llegar 3h antes del vuelo. Coche ya devuelto el día anterior. Tax refund VAT en mostrador si aplica.",
+            time: "4:00 AM",
+            notes: "Despertar 3:15 AM. Salida 5:40 AM, llega a CDG 8:45 AM. Documentar maletas directo hasta MEX (confirmar que ambos vuelos están en la misma reserva). Seguridad abre ~4 AM.",
+          },
+          {
+            name: "Paris CDG · escala",
+            lat: 49.0097,
+            lng: 2.5479,
+            time: "8:45 AM",
+            duration: "6h",
+            notes: "AM 6 sale 2:55 PM. Opción: escapada corta a París (RER B a Notre-Dame/Châtelet ~40 min, ~1.5h en la ciudad, volver a CDG antes de la 1 PM). Requiere pasar migración Schengen (registro biométrico EES; si ETIAS ya está activo, tramitarlo antes). Plan seguro: desayunar y descansar en la terminal 2.",
+          },
+          {
+            name: "Ciudad de México (MEX) · AM 6",
+            lat: 19.4361,
+            lng: -99.0719,
+            time: "7:10 PM",
+            notes: "Llegada a CDMX el dom 23 may, 7:10 PM hora local.",
           },
         ],
       },

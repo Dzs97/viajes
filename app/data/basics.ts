@@ -193,7 +193,7 @@ export const basics: BasicItem[] = [
     brand: "—",
     category: "documentos",
     description:
-      "VERIFICAR que esté vigente con mínimo 6 meses después del fin del viaje (24 may 2027 + 6 meses = vencimiento ≥ nov 2027). Si vence antes, renovar YA.",
+      "VERIFICAR que esté vigente con mínimo 6 meses después del fin del viaje (23 may 2027 + 6 meses = vencimiento ≥ nov 2027). Si vence antes, renovar YA.",
     status: "pendiente",
     forUser: "ambos",
     notes: "Mexicanos NO necesitan visa para UK, Irlanda ni Schengen (estancia <90 días). Solo pasaporte + boleto de regreso + capacidad financiera demostrable.",

@@ -4,7 +4,7 @@
 
 ## Qué es esto
 
-Página web personal de itinerario de viaje de ~3.5 semanas (24 días) por Inglaterra, Irlanda y Escocia (1-24 mayo 2027, salida de CDMX vie 30 abr en vuelo nocturno). El owner (Diego) es el único usuario real; el sitio es semi-público en Vercel para compartir con familia y compañeros de viaje.
+Página web personal de itinerario de viaje de ~3 semanas (23 días) por Inglaterra, Irlanda y Escocia (1-23 mayo 2027). Vuelos internacionales COMPRADOS: ida AM 7 CDMX vie 30 abr 10:30 PM → LHR sáb 1 may 4:00 PM; regreso AF 1887 EDI dom 23 may 5:40 AM → CDG 8:45 AM + AM 6 CDG 2:55 PM → CDMX 7:10 PM. El owner (Diego) es el único usuario real; el sitio es semi-público en Vercel para compartir con familia y compañeros de viaje.
 
 URL en producción: `https://viajes-eight.vercel.app/`
 
@@ -69,7 +69,7 @@ Estas variables tienen overrides en `[data-theme="dark"]`. Si añades colores nu
 
 ## Datos del viaje (estado actual)
 
-**Orden del viaje:** Inglaterra (días 1-7) → Irlanda (días 8-17) → Escocia (días 18-24). Día 1 = sáb 1 may 2027, día 24 = lun 24 may 2027. Fechas elegidas para evitar el bank holiday del 31 may, el half-term inglés (29 may-6 jun), el Chelsea Flower Show (18-22 may) y el June bank holiday irlandés (7 jun).
+**Orden del viaje:** Inglaterra (días 1-7) → Irlanda (días 8-17) → Escocia (días 18-23). Día 1 = sáb 1 may 2027, día 23 = dom 23 may 2027 (solo vuelo de regreso, 5:40 AM). Fechas elegidas para evitar el bank holiday del 31 may, el half-term inglés (29 may-6 jun), el Chelsea Flower Show (18-22 may) y el June bank holiday irlandés (7 jun).
 
 ### Inglaterra (completo - 7 días, días 1-7)
 - Día 1 sáb 1 may: Llegada + Piccadilly + Covent Garden evening
@@ -87,11 +87,11 @@ Estas variables tienen overrides en `[data-theme="dark"]`. Si añades colores nu
 - Coche rentado del día 10 al día 17 (8 días)
 - Todos los datos en `app/data/trip.ts` con coordenadas reales y notas
 
-### Escocia (completo - 7 días, días 18-24)
-- Días 18-24: Edimburgo → Glencoe → Fort William → Skye → Loch Ness → Edimburgo → vuelo CDMX
-- Coche rentado del día 21 al día 23 (3 días). Día 20 (Duddingston/Craigmillar) es sin coche.
+### Escocia (completo - 6 días, días 18-23)
+- Días 18-23: Edimburgo (18-19) → Glencoe → Fort William (20) → Skye (21) → Loch Ness → hotel aeropuerto EDI (22) → vuelo vía París (23)
+- Coche rentado del día 20 al día 22 (3 días), se devuelve la tarde del 22. Duddingston se fusionó en el día 19; Craigmillar Castle se quitó por el día perdido.
 - Lugares principales: Edinburgh Castle, Royal Mile, Holyroodhouse, Duddingston cluster, Craigmillar Castle, Glencoe, Glenfinnan Viaduct, Eilean Donan, Isle of Skye (Old Man of Storr, Fairy Glen), Plodda Falls, Loch Ness, Inverness
-- Día 24 = solo vuelo de regreso desde EDI
+- Día 23 = solo vuelo de regreso desde EDI (AF 1887 5:40 AM). Escala de ~6h en CDG: escapada a París opcional.
 - Lounge 33 es un listening lounge de vinilos en Leith (no en Old Town); coordenadas aproximadas, verificar dirección. Islander = 6 Sibbald Walk (taller de bolsa Harris Tweed).
 
 ## Presupuesto (estado actual)

@@ -4,7 +4,7 @@ export default function manifest(): MetadataRoute.Manifest {
   return {
     name: "My Travel",
     short_name: "My Travel",
-    description: "Itinerario de viaje de 24 días por Inglaterra, Irlanda y Escocia. Mayo 2027.",
+    description: "Itinerario de viaje de 23 días por Inglaterra, Irlanda y Escocia. Mayo 2027.",
     start_url: "/",
     scope: "/",
     display: "standalone",

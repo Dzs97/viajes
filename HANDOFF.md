@@ -7,7 +7,7 @@
 
 ## TL;DR del proyecto
 
-**My Travel** — PWA de itinerario de viaje 24 días por Inglaterra, Irlanda y Escocia (1 – 24 may 2027). 2 personas, salida desde CDMX. Presupuesto total ~$15,140 USD / $284,329 MXN (tipo de cambio 23 oct 2026).
+**My Travel** — PWA de itinerario de viaje 23 días por Inglaterra, Irlanda y Escocia (1 – 23 may 2027). 2 personas, salida desde CDMX. Presupuesto total ~$14,785 USD / $277,662 MXN (tipo de cambio 23 oct 2026).
 
 - **Repo:** https://github.com/Dzs97/viajes
 - **Producción:** https://viajes-eight.vercel.app
@@ -47,7 +47,7 @@
 2. Cambió a **Inglaterra → Irlanda → Escocia** para volar directo CDMX→LHR y regresar EDI→CDMX (multi-city)
 
 ### Duración
-1. Empezó como 21 días → 22 → 23 → **24 días** (extendió por agregar Seven Sisters)
+1. Empezó como 21 días → 22 → 23 → 24 días (Seven Sisters) → **23 días** (oct 2026: el vuelo de regreso comprado sale 5:40 AM del 23 may)
 2. Fecha inicio se movió de lun 17 may 2027 → sáb 15 may 2027 → **sáb 1 may 2027** (oct 2026) para evitar bank holiday 31 may + half-term inglés + Chelsea Flower Show + June bank holiday irlandés. Se mantuvo inicio en sábado (Sunday cluster: Columbia Road + Brick Lane; el Barbican Conservatory cerró hasta 2030).
 
 ### Coche
