@@ -50,17 +50,6 @@ export const basics: BasicItem[] = [
     notes:
       "Aplicar spray waterproofing (Crep Protect ~$15) antes del viaje. Repele agua 2-3 semanas — útil para lluvia ligera de Londres.",
   },
-  {
-    name: "Calceta merino wool",
-    brand: "Darn Tough / Smartwool / Icebreaker",
-    category: "calzado",
-    description:
-      "4-6 pares por persona. Para hiking shoes y días de mucho caminar. Merino no se moja rápido, seca en 4-6h, no apesta.",
-    priceUSD: 210,
-    status: "pendiente",
-    forUser: "ambos",
-    notes: "Darn Tough Hiker Micro Crew Cushion ~$26/par × 8 pares (4 por persona) ≈ $210; en oferta bajan a ~$19. Darn Tough tiene garantía de por vida. Importante para el hike de Storr (calceta gruesa) y días largos.",
-  },
 
   // ============ ROPA ============
   {
@@ -144,17 +133,6 @@ export const basics: BasicItem[] = [
     forUser: "ambos",
     notes:
       "Comprar 2-3 unidades ($8-10 c/u). Alternativa: adaptador universal multi-país (~$25) si harán más viajes. NUNCA usar adaptador barato genérico para hair dryer o plancha (riesgo).",
-  },
-  {
-    name: "Power bank 10000-20000 mAh",
-    brand: "Anker PowerCore / Belkin / Xiaomi",
-    category: "electronica",
-    description:
-      "Días largos de caminata con Google Maps, fotos y Spotify drenan la batería. Power bank de mínimo 10K mAh con USB-C PD para cargar rápido el celular.",
-    priceUSD: 60,
-    status: "pendiente",
-    forUser: "ambos",
-    notes: "1 por persona, Anker 10000 mAh ~$30. Reglas 2026: solo en equipaje de mano (nunca documentado), máximo 2 por pasajero y <100 Wh; muchas aerolíneas ya prohíben usarlo o cargarlo durante el vuelo. Revisar las reglas de AeroMéxico, Air France y Ryanair/Aer Lingus antes de volar.",
   },
   {
     name: "Cables USB-C / Lightning extras",
@@ -315,17 +293,6 @@ export const basics: BasicItem[] = [
 
   // ============ MISC ============
   {
-    name: "Daypack 20-30L",
-    brand: "Osprey Daylite Plus / Decathlon Quechua / Patagonia",
-    category: "misc",
-    description:
-      "Mochila ligera para llevar en hikes y excursiones day-trip (Wiltshire, Skye, Highlands). Suficiente para chamarra extra, agua, snacks, cámara.",
-    priceUSD: 140,
-    status: "pendiente",
-    forUser: "ambos",
-    notes: "Osprey Daylite Plus 20L ~$70-75 de lista (en oferta ~$45-60). 1 por persona ($140) o 1 compartida ($70) si caminan juntos siempre.",
-  },
-  {
     name: "Botella reusable",
     brand: "Stanley / Hydro Flask / Decathlon",
     category: "misc",
@@ -335,17 +302,6 @@ export const basics: BasicItem[] = [
     status: "pendiente",
     forUser: "ambos",
     notes: "$25 × 2 botellas. Tamaño 500ml-750ml suficiente. Térmica si quieren agua fría/caliente en hikes.",
-  },
-  {
-    name: "AirTag x2-3",
-    brand: "Apple",
-    category: "misc",
-    description:
-      "Uno por maleta documentada + uno en daypack. Útil sobre todo en el regreso, con conexión en París (AF 1887 + AM 6), y en los vuelos internos.",
-    priceUSD: 80,
-    status: "opcional",
-    forUser: "ambos",
-    notes: "AirTag 2, pack de 4: $99 de lista, en oferta ~$70-89. Si solo iPhone — para Android no funcionan, ahí Tile o Samsung SmartTag equivalente.",
   },
   {
     name: "Packing cubes / bolsas de compresión",
@@ -379,17 +335,6 @@ export const basics: BasicItem[] = [
     status: "opcional",
     forUser: "ambos",
     notes: "$7-8 por candado, 2 unidades. Para maletas documentadas en vuelos internacionales.",
-  },
-  {
-    name: "Adaptador SIM / eSIM internacional",
-    brand: "Airalo / Holafly / Saily",
-    category: "misc",
-    description:
-      "Para datos en UK + Irlanda. eSIM (compatible con iPhone XS+ y Samsung S20+) es lo más fácil — compras en app, activas al aterrizar. Alternativa: SIM física en Three / Vodafone al llegar.",
-    priceUSD: 70,
-    status: "pendiente",
-    forUser: "ambos",
-    notes: "Airalo Eurolink 10GB / 30 días ~$31-37 por persona. Cubre UK + Irlanda + Francia (escala) con un solo eSIM, solo datos (sin número local). Instalar en México y activar al aterrizar en Londres.",
   },
 ];
 
