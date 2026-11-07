@@ -98,17 +98,17 @@ export const basics: BasicItem[] = [
     notes: "~$80-90/persona × 2 (en Black Friday suele bajar). Si prefieren algo que abrigue mojado: Patagonia Nano Puff (~$229) o un fleece ligero.",
   },
   {
-    name: "Quandary Pants",
+    name: "Torrentshell 3L Rain Pants",
     brand: "Patagonia",
     category: "ropa",
     description:
-      "Pantalón ligero de secado rápido, repelente al agua y con stretch. El mejor calificado para viajar en 2026: sirve igual para Skye y Glencoe que para cenar en Londres. 1 par por persona + los jeans.",
-    priceUSD: 198,
+      "Pantalón impermeable de 3 capas que se pone ENCIMA del pantalón normal en días de lluvia fuerte: Old Man of Storr, Glencoe, Cliffs of Moher, Giant's Causeway. Se dobla chico y va en el daypack. 1 por persona.",
+    priceUSD: 278,
     status: "pendiente",
     forUser: "ambos",
     notes:
-      "~$99/persona × 2 en EE.UU. Hay versión de hombre y mujer (y jogger). Mezclilla NO sirve si llueve: se moja, no seca y te enfría.",
-    url: "https://www.patagonia.com/search/?q=quandary%20pants",
+      "~$139/persona × 2 (REI $139, Backcountry $129). Versión hombre (Regular) y mujer. CleverHiker: mejores rain pants (4.9/5). Cierres laterales largos para ponerlos sin quitarse los zapatos. Transpiran poco: quitárselos cuando pare la lluvia. Debajo van los pantalones que ya tienen.",
+    url: "https://www.patagonia.com/search/?q=torrentshell%203l%20rain%20pants",
   },
   {
     name: "Camisa decente para cena (The Witchery, Sherlock Holmes Pub)",
