@@ -64,16 +64,17 @@ export const basics: BasicItem[] = [
 
   // ============ ROPA ============
   {
-    name: "Chamarra impermeable (rain jacket)",
-    brand: "Patagonia Torrentshell 3L / Arc'teryx Beta SL / Decathlon",
+    name: "Torrentshell 3L Rain Jacket",
+    brand: "Patagonia",
     category: "ropa",
     description:
-      "Crítico. Escocia e Irlanda llueven en mayo casi a diario. Membrana waterproof breathable mínimo 10K mm. Con capucha ajustable. Ligera para empacar.",
-    priceUSD: 360,
+      "Chamarra impermeable de 3 capas (H2No), la más recomendada en reseñas 2026. Crítica para Escocia e Irlanda, que llueven casi a diario en mayo. Va sobre Heattech + capa térmica.",
+    priceUSD: 380,
     status: "pendiente",
     forUser: "ambos",
     notes:
-      "$180/persona × 2. Alternativa budget: Decathlon Quechua MH500 (~$50). NO usar windbreaker simple — necesitas waterproof real. Probar antes en regadera o lluvia para verificar.",
+      "~$190/persona × 2 en EE.UU. (en Liverpool MX $3,999). Comprar en Black Friday (27 nov) o en REI/Backcountry. Garantía Ironclad de Patagonia. Es algo rígida y no tiene bolsillo de pecho. Probarla en la regadera antes del viaje.",
+    url: "https://www.patagonia.com/search/?q=torrentshell%203l%20jacket",
   },
   {
     name: "Base layer térmico (merino o sintético)",
@@ -98,15 +99,17 @@ export const basics: BasicItem[] = [
     notes: "$50/persona × 2. Patagonia Better Sweater es clásico ($139). Alternativas más baratas en Decathlon Quechua o Uniqlo.",
   },
   {
-    name: "Pantalones hiking convertibles o impermeables",
-    brand: "Patagonia / Decathlon / Columbia",
+    name: "Quandary Pants",
+    brand: "Patagonia",
     category: "ropa",
     description:
-      "Pantalones de quick-dry o waterproof para días de Highlands, Skye y caminatas largas en Irlanda. 1 par por persona suficiente.",
-    priceUSD: 100,
+      "Pantalón ligero de secado rápido, repelente al agua y con stretch. El mejor calificado para viajar en 2026: sirve igual para Skye y Glencoe que para cenar en Londres. 1 par por persona + los jeans.",
+    priceUSD: 198,
     status: "pendiente",
     forUser: "ambos",
-    notes: "Para uso en hikes. Pantalón de mezclilla NO sirve si llueve — se moja, no seca, te enfría.",
+    notes:
+      "~$99/persona × 2 en EE.UU. Hay versión de hombre y mujer (y jogger). Mezclilla NO sirve si llueve: se moja, no seca y te enfría.",
+    url: "https://www.patagonia.com/search/?q=quandary%20pants",
   },
   {
     name: "Camisa decente para cena (The Witchery, Sherlock Holmes Pub)",
