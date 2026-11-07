@@ -54,8 +54,8 @@ export const budgets: CountryBudget[] = [
       },
       {
         label: "Hospedaje Londres (7 noches, hoteles 3-3.5★ centro)",
-        amount: 1500,
-        detail: "Precios reales Booking (nov 2026) para 1-8 may 2027, 3-4★ con calificación 8+: lo más barato decente en zona 1 ~$1,130-1,200 los 7 noches (hub by Premier Inn, Tavistock); hoteles mid típicos $1,350-1,850 (Rockwell East, Crescent Hyde Park, Mercure Earls Court, City Sleeper). Presupuesto ~$215/noche. Zonas: Bloomsbury, King's Cross, Paddington/Bayswater.",
+        amount: 1130,
+        detail: "hub by Premier Inn Marylebone o Farringdon (~$1,130 los 7 noches en Booking, nov 2026; calificación 8+). Cuartos chicos (~11 m²) pero en zona 1. Si quieren más espacio, hoteles mid típicos cuestan $1,350-1,850.",
       },
       {
         label: "7-Day Travelcard zonas 1-6 (2 personas)",
@@ -109,8 +109,8 @@ export const budgets: CountryBudget[] = [
     items: [
       {
         label: "Hospedaje (9 noches, hoteles 3-3.5★)",
-        amount: 2115,
-        detail: "Precios reales Booking (nov 2026), 3-4★ con calificación 8+: Dublín 8-11 may ~$700 (Motel One, Travelodge PLUS, Leonardo Parnell), Galway 11-13 ~$420 (The Lane, Eyre Square), Sligo 13-14 ~$230 (The Address, Clayton), Bushmills 14-15 ~$320 (Causeway Hotel $294, Bushmills Inn $444), Belfast 15-16 ~$260 (Moxy, ibis, DoubleTree), Dublín 16-17 ~$185. Promedio ~$235/noche.",
+        amount: 1660,
+        detail: "Booking (nov 2026), calificación 8+: Premier Inn Dublin City Gloucester St 8-11 may $553, Menlo Park Hotel Galway (con parking) 11-13 $356, Station Lodge Sligo 13-14 $121, Causeway Hotel (junto a Giant\'s Causeway) 14-15 $294, Moxy Belfast 15-16 $216, Premier Inn Dublin Airport 16-17 $118.",
       },
       {
         label: "Renta de coche automático (7 días, 10-17 may)",
@@ -144,8 +144,8 @@ export const budgets: CountryBudget[] = [
     items: [
       {
         label: "Hospedaje (6 noches, hoteles 3-3.5★)",
-        amount: 1860,
-        detail: "Precios reales Booking (nov 2026), calificación 8+: Edimburgo centro 17-20 may ~$1,100 los 3 noches (Angels Share, YOTEL, Leonardo City, The Inn Place: $1,010-1,280), Fort William ~$250 (B&B), Portree ~$255 (Rockview, Pink House, Rosedale), aeropuerto EDI ~$255 (Moxy, a pie de la terminal). Promedio ~$310/noche: Edimburgo en mayo es caro.",
+        amount: 1430,
+        detail: "Booking (nov 2026), calificación 8+: Edimburgo 17-20 may Four Points Flex by Sheraton $672 (1 km del centro) o Tynecastle Park Hotel $645 (2.6 km, 9.1), Fort William B&B ~$250, Portree ~$255 (Rockview, Pink House), Moxy Edinburgh Airport $253 (a pie de la terminal).",
       },
       {
         label: "Coche rentado (3 días)",

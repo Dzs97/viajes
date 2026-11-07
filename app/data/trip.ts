@@ -44,7 +44,7 @@ export const trip: Country[] = [
         title: "Llegada a Londres + Soho evening",
         narrative:
           "Llegada desde CDMX (AM 7, ~10.5h). Tarde-noche light: drop maletas, caminata por Piccadilly Circus y Covent Garden, cena casual cerca del hotel.",
-        sleep: "Londres central (Bloomsbury / Bayswater / King's Cross)",
+        sleep: "Londres · hub by Premier Inn (Marylebone o Farringdon)",
         locations: [
           {
             name: "Heathrow Airport (LHR)",
@@ -54,11 +54,11 @@ export const trip: Country[] = [
             notes: "Vuelo AM 7: sale de CDMX vie 30 abr 10:30 PM, llega a LHR sáb 1 may 4:00 PM. Migración + ETA ~45 min. Elizabeth line a Paddington/centro (~30 min, cubierta por la Travelcard) o Heathrow Express (15 min, ~£25). Recoger Oyster Card / 7-Day Travelcard zonas 1-6 en máquinas del aeropuerto.",
           },
           {
-            name: "Hotel central (Bayswater/Bloomsbury/King's Cross)",
+            name: "Hotel: hub by Premier Inn",
             lat: 51.5305,
             lng: -0.124,
             time: "6:30 PM",
-            notes: "Drop maletas. Hoteles 3-3.5★ recomendados en zonas con tube zona 1-2 (Premier Inn Hub, Travelodge Plus, Hilton Garden Inn, ibis Styles).",
+            notes: "Drop maletas. hub by Premier Inn Marylebone o Farringdon (~$1,130 los 7 noches): cuartos chicos pero zona 1 y bien conectados. Alternativas: Travelodge Plus, Hilton Garden Inn, ibis Styles).",
           },
           {
             name: "Piccadilly Circus",
@@ -605,7 +605,7 @@ export const trip: Country[] = [
         title: "Dublín → Galway vía Connemara",
         narrative:
           "Cruzas Irlanda de este a oeste. Connemara es el highlight visual del día.",
-        sleep: "Galway (2 noches)",
+        sleep: "Galway · Menlo Park Hotel (2 noches)",
         locations: [
           {
             name: "Salida de Dublín",
@@ -692,7 +692,7 @@ export const trip: Country[] = [
         title: "Galway → Sligo (Gleniff Horseshoe)",
         narrative:
           "Subida hacia el noroeste. Gleniff Horseshoe es una joya poco turística.",
-        sleep: "Sligo o Donegal Town",
+        sleep: "Sligo · Station Lodge",
         locations: [
           {
             name: "Sligo town",
@@ -725,7 +725,7 @@ export const trip: Country[] = [
         title: "Sligo → Costa de Antrim (UK)",
         narrative:
           "Cruzas a Irlanda del Norte (UK). Cambias de euros a libras. Día largo pero la Causeway Coast es el highlight del norte.",
-        sleep: "Bushmills o Portrush",
+        sleep: "Causeway Hotel (junto a Giant's Causeway)",
         locations: [
           {
             name: "Bushmills",
@@ -798,8 +798,8 @@ export const trip: Country[] = [
         number: 16,
         title: "Belfast → Dublín (costa este)",
         narrative:
-          "Regreso a Dublín por la costa este con parada cultural en Newgrange.",
-        sleep: "Dublín",
+          "Regreso hacia Dublín por la costa este con parada cultural en Newgrange. Noche junto al aeropuerto para el vuelo del día siguiente.",
+        sleep: "Premier Inn Dublin Airport",
         locations: [
           {
             name: "Drogheda",
@@ -818,11 +818,11 @@ export const trip: Country[] = [
             notes: "Túmulo prehistórico más antiguo que las pirámides. Tour de ~3h desde el Visitor Centre (Newgrange + Knowth, ~€18/persona); el último tour sale ~4:45 PM. Los boletos salen online exactamente 30 días antes, a medianoche hora de Irlanda: reservar ese día. No se puede llegar en coche directo al túmulo.",
           },
           {
-            name: "Dublín",
-            lat: 53.3498,
-            lng: -6.2603,
+            name: "Premier Inn Dublin Airport",
+            lat: 53.4357,
+            lng: -6.2333,
             time: "6:00 PM",
-            notes: "Última noche. Cena de despedida en Temple Bar.",
+            notes: "~50 min desde Newgrange por la M1. Check-in y cena de despedida en Swords o Malahide (a 10-15 min). Última noche en Irlanda.",
           },
         ],
       },
@@ -830,16 +830,16 @@ export const trip: Country[] = [
         number: 17,
         title: "Dublín → Edimburgo (vuelo)",
         narrative:
-          "Día final en Irlanda. Devuelves el coche en el aeropuerto y vuelas a Escocia (~1h con Aer Lingus o Ryanair). Primera noche en Edimburgo.",
-        sleep: "Edimburgo Old Town (3 noches)",
+          "Día final en Irlanda. Mañana en Malahide (castillo y pueblo costero, a 15 min del aeropuerto), devuelves el coche y vuelas a Escocia. Primera noche en Edimburgo.",
+        sleep: "Edimburgo centro (3 noches)",
         locations: [
           {
-            name: "Mañana libre en Dublín",
-            lat: 53.3498,
-            lng: -6.2603,
+            name: "Malahide Castle & village",
+            lat: 53.4437,
+            lng: -6.1647,
             time: "10:00 AM",
             duration: "3h",
-            notes: "Shopping, museos o relax según horario del vuelo.",
+            notes: "Castillo medieval con jardines y tour guiado, más el pueblo costero con marina y cafés. A 15 min del aeropuerto. Verificar precio y horario del tour en malahidecastleandgardens.ie. Lunch en Malahide antes de devolver el coche.",
           },
           {
             name: "Dublin Airport",
@@ -853,7 +853,7 @@ export const trip: Country[] = [
             lat: 55.9505,
             lng: -3.368,
             time: "7:10 PM",
-            notes: "Tram al centro (~35 min) o Airlink 100 bus. Check-in en Old Town y cena ligera.",
+            notes: "Tram al centro (~35 min) o Airlink 100 bus. Check-in en el hotel (Four Points Flex o Tynecastle Park) y cena ligera.",
           },
         ],
       },
@@ -872,7 +872,7 @@ export const trip: Country[] = [
         title: "Edimburgo: Princes Street + Castle + Royal Mile",
         narrative:
           "Primer día completo en Edimburgo. Princes Street y el Mound por la mañana, castillo, bajada por el Royal Mile con un museo curioso, cena legendaria en The Witchery y nightcap.",
-        sleep: "Edimburgo Old Town",
+        sleep: "Edimburgo centro",
         locations: [
           {
             name: "Scott Monument",
@@ -945,7 +945,7 @@ export const trip: Country[] = [
         title: "Holyrood + Duddingston + pub crawl",
         narrative:
           "Mañana en New Town y la parte baja del Royal Mile, palacio real, caminata por Holyrood Park al jardín secreto de Duddingston y cena en el pub más antiguo de Escocia. Por la noche, crawl por los dos pubs más icónicos.",
-        sleep: "Edimburgo Old Town",
+        sleep: "Edimburgo centro",
         locations: [
           {
             name: "Scottish National Portrait Gallery",
