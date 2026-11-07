@@ -865,7 +865,7 @@ export const trip: Country[] = [
     flag: "🏴󠁧󠁢󠁳󠁣󠁴󠁿",
     subtitle: "Última etapa · 6 días · Coche rentado para Highlands y Skye",
     description:
-      "Base en Edimburgo (3 noches Old Town + 1 cerca aeropuerto), loop por West Highlands (Glencoe, Fort William), Isle of Skye (Portree) y regreso por Loch Ness. Coche rentado del día 20 al día 22. Vuelo de regreso a CDMX vía París la madrugada del día 23 (AF 1887 sale 5:40 AM).",
+      "Base en Edimburgo (3 noches en el centro + 1 junto al aeropuerto), loop por West Highlands (Glencoe, Fort William), Isle of Skye (Portree) y regreso por Loch Ness. Coche rentado del día 20 al día 22. Vuelo de regreso a CDMX vía París la madrugada del día 23 (AF 1887 sale 5:40 AM).",
     days: [
       {
         number: 18,
