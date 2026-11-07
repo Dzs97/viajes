@@ -77,7 +77,7 @@ Estas variables tienen overrides en `[data-theme="dark"]`. Si añades colores nu
 - Día 3 lun 3 may (bank holiday): Westminster + West End (Abbey, Buckingham, National Gallery, Sherlock Holmes Pub, opcional teatro)
 - Día 4 mar 4 may: DAY TRIP Wiltshire (Stonehenge + Bath + Castle Combe, tour organizado)
 - Día 5 mié 5 may: City + South Bank en línea este→oeste (Tower, Leadenhall, Reflection Garden, St Paul's, Tate Modern, Shakespeare's Globe, Borough Market)
-- Día 6 jue 6 may: Greenwich (Painted Hall + Queen's House + Royal Observatory) + Hampstead (Hill Garden Pergola + Holly Village)
+- Día 6 jue 6 may: Greenwich (Painted Hall + Queen's House + National Maritime Museum + mirador de Greenwich Park; el Royal Observatory está cerrado por obras hasta verano 2027) + Hampstead (Hill Garden Pergola + Holly Village)
 - Día 7 vie 7 may: DAY TRIP Seven Sisters (acantilados East Sussex con coche rentado medio día desde East Croydon)
 - Transporte: 7-Day Travelcard zonas 1-6 todo Londres. Coche rentado solo el día 7 (medio día).
 

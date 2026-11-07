@@ -54,8 +54,8 @@ export const budgets: CountryBudget[] = [
       },
       {
         label: "Hospedaje Londres (7 noches, hoteles 3-3.5★ centro)",
-        amount: 1455,
-        detail: "Promedio $208/noche en mayo (temporada media). Zonas recomendadas con tube zona 1-2: Bayswater, Bloomsbury, King's Cross, South Kensington. Cadenas: Premier Inn Hub Kings Cross (~£140), Travelodge Plus Bayswater (~£150), Hilton Garden Inn London City (~£180), ibis Styles. Reservar 2-3 meses antes.",
+        amount: 1500,
+        detail: "Precios reales Booking (nov 2026) para 1-8 may 2027, 3-4★ con calificación 8+: lo más barato decente en zona 1 ~$1,130-1,200 los 7 noches (hub by Premier Inn, Tavistock); hoteles mid típicos $1,350-1,850 (Rockwell East, Crescent Hyde Park, Mercure Earls Court, City Sleeper). Presupuesto ~$215/noche. Zonas: Bloomsbury, King's Cross, Paddington/Bayswater.",
       },
       {
         label: "7-Day Travelcard zonas 1-6 (2 personas)",
@@ -78,14 +78,14 @@ export const budgets: CountryBudget[] = [
         detail: "Pick up en estación perimetral sur (East Croydon o similar — evitar central London por tarifas y tráfico). $60 renta + $20 gasolina + $7 parking Birling Gap + $20 seguro + $15 tube a/desde estación. Roundtrip ~80 millas. Manejar del lado izquierdo en UK — primera vez = estrés, ir despacio.",
       },
       {
-        label: "Vuelo Londres (LHR/STN) → Dublín (DUB)",
-        amount: 145,
-        detail: "Ryanair, EasyJet o Aer Lingus, ~1h vuelo, ~$72/persona reservando con 2-3 meses anticipación. Alternativa: ferry Holyhead-Dublin (~$220-300 los 2, 8-10h door-to-door, más experiencia).",
+        label: "Vuelo Londres (LHR) → Dublín (DUB), sáb 8 may",
+        amount: 285,
+        detail: "Google Flights (nov 2026): Aer Lingus LHR 8:10 PM → DUB 9:30 PM ~$107/persona (tarifa básica, solo equipaje de mano). + maleta documentada ~$35 c/u. BA 5:55 PM ~$85 si prefieren llegar antes, pero obliga a salir de Kew a las 3 PM.",
       },
       {
         label: "Entradas atracciones pagadas",
-        amount: 595,
-        detail: "Precios oficiales oct 2026: Westminster Abbey £31×2=$83, Tower of London £37×2=$99, St Paul's Cathedral £27×2=$72, Shakespeare's Globe tour ~£27×2=$72, Painted Hall Greenwich £19×2=$51, Royal Observatory Greenwich £18-24×2=$64, Windsor Castle £32×2=$85, Kew Gardens £25×2=$67. Reservar online para evitar colas. GRATIS: British Museum, National Gallery, Tate Modern, Sir John Soane's Museum, Sky Garden (reservar), Columbia Road Flower Market (dom), Queen's House Greenwich, St James's Park, Hill Garden Pergola, Holly Village, Cambio de Guardia Buckingham.",
+        amount: 530,
+        detail: "Precios oficiales oct 2026: Westminster Abbey £31×2=$83, Tower of London £37×2=$99, St Paul's Cathedral £27×2=$72, Shakespeare's Globe tour ~£27×2=$72, Painted Hall Greenwich £19×2=$51, Windsor Castle £32×2=$85, Kew Gardens £25×2=$67. El Royal Observatory está cerrado por obras hasta verano 2027. Reservar online para evitar colas. GRATIS: British Museum, National Gallery, Tate Modern, Sir John Soane's Museum, Sky Garden (reservar), Columbia Road Flower Market (dom), Queen's House y National Maritime Museum (Greenwich), St James's Park, Hill Garden Pergola, Holly Village, Cambio de Guardia Buckingham.",
       },
       {
         label: "Comida y bebidas (7 días)",
@@ -109,13 +109,13 @@ export const budgets: CountryBudget[] = [
     items: [
       {
         label: "Hospedaje (9 noches, hoteles 3-3.5★)",
-        amount: 1125,
-        detail: "Dublín (4 noches) $133/noche, Galway (2) $112, Sligo (1) $97, Bushmills (1) $133, Belfast (1) $112. Promedio $125/noche en mayo (shoulder season).",
+        amount: 2115,
+        detail: "Precios reales Booking (nov 2026), 3-4★ con calificación 8+: Dublín 8-11 may ~$700 (Motel One, Travelodge PLUS, Leonardo Parnell), Galway 11-13 ~$420 (The Lane, Eyre Square), Sligo 13-14 ~$230 (The Address, Clayton), Bushmills 14-15 ~$320 (Causeway Hotel $294, Bushmills Inn $444), Belfast 15-16 ~$260 (Moxy, ibis, DoubleTree), Dublín 16-17 ~$185. Promedio ~$235/noche.",
       },
       {
-        label: "Renta de coche (8 días)",
-        amount: 735,
-        detail: "Automático, seguro completo, cross-border NI incluido. ~$92/día con compañías como Hertz o Europcar.",
+        label: "Renta de coche automático (7 días, 10-17 may)",
+        amount: 520,
+        detail: "Kayak (nov 2026): automático desde $178 los 7 días en aeropuerto DUB (manual desde $126), sin seguro total. + cobertura total ~€25-30/día si no la cubre la tarjeta + cargo por cruzar a Irlanda del Norte (~£30). Recoger en el aeropuerto suele ser más barato y con más automáticos que en el centro.",
       },
       {
         label: "Gasolina + tolls + parking",
@@ -135,7 +135,7 @@ export const budgets: CountryBudget[] = [
       {
         label: "Vuelo Dublín → Edimburgo",
         amount: 165,
-        detail: "2 personas, Aer Lingus o Ryanair, ~$82 c/u si se reserva con anticipación.",
+        detail: "Google Flights (nov 2026), lun 17 may: Aer Lingus 5:50 PM → 7:10 PM ~$48/persona; Ryanair 4:05 PM → 5:15 PM ~$40. + maleta documentada ~$35 c/u.",
       },
     ],
   },
@@ -144,13 +144,13 @@ export const budgets: CountryBudget[] = [
     items: [
       {
         label: "Hospedaje (6 noches, hoteles 3-3.5★)",
-        amount: 990,
-        detail: "Edimburgo Old Town (3 noches, 17-19 may) $177/noche = $531, Fort William (1) $135, Portree Skye (1) $187 (Skye se llena), Edimburgo aeropuerto (1, a pie de la terminal por el vuelo de 5:40 AM) $135. Promedio $165/noche en mayo.",
+        amount: 1860,
+        detail: "Precios reales Booking (nov 2026), calificación 8+: Edimburgo centro 17-20 may ~$1,100 los 3 noches (Angels Share, YOTEL, Leonardo City, The Inn Place: $1,010-1,280), Fort William ~$250 (B&B), Portree ~$255 (Rockview, Pink House, Rosedale), aeropuerto EDI ~$255 (Moxy, a pie de la terminal). Promedio ~$310/noche: Edimburgo en mayo es caro.",
       },
       {
         label: "Coche rentado (3 días)",
         amount: 250,
-        detail: "Automático con seguro completo. Pickup día 20 (centro o aeropuerto EDI), return en aeropuerto EDI la tarde del día 22. ~$83/día con Hertz/Europcar/Enterprise. Días 18-19 sin coche: Duddingston se hace caminando por Holyrood Park.",
+        detail: "Automático con seguro completo. Kayak (nov 2026): automático desde $147 los 3 días en aeropuerto EDI, + seguro. Pickup día 20, return en aeropuerto EDI la tarde del día 22. con Hertz/Europcar/Enterprise. Días 18-19 sin coche: Duddingston se hace caminando por Holyrood Park.",
       },
       {
         label: "Gasolina + parking",
