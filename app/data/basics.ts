@@ -32,11 +32,11 @@ export const basics: BasicItem[] = [
     category: "calzado",
     description:
       "Hiking shoes low-top con membrana GoreTex (waterproof) + outsole Continental rubber. Para Old Man of Storr en Skye, Connemara, Glencoe, Cliffs of Moher y Giant's Causeway. También sirven para días lluviosos en ciudad.",
-    priceUSD: 320,
+    priceUSD: 160,
     status: "pendiente",
-    forUser: "ambos",
+    forUser: "Diego",
     notes:
-      "~$160/par × 2 (en oferta se ve en ~$100-140). Hay versión de hombre y de mujer; verificar si ya salió la Skychaser 2. Comprar 2 pares (uno para cada uno). Versión low — evitar las variantes 'Tech' o 'AX5 Mid' que son boot. Alternativa más barata: AX5 GTX low ($120) si quieren ahorrar y aceptan menos protección de toe cap. ROMPER antes del viaje con mínimo 15-20h de uso previo + 1 hike de 3-4h (Ajusco, Chipinque, Tepoztlán).",
+      "~$160 (en oferta se ve en ~$100-140). Para Mariana van las dos opciones de abajo. Versión low — evitar las variantes 'Tech' o 'AX5 Mid' que son boot. Alternativa más barata: AX5 GTX low ($120) si quieren ahorrar y aceptan menos protección de toe cap. ROMPER antes del viaje con mínimo 15-20h de uso previo + 1 hike de 3-4h (Ajusco, Chipinque, Tepoztlán).",
     url: "https://www.adidas.com/us/terrex-skychaser-gore-tex-hiking-shoes",
   },
   {
@@ -50,6 +50,30 @@ export const basics: BasicItem[] = [
     forUser: "Diego",
     notes: "Talla US 10.5 de hombre. Precio en nike.com EE.UU. (nov 2026): $190 USD; no envía a México, comprarlo allá.",
     url: "https://www.nike.com/us/es/t/tenis-acondicionados-para-el-invierno-para-hombre-nike-zoom-vomero-roam-98VRD2uY/HJ4646-301",
+  },
+  {
+    name: "Opción 1 · Terrex Skychaser GORE-TEX · Core Black/Carbon (IH1093)",
+    brand: "Adidas",
+    category: "calzado",
+    description:
+      "Hiking shoe low-top impermeable (GORE-TEX) con suela Continental. Elegir esta u Opción 2.",
+    priceUSD: 160,
+    status: "pendiente",
+    forUser: "pareja",
+    notes: "~$160 USD en adidas.com EE.UU. Algunas tiendas listan IH1093 como modelo de hombre: confirmar que la talla elegida sea de mujer (o convertirla) antes de comprar. Romperlos antes del viaje.",
+    url: "https://www.adidas.com/us/terrex-skychaser-gore-tex-hiking-shoes/IH1093.html",
+  },
+  {
+    name: "Opción 2 · Terrex Free Hiker SL GORE-TEX · Chalk White/Cloud White/Grey Three (KJ1918)",
+    brand: "Adidas",
+    category: "calzado",
+    description:
+      "Hiking shoe de mujer impermeable (GORE-TEX), suela Continental y espuma Dreamstrike más acolchada. Elegir esta u Opción 1.",
+    priceUSD: 150,
+    status: "pendiente",
+    forUser: "pareja",
+    notes: "~$150 USD en EE.UU. Es de color claro: se ensucia más con lodo en Skye y Glencoe. Romperlos antes del viaje.",
+    url: "https://www.adidas.com/us/terrex-freehiker-sl-gore-tex-hiking-shoes/KJ1918.html?forceSelSize=5",
   },
   {
     name: "On Cloud (ya los tenemos)",
