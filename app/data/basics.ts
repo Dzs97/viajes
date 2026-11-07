@@ -32,11 +32,11 @@ export const basics: BasicItem[] = [
     category: "calzado",
     description:
       "Hiking shoes low-top con membrana GoreTex (waterproof) + outsole Continental rubber. Para Old Man of Storr en Skye, Connemara, Glencoe, Cliffs of Moher y Giant's Causeway. También sirven para días lluviosos en ciudad.",
-    priceUSD: 160,
+    priceUSD: 320,
     status: "pendiente",
     forUser: "ambos",
     notes:
-      "Comprar 2 pares (uno para cada uno). Versión low ($160) — evitar las variantes 'Tech' o 'AX5 Mid' que son boot. Alternativa más barata: AX5 GTX low ($120) si quieren ahorrar y aceptan menos protección de toe cap. ROMPER antes del viaje con mínimo 15-20h de uso previo + 1 hike de 3-4h (Ajusco, Chipinque, Tepoztlán).",
+      "~$160/par × 2 (en oferta se ve en ~$100-140). Hay versión de hombre y de mujer; verificar si ya salió la Skychaser 2. Comprar 2 pares (uno para cada uno). Versión low — evitar las variantes 'Tech' o 'AX5 Mid' que son boot. Alternativa más barata: AX5 GTX low ($120) si quieren ahorrar y aceptan menos protección de toe cap. ROMPER antes del viaje con mínimo 15-20h de uso previo + 1 hike de 3-4h (Ajusco, Chipinque, Tepoztlán).",
     url: "https://www.adidas.com/us/terrex-skychaser-gore-tex-hiking-shoes",
   },
   {
@@ -56,10 +56,10 @@ export const basics: BasicItem[] = [
     category: "calzado",
     description:
       "4-6 pares por persona. Para hiking shoes y días de mucho caminar. Merino no se moja rápido, seca en 4-6h, no apesta.",
-    priceUSD: 160,
+    priceUSD: 210,
     status: "pendiente",
     forUser: "ambos",
-    notes: "~$20/par × 8 pares (4 por persona) = $160. Importante para el hike de Storr (calceta gruesa) y días largos.",
+    notes: "Darn Tough Hiker Micro Crew Cushion ~$26/par × 8 pares (4 por persona) ≈ $210; en oferta bajan a ~$19. Darn Tough tiene garantía de por vida. Importante para el hike de Storr (calceta gruesa) y días largos.",
   },
 
   // ============ ROPA ============
@@ -77,26 +77,25 @@ export const basics: BasicItem[] = [
     url: "https://www.patagonia.com/search/?q=torrentshell%203l%20jacket",
   },
   {
-    name: "Base layer térmico (merino o sintético)",
-    brand: "Uniqlo Heattech / Icebreaker / Smartwool",
+    name: "Base layer térmico (Heattech, ya lo tenemos)",
+    brand: "Uniqlo Heattech",
     category: "ropa",
     description:
-      "Camisetas térmicas para mañanas frías en Highlands y Skye (~8-12°C en mayo). 2 por persona, manga larga, ajustadas debajo de fleece o chamarra.",
-    priceUSD: 80,
-    status: "pendiente",
+      "Camisetas térmicas para mañanas frías en Highlands y Skye (~7-12°C en mayo). 2 por persona, manga larga, debajo de la capa térmica o la chamarra.",
+    status: "comprado",
     forUser: "ambos",
-    notes: "Uniqlo Heattech es la opción budget ($20/pieza). Merino real (Icebreaker, Smartwool) es $80+/pieza pero no apesta y dura años.",
+    notes: "Ya los tenemos. Solo si quieren algo que no huela después de varios días: merino (Icebreaker, Smartwool) ~$80+/pieza.",
   },
   {
-    name: "Fleece / mid-layer",
-    brand: "Patagonia / The North Face / Decathlon",
+    name: "Ultra Light Down (capa térmica)",
+    brand: "Uniqlo",
     category: "ropa",
     description:
-      "Capa intermedia entre térmico y chamarra. Para mañanas frías y noches en pubs sin calefacción fuerte. 1 por persona.",
-    priceUSD: 100,
+      "Capa intermedia entre el Heattech y la Torrentshell. Se dobla en su propia bolsita, así que va siempre en el daypack. Para mañanas frías, Skye al atardecer y pubs sin mucha calefacción. 1 por persona.",
+    priceUSD: 170,
     status: "pendiente",
     forUser: "ambos",
-    notes: "$50/persona × 2. Patagonia Better Sweater es clásico ($139). Alternativas más baratas en Decathlon Quechua o Uniqlo.",
+    notes: "~$80-90/persona × 2 (en Black Friday suele bajar). Si prefieren algo que abrigue mojado: Patagonia Nano Puff (~$229) o un fleece ligero.",
   },
   {
     name: "Quandary Pants",
@@ -152,10 +151,10 @@ export const basics: BasicItem[] = [
     category: "electronica",
     description:
       "Días largos de caminata con Google Maps, fotos y Spotify drenan la batería. Power bank de mínimo 10K mAh con USB-C PD para cargar rápido el celular.",
-    priceUSD: 35,
+    priceUSD: 60,
     status: "pendiente",
     forUser: "ambos",
-    notes: "Anker PowerCore 10000 (~$30). Verificar que sea <100Wh (regla TSA / aerolíneas). 20K mAh dura 4-5 cargas de celular pero más pesado.",
+    notes: "1 por persona, Anker 10000 mAh ~$30. Reglas 2026: solo en equipaje de mano (nunca documentado), máximo 2 por pasajero y <100 Wh; muchas aerolíneas ya prohíben usarlo o cargarlo durante el vuelo. Revisar las reglas de AeroMéxico, Air France y Ryanair/Aer Lingus antes de volar.",
   },
   {
     name: "Cables USB-C / Lightning extras",
@@ -184,7 +183,7 @@ export const basics: BasicItem[] = [
     brand: "AirPods Pro / Sony WF-1000XM5 / Bose",
     category: "electronica",
     description:
-      "Para los 13h de vuelo CDMX↔Londres. Con noise-cancelling marca diferencia en aviones.",
+      "Para los ~10.5h de ida (AM 7 directo a Londres) y el regreso de ~15h con escala en París. Con noise-cancelling marca diferencia en aviones.",
     status: "opcional",
     forUser: "ambos",
     notes: "Si ya tienen, no comprar. Si planean comprar de todos modos, este es buen momento.",
@@ -199,7 +198,7 @@ export const basics: BasicItem[] = [
       "VERIFICAR que esté vigente con mínimo 6 meses después del fin del viaje (23 may 2027 + 6 meses = vencimiento ≥ nov 2027). Si vence antes, renovar YA.",
     status: "pendiente",
     forUser: "ambos",
-    notes: "Mexicanos NO necesitan visa para UK, Irlanda ni Schengen (estancia <90 días). Solo pasaporte + boleto de regreso + capacidad financiera demostrable.",
+    notes: "Mexicanos NO necesitan visa para UK, Irlanda ni Schengen (estancia <90 días). Solo pasaporte + boleto de regreso + capacidad financiera demostrable. ETIAS (permiso Schengen) se pospuso a 2027: no aplica para la escala en París, pero confirmarlo si deciden salir del aeropuerto.",
   },
   {
     name: "ETA UK (Electronic Travel Authorisation)",
@@ -218,7 +217,7 @@ export const basics: BasicItem[] = [
     brand: "Allianz / World Nomads / AXA / IATI",
     category: "documentos",
     description:
-      "Cobertura mínima: médico €100K+, cancelación vuelo, pérdida equipaje, COVID. Para 23 días, 2 personas, cobertura UK + Irlanda.",
+      "Cobertura mínima: médico €100K+, cancelación vuelo, pérdida equipaje, COVID. Para 23 días, 2 personas, cobertura UK + Irlanda + Francia (escala en París).",
     priceUSD: 150,
     status: "pendiente",
     forUser: "ambos",
@@ -229,11 +228,11 @@ export const basics: BasicItem[] = [
     brand: "—",
     category: "documentos",
     description:
-      "Para rentar coche en Irlanda y Escocia. Licencia mexicana vigente + IDP (Permiso Internacional de Conducir) que se tramita en AAA / SCT. Algunas rentadoras aceptan solo licencia mexicana pero IDP es seguro tener.",
+      "Para rentar coche en Inglaterra (día 7), Irlanda y Escocia. Licencia mexicana vigente + IDP (Permiso Internacional de Conducir). Como la licencia está en español, varias rentadoras lo piden.",
     priceUSD: 30,
     status: "pendiente",
     forUser: "Diego",
-    notes: "Solo conductor principal necesita IDP. $25-40 MXN equivalente USD. Trámite en oficinas de SCT o AAA México. Vigencia 1 año.",
+    notes: "En México solo lo expiden la ANA (Asociación Nacional Automovilística) y la AMA (Asociación Mexicana Automovilística); se entrega el mismo día. Requiere licencia vigente con al menos 1 año de antigüedad. Confirmar tarifa con la asociación. Vigencia 1 año. Si Mariana también va a manejar, ella necesita el suyo.",
   },
   {
     name: "Copias digitales de todo en la nube",
@@ -246,6 +245,17 @@ export const basics: BasicItem[] = [
     notes: "Compartir carpeta entre tu pareja y tú. Backup también en email a uno mismo. Si pierden el celular o pasaporte, recuperación más fácil.",
   },
 
+  {
+    name: "Tarjeta sin comisión en el extranjero",
+    brand: "—",
+    category: "documentos",
+    description:
+      "UK e Irlanda son casi 100% contactless (tube, buses, pubs, mercados). Llevar al menos una tarjeta sin comisión por compras en moneda extranjera para cada uno, más una de respaldo guardada aparte.",
+    status: "pendiente",
+    forUser: "ambos",
+    notes: "Al pagar, elegir siempre cobrar en la moneda local (GBP/EUR), nunca en pesos: la conversión del comercio sale más cara. Avisar al banco del viaje. Efectivo: casi no hace falta, unas £50 y €50 para emergencias.",
+  },
+
   // ============ SALUD ============
   {
     name: "Repelente para midges (Smidge)",
@@ -256,7 +266,7 @@ export const basics: BasicItem[] = [
     priceUSD: 15,
     status: "pendiente",
     forUser: "ambos",
-    notes: "Comprar en farmacias UK al llegar (Boots, Superdrug) — más fácil que traer de México. ~£8/botella. Aplicar antes de hikes mañana/atardecer especialmente.",
+    notes: "Comprar en farmacias UK al llegar (Boots, Superdrug) — más fácil que traer de México. ~£8/botella. Los midges suelen salir de mediados a finales de mayo según el clima: el 20-22 may en Skye puede haber pocos. Comprarlo allá solo si los ven.",
   },
   {
     name: "Botiquín básico",
@@ -310,10 +320,10 @@ export const basics: BasicItem[] = [
     category: "misc",
     description:
       "Mochila ligera para llevar en hikes y excursiones day-trip (Wiltshire, Skye, Highlands). Suficiente para chamarra extra, agua, snacks, cámara.",
-    priceUSD: 65,
+    priceUSD: 140,
     status: "pendiente",
     forUser: "ambos",
-    notes: "1 por persona ($65 × 2 = $130) o 1 compartida si caminan juntos siempre. Osprey Daylite Plus es el clásico.",
+    notes: "Osprey Daylite Plus 20L ~$70-75 de lista (en oferta ~$45-60). 1 por persona ($140) o 1 compartida ($70) si caminan juntos siempre.",
   },
   {
     name: "Botella reusable",
@@ -331,18 +341,18 @@ export const basics: BasicItem[] = [
     brand: "Apple",
     category: "misc",
     description:
-      "Uno por maleta documentada + uno en daypack. Recuperación de equipaje extraviado en aeropuertos con múltiples conexiones (CDMX→LHR vía AMS o CDG).",
-    priceUSD: 90,
+      "Uno por maleta documentada + uno en daypack. Útil sobre todo en el regreso, con conexión en París (AF 1887 + AM 6), y en los vuelos internos.",
+    priceUSD: 80,
     status: "opcional",
     forUser: "ambos",
-    notes: "Pack de 4 AirTags $99. Si solo iPhone — para Android no funcionan, ahí Tile o Samsung SmartTag equivalente.",
+    notes: "AirTag 2, pack de 4: $99 de lista, en oferta ~$70-89. Si solo iPhone — para Android no funcionan, ahí Tile o Samsung SmartTag equivalente.",
   },
   {
     name: "Packing cubes / bolsas de compresión",
     brand: "Eagle Creek / Decathlon / Amazon Basics",
     category: "misc",
     description:
-      "Organizar maleta por tipo de ropa. Crítico para mover entre 6 hoteles diferentes durante 23 días sin desempacar/empacar caos.",
+      "Organizar maleta por tipo de ropa. Crítico para moverse entre 11 hoteles diferentes durante 23 días sin desempacar/empacar caos.",
     priceUSD: 30,
     status: "opcional",
     forUser: "ambos",
@@ -376,10 +386,10 @@ export const basics: BasicItem[] = [
     category: "misc",
     description:
       "Para datos en UK + Irlanda. eSIM (compatible con iPhone XS+ y Samsung S20+) es lo más fácil — compras en app, activas al aterrizar. Alternativa: SIM física en Three / Vodafone al llegar.",
-    priceUSD: 50,
+    priceUSD: 70,
     status: "pendiente",
     forUser: "ambos",
-    notes: "$25/persona × 2 para 23 días con ~10GB datos. Airalo Eurolink cubre UK + Irlanda + Schengen con un solo eSIM. Activar el día de salida.",
+    notes: "Airalo Eurolink 10GB / 30 días ~$31-37 por persona. Cubre UK + Irlanda + Francia (escala) con un solo eSIM, solo datos (sin número local). Instalar en México y activar al aterrizar en Londres.",
   },
 ];
 
