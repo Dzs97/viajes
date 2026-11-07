@@ -40,6 +40,18 @@ export const basics: BasicItem[] = [
     url: "https://www.adidas.com/us/terrex-skychaser-gore-tex-hiking-shoes",
   },
   {
+    name: "Nike Zoom Vomero Roam · Secuoya/Negro/Oliva (HJ4646-301), talla US 10.5",
+    brand: "Nike",
+    category: "calzado",
+    description:
+      "Tenis acondicionados para el invierno: acabado repelente al agua y guardabarros de goma. Para ciudad con lluvia (Londres, Dublín, Edimburgo).",
+    priceUSD: 190,
+    status: "pendiente",
+    forUser: "Diego",
+    notes: "Talla US 10.5 de hombre. Precio en nike.com EE.UU. (nov 2026): $190 USD; no envía a México, comprarlo allá.",
+    url: "https://www.nike.com/us/es/t/tenis-acondicionados-para-el-invierno-para-hombre-nike-zoom-vomero-roam-98VRD2uY/HJ4646-301",
+  },
+  {
     name: "On Cloud (ya los tenemos)",
     brand: "On",
     category: "calzado",
