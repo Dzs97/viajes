@@ -198,6 +198,6 @@ No usa base de datos ni Anthropic API. `.claude/settings.local.json` solo tiene 
 ## Notas de trabajo (antes solo en la memoria de Claude)
 
 - **Haz tú los commits y el push.** No le pases comandos de git a Diego: verifica el cambio, haz commit y push, y confirma el deploy.
-- `gh` CLI no está instalado.
+- `gh` CLI está instalado. Por defecto se hace push directo a `main`; usar rama + PR solo cuando Diego lo pida.
 - **Landing page personal:** repo aparte en `~/Downloads/Projects/Dzs97.github.io` (GitHub Pages, https://dzs97.github.io). Es HTML/CSS plano con toggle EN/ES vía el diccionario `ES` en `index.html`. Sube `styles.css?v=N` cada vez que cambie el CSS. El sourcing tracker aparece listado **sin link, a propósito**: no lo enlaces públicamente.
 - Diego es Recruitment Lead (no desarrollador). El contenido de la landing viene de su CV y LinkedIn.
