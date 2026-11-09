@@ -1,10 +1,9 @@
 "use client";
 
 import { useState } from "react";
-import { budgets, formatAmount, getCountryTotal, type Currency } from "../data/budget";
+import { budgets, formatAmount, getCountryTotal, currencies, type Currency } from "../data/budget";
 import { trip } from "../data/trip";
 
-const CURRENCIES: Currency[] = ["MXN", "USD", "EUR", "GBP"];
 
 export default function ExpenseBreakdown() {
   const [currency, setCurrency] = useState<Currency>("MXN");
@@ -45,7 +44,7 @@ export default function ExpenseBreakdown() {
             {allExpanded ? "Colapsar todo" : "Expandir todo"}
           </button>
           <div className="currency-toggle" role="group" aria-label="Cambiar moneda desglose">
-            {CURRENCIES.map((c) => (
+            {currencies.map((c) => (
               <button
                 key={c}
                 className="currency-btn"

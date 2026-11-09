@@ -2,10 +2,11 @@
 // Cache-first para assets estáticos, network-first para todo lo demás.
 
 // Bump version on releases to invalidate old caches
-const CACHE_NAME = "my-travel-v2";
+const CACHE_NAME = "my-travel-v3";
 const STATIC_ASSETS = [
   "/",
   "/basics",
+  "/reservas",
 ];
 
 // Install: pre-cache assets esenciales

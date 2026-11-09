@@ -680,14 +680,6 @@ a { color: inherit; text-decoration: none; }
   transform: rotate(45deg);
 }
 
-.route-warning {
-  font-family: 'JetBrains Mono', monospace;
-  font-size: 0.7rem;
-  color: var(--ink-faded);
-  margin-bottom: 0.85rem;
-  font-style: italic;
-}
-
 /* Scroll to top button — floating, bottom-right */
 .scroll-top {
   position: fixed;
@@ -2183,7 +2175,6 @@ a { color: inherit; text-decoration: none; }
   .overview-map-section,
   .countdown,
   .route-button,
-  .route-warning,
   .basics-toolbar,
   .basics-add-btn,
   .basic-item-actions,

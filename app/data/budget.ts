@@ -27,6 +27,8 @@ export const exchangeRates = {
 
 export type Currency = keyof typeof exchangeRates;
 
+export const currencies: Currency[] = ["MXN", "USD", "EUR", "GBP"];
+
 export const currencySymbols: Record<Currency, string> = {
   USD: "$",
   MXN: "$",
@@ -59,7 +61,7 @@ export const budgets: CountryBudget[] = [
       },
       {
         label: "7-Day Travelcard zonas 1-6 (2 personas)",
-        amount: 220,
+        amount: 218,
         detail: "£81.60/persona × 2 = £163 ≈ $218 (precio TfL 2026, congelado vs 2025). Mismo monto que el cap semanal de contactless. Cubre tube + bus + Overground + DLR durante 7 días. Alternativa: contactless/Oyster con cap diario (~£15/día zonas 1-2). Travelcard sale igual o más barato si harán 6+ viajes diarios.",
       },
       {

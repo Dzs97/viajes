@@ -220,10 +220,10 @@ export const basics: BasicItem[] = [
     category: "documentos",
     description:
       "Obligatoria para mexicanos (cubre Inglaterra, Escocia e Irlanda del Norte; Irlanda no la pide). £20/persona desde abr 2026 (antes £16), válida 2 años. Tramitar online 1-2 meses antes del viaje.",
-    priceUSD: 52,
+    priceUSD: 53,
     status: "pendiente",
     forUser: "ambos",
-    notes: "£20×2 = $52. Tramitar en gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta. Verificar requisitos actualizados unos meses antes del viaje.",
+    notes: "£20×2 ≈ $53. Tramitar en gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta. Verificar requisitos actualizados unos meses antes del viaje.",
     url: "https://www.gov.uk/guidance/apply-for-an-electronic-travel-authorisation-eta",
   },
   {

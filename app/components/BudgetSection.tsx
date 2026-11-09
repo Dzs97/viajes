@@ -7,10 +7,10 @@ import {
   formatAmount,
   getCountryTotal,
   getGrandTotal,
+  currencies,
   type Currency,
 } from "../data/budget";
-
-const CURRENCIES: Currency[] = ["MXN", "USD", "EUR", "GBP"];
+import { totalTripDays } from "../data/trip";
 
 export default function BudgetSection({ countryId }: { countryId: string }) {
   const [currency, setCurrency] = useState<Currency>("MXN");
@@ -31,7 +31,7 @@ export default function BudgetSection({ countryId }: { countryId: string }) {
           </p>
         </div>
         <div className="currency-toggle" role="group" aria-label="Cambiar moneda">
-          {CURRENCIES.map((c) => (
+          {currencies.map((c) => (
             <button
               key={c}
               className="currency-btn"
@@ -88,10 +88,10 @@ export function GrandTotalBanner() {
         <div>
           <div className="budget-eyebrow">Total del viaje</div>
           <h2 className="grand-total-amount">{formatAmount(total, currency)}</h2>
-          <p className="grand-total-detail">3 países · 23 días · 2 personas</p>
+          <p className="grand-total-detail">3 países · {totalTripDays} días · 2 personas</p>
         </div>
         <div className="currency-toggle" role="group" aria-label="Cambiar moneda total">
-          {CURRENCIES.map((c) => (
+          {currencies.map((c) => (
             <button
               key={c}
               className="currency-btn"

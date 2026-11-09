@@ -1,37 +1,14 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { loadGoogleMaps } from "./mapsLoader";
+import { getCurrentTheme, loadGoogleMaps, mapStyles } from "./mapsLoader";
 import { trip } from "../data/trip";
-
-const lightStyle: google.maps.MapTypeStyle[] = [
-  { featureType: "poi", elementType: "labels", stylers: [{ visibility: "off" }] },
-  { featureType: "transit", elementType: "labels", stylers: [{ visibility: "off" }] },
-];
-
-const darkStyle: google.maps.MapTypeStyle[] = [
-  { elementType: "geometry", stylers: [{ color: "#16201d" }] },
-  { elementType: "labels.text.stroke", stylers: [{ color: "#16201d" }] },
-  { elementType: "labels.text.fill", stylers: [{ color: "#b0a690" }] },
-  { featureType: "poi", elementType: "labels", stylers: [{ visibility: "off" }] },
-  { featureType: "transit", stylers: [{ visibility: "off" }] },
-  { featureType: "road", elementType: "geometry", stylers: [{ color: "#2d3a36" }] },
-  { featureType: "road", elementType: "labels.text.fill", stylers: [{ color: "#7a7361" }] },
-  { featureType: "water", elementType: "geometry", stylers: [{ color: "#0f1614" }] },
-  { featureType: "landscape", elementType: "geometry", stylers: [{ color: "#1f2a27" }] },
-  { featureType: "administrative.land_parcel", stylers: [{ visibility: "off" }] },
-];
 
 const COUNTRY_COLORS: Record<string, { light: string; dark: string }> = {
   inglaterra: { light: "#c84c2a", dark: "#e87a5d" }, // terracota
   irlanda: { light: "#5a7d3a", dark: "#7ea35a" }, // verde musgo
   escocia: { light: "#b89322", dark: "#d4b04a" }, // mostaza
 };
-
-function getCurrentTheme(): "light" | "dark" {
-  if (typeof document === "undefined") return "light";
-  return (document.documentElement.dataset.theme as "light" | "dark") || "light";
-}
 
 export default function OverviewMap() {
   const containerRef = useRef<HTMLDivElement>(null);
@@ -60,19 +37,10 @@ export default function OverviewMap() {
           });
         });
 
-        // Fallback bounds if no locations yet
-        const hasLocations = !bounds.isEmpty();
-        if (!hasLocations) {
-          // Center on British Isles
-          bounds.extend({ lat: 51.5, lng: -0.1 }); // London
-          bounds.extend({ lat: 56.5, lng: -4.2 }); // Scotland
-          bounds.extend({ lat: 53.3, lng: -8.5 }); // Ireland
-        }
-
         const map = new google.maps.Map(containerRef.current, {
           center: bounds.getCenter(),
           zoom: 6,
-          styles: theme === "dark" ? darkStyle : lightStyle,
+          styles: mapStyles[theme],
           mapTypeControl: false,
           streetViewControl: false,
           fullscreenControl: true,
@@ -133,11 +101,7 @@ export default function OverviewMap() {
           }
         });
 
-        if (hasLocations) {
-          map.fitBounds(bounds, 60);
-        } else {
-          map.fitBounds(bounds, 80);
-        }
+        map.fitBounds(bounds, 60);
 
         setLoading(false);
       })
@@ -161,7 +125,7 @@ export default function OverviewMap() {
     const observer = new MutationObserver(() => {
       if (!mapRef.current) return;
       const theme = getCurrentTheme();
-      mapRef.current.setOptions({ styles: theme === "dark" ? darkStyle : lightStyle });
+      mapRef.current.setOptions({ styles: mapStyles[theme] });
     });
     observer.observe(document.documentElement, { attributes: true, attributeFilter: ["data-theme"] });
     return () => observer.disconnect();

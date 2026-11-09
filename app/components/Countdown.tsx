@@ -1,7 +1,7 @@
 "use client";
 
 import { useEffect, useState } from "react";
-import { daysUntilTrip, formatTripDateLong } from "../lib/dates";
+import { countdownMessage, daysUntilTrip, formatTripDateLong } from "../lib/dates";
 import { tripStartDate } from "../data/trip";
 
 export default function Countdown() {
@@ -16,19 +16,7 @@ export default function Countdown() {
   if (days === null) return null;
 
   const startLabel = formatTripDateLong(tripStartDate);
-
-  let message: string;
-  if (days > 1) {
-    message = `Faltan ${days} días`;
-  } else if (days === 1) {
-    message = "Mañana sale el viaje";
-  } else if (days === 0) {
-    message = "¡Hoy empieza el viaje!";
-  } else if (days > -21) {
-    message = `Día ${Math.abs(days) + 1} del viaje`;
-  } else {
-    message = "Viaje terminado";
-  }
+  const message = countdownMessage(days);
 
   return (
     <div className="countdown">

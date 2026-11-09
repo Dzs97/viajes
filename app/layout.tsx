@@ -1,6 +1,7 @@
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 import SWRegister from "./components/SWRegister";
+import { totalTripDays } from "./data/trip";
 
 const siteUrl = "https://viajes-eight.vercel.app";
 
@@ -8,7 +9,7 @@ export const metadata: Metadata = {
   metadataBase: new URL(siteUrl),
   title: "My Travel · Inglaterra, Irlanda & Escocia (Mayo 2027)",
   description:
-    "Itinerario de viaje de 23 días por las Islas Británicas. Londres, Irlanda salvaje y Highlands escocesas. Mayo 2027.",
+    `Itinerario de viaje de ${totalTripDays} días por las Islas Británicas. Londres, Irlanda salvaje y Highlands escocesas. Mayo 2027.`,
   applicationName: "My Travel",
   appleWebApp: {
     capable: true,
@@ -30,7 +31,7 @@ export const metadata: Metadata = {
   twitter: {
     card: "summary_large_image",
     title: "My Travel · Inglaterra, Irlanda & Escocia",
-    description: "Itinerario de 23 días por las Islas Británicas, mayo 2027.",
+    description: `Itinerario de ${totalTripDays} días por las Islas Británicas, mayo 2027.`,
   },
   robots: {
     index: false,
@@ -55,12 +56,20 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   return (
-    <html lang="es">
+    // suppressHydrationWarning: the inline script sets data-theme before React hydrates.
+    <html lang="es" suppressHydrationWarning>
       <head>
         <meta name="mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-capable" content="yes" />
         <meta name="apple-mobile-web-app-title" content="My Travel" />
         <meta name="apple-mobile-web-app-status-bar-style" content="default" />
+        {/* Apply the saved theme before first paint so dark mode doesn't flash light. Same logic as ThemeToggle. */}
+        <script
+          dangerouslySetInnerHTML={{
+            __html:
+              "try{var t=localStorage.getItem('theme')||(matchMedia('(prefers-color-scheme: dark)').matches?'dark':'light');document.documentElement.dataset.theme=t}catch(e){}",
+          }}
+        />
       </head>
       <body>
         {children}

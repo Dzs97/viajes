@@ -49,7 +49,7 @@ function generateMarkdown(): string {
         md += `| ${item.label} | ${status} | ${formatAmount(item.amount, "MXN")} | ${formatAmount(item.amount, "USD")} |\n`;
       }
       const total = getCountryTotal(country.id);
-      md += `| **TOTAL** | **${formatAmount(total, "MXN")}** | **${formatAmount(total, "USD")}** |\n\n`;
+      md += `| **TOTAL** | | **${formatAmount(total, "MXN")}** | **${formatAmount(total, "USD")}** |\n\n`;
     }
 
     md += `---\n\n`;

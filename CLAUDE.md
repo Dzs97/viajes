@@ -147,6 +147,7 @@ Estilos en `globals.css`. Está organizado por secciones con comentarios `/* ===
 ```bash
 npm run dev        # Servidor local en localhost:3000
 npm run build      # Build de producción (verificar que pasa)
+npm test           # Pruebas de fechas y de Basics (Node 24+, sin dependencias)
 npm run start      # Servidor de producción local
 ```
 

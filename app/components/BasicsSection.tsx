@@ -2,10 +2,9 @@
 
 import { useState } from "react";
 import { basicsCategories, groupByCategory, totalCostUSD, type BasicItem } from "../data/basics";
-import { exchangeRates, formatAmount, type Currency } from "../data/budget";
+import { exchangeRates, formatAmount, currencies, type Currency } from "../data/budget";
 import { useBasicsState, cycleStatus } from "../lib/useBasicsState";
 
-const CURRENCIES: Currency[] = ["MXN", "USD", "EUR", "GBP"];
 
 export default function BasicsSection() {
   const [currency, setCurrency] = useState<Currency>("MXN");
@@ -31,7 +30,7 @@ export default function BasicsSection() {
     <section className="basics-section" id="basics">
       <div className="basics-toolbar basics-toolbar-standalone">
         <div className="currency-toggle" role="group" aria-label="Cambiar moneda basics">
-          {CURRENCIES.map((c) => (
+          {currencies.map((c) => (
             <button
               key={c}
               className="currency-btn"

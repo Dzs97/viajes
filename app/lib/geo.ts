@@ -21,10 +21,11 @@ export function distanceKm(a: Location, b: Location): number {
 // Estimate driving time between two coordinates using straight-line distance
 // scaled by a road factor (~1.3x) and average speed (60 km/h mixed driving).
 // Returns formatted string like "1h 25min" or "20 min".
-// Returns null if locations are very close (under 1 km) — usually same city stops.
+// Returns null if locations are very close (under 1 km) — usually same city stops —
+// or farther than 400 km, which in this trip only happens on flight legs.
 export function estimateDriveTime(a: Location, b: Location): { minutes: number; label: string; km: number } | null {
   const km = distanceKm(a, b) * 1.3;
-  if (km < 1) return null;
+  if (km < 1 || km > 400) return null;
   const minutes = Math.round((km / 60) * 60);
   if (minutes < 5) return null;
 

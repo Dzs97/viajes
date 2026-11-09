@@ -1,34 +1,8 @@
 "use client";
 
 import { useEffect, useRef, useState } from "react";
-import { loadGoogleMaps } from "./mapsLoader";
+import { getCurrentTheme, loadGoogleMaps, mapStyles } from "./mapsLoader";
 import type { Location } from "../data/trip";
-
-const lightStyle: google.maps.MapTypeStyle[] = [
-  { featureType: "poi", elementType: "labels", stylers: [{ visibility: "off" }] },
-  { featureType: "transit", elementType: "labels", stylers: [{ visibility: "off" }] },
-];
-
-const darkStyle: google.maps.MapTypeStyle[] = [
-  { elementType: "geometry", stylers: [{ color: "#16201d" }] },
-  { elementType: "labels.text.stroke", stylers: [{ color: "#16201d" }] },
-  { elementType: "labels.text.fill", stylers: [{ color: "#b0a690" }] },
-  { featureType: "poi", elementType: "labels", stylers: [{ visibility: "off" }] },
-  { featureType: "transit", stylers: [{ visibility: "off" }] },
-  { featureType: "road", elementType: "geometry", stylers: [{ color: "#2d3a36" }] },
-  { featureType: "road", elementType: "geometry.stroke", stylers: [{ color: "#1a2421" }] },
-  { featureType: "road", elementType: "labels.text.fill", stylers: [{ color: "#7a7361" }] },
-  { featureType: "water", elementType: "geometry", stylers: [{ color: "#0f1614" }] },
-  { featureType: "water", elementType: "labels.text.fill", stylers: [{ color: "#5a5246" }] },
-  { featureType: "landscape", elementType: "geometry", stylers: [{ color: "#1f2a27" }] },
-  { featureType: "administrative", elementType: "geometry.stroke", stylers: [{ color: "#2d3a36" }] },
-  { featureType: "administrative.land_parcel", stylers: [{ visibility: "off" }] },
-];
-
-function getCurrentTheme(): "light" | "dark" {
-  if (typeof document === "undefined") return "light";
-  return (document.documentElement.dataset.theme as "light" | "dark") || "light";
-}
 
 /**
  * Build a Google Maps Directions URL with multiple waypoints.
@@ -86,7 +60,7 @@ export default function DayMap({ locations }: { locations: Location[] }) {
         const map = new google.maps.Map(containerRef.current, {
           center: bounds.getCenter(),
           zoom: 9,
-          styles: theme === "dark" ? darkStyle : lightStyle,
+          styles: mapStyles[theme],
           mapTypeControl: false,
           streetViewControl: false,
           fullscreenControl: true,
@@ -182,7 +156,7 @@ export default function DayMap({ locations }: { locations: Location[] }) {
       if (!mapRef.current) return;
       const theme = getCurrentTheme();
       mapRef.current.setOptions({
-        styles: theme === "dark" ? darkStyle : lightStyle,
+        styles: mapStyles[theme],
       });
       markersRef.current.forEach((marker) => {
         marker.setIcon({
@@ -219,7 +193,6 @@ export default function DayMap({ locations }: { locations: Location[] }) {
 
   const routeUrl = buildRouteUrl(locations);
   const isRoute = locations.length >= 2;
-  const waypointWarning = locations.length > 10;
 
   return (
     <div>
@@ -236,11 +209,6 @@ export default function DayMap({ locations }: { locations: Location[] }) {
           {isRoute ? "Abrir ruta completa del día en Google Maps" : "Abrir ubicación en Google Maps"}
         </span>
       </a>
-      {waypointWarning && (
-        <p className="route-warning">
-          Google Maps soporta máximo 10 paradas. Se mostrarán las primeras.
-        </p>
-      )}
       <div className="map-wrapper">
         {loading && <div className="map-loading">Cargando mapa…</div>}
         {error && (
